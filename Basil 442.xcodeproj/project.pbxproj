@@ -31,6 +31,7 @@
 		630C480F1DF097490067A985 /* Asset 32.png in Resources */ = {isa = PBXBuildFile; fileRef = 630C48091DF097490067A985 /* Asset 32.png */; };
 		630C48101DF097490067A985 /* Asset 33.png in Resources */ = {isa = PBXBuildFile; fileRef = 630C480A1DF097490067A985 /* Asset 33.png */; };
 		630C48111DF097490067A985 /* Asset 34.png in Resources */ = {isa = PBXBuildFile; fileRef = 630C480B1DF097490067A985 /* Asset 34.png */; };
+		EA4109571DF0D47E00E2C825 /* recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4109561DF0D47E00E2C825 /* recipe.swift */; };
 		EA494FD31DDD75A000712D6A /* RecipeCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA494FD21DDD75A000712D6A /* RecipeCells.swift */; };
 		EA494FD51DDD7F9C00712D6A /* recipeRead.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA494FD41DDD7F9C00712D6A /* recipeRead.swift */; };
 		EA494FD81DDD82C600712D6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA494FD61DDD82C600712D6A /* Main.storyboard */; };
@@ -86,6 +87,7 @@
 		630C48091DF097490067A985 /* Asset 32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Asset 32.png"; sourceTree = "<group>"; };
 		630C480A1DF097490067A985 /* Asset 33.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Asset 33.png"; sourceTree = "<group>"; };
 		630C480B1DF097490067A985 /* Asset 34.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Asset 34.png"; sourceTree = "<group>"; };
+		EA4109561DF0D47E00E2C825 /* recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = recipe.swift; sourceTree = "<group>"; };
 		EA494FD21DDD75A000712D6A /* RecipeCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeCells.swift; sourceTree = "<group>"; };
 		EA494FD41DDD7F9C00712D6A /* recipeRead.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = recipeRead.swift; sourceTree = "<group>"; };
 		EA494FD71DDD82C600712D6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 			children = (
 				EA494FD41DDD7F9C00712D6A /* recipeRead.swift */,
 				EADE938B1DEB7AD900BFF5D6 /* recipeSteps.swift */,
+				EA4109561DF0D47E00E2C825 /* recipe.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA494FD31DDD75A000712D6A /* RecipeCells.swift in Sources */,
+				EA4109571DF0D47E00E2C825 /* recipe.swift in Sources */,
 				49911E781DDA2C16004EE876 /* ViewController.swift in Sources */,
 				EADE938C1DEB7AD900BFF5D6 /* recipeSteps.swift in Sources */,
 				49911E761DDA2C16004EE876 /* AppDelegate.swift in Sources */,
