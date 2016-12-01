@@ -215,25 +215,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ingredients are here." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Do9-fv-tR4">
-                                <rect key="frame" x="40" y="185" width="158" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kd4-Bg-SEd">
-                                <rect key="frame" x="233" y="181" width="92" height="30"/>
-                                <state key="normal" title="Directions???"/>
-                                <connections>
-                                    <segue destination="urJ-Bu-pOY" kind="show" identifier="toDirectionsSegue" id="hnM-yy-sxM"/>
-                                </connections>
-                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dpa-T6-Mf7">
-                                <rect key="frame" x="29" y="239" width="316" height="375"/>
+                                <rect key="frame" x="29" y="197" width="316" height="417"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="eSd-YV-L4h">
-                                        <rect key="frame" x="0.0" y="28" width="316" height="44"/>
+                                        <rect key="frame" x="0.0" y="92" width="316" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eSd-YV-L4h" id="VF2-B5-gNF">
                                             <rect key="frame" x="0.0" y="0.0" width="316" height="43"/>
@@ -250,8 +237,17 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="Artboard 11.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="4Ai-4Y-ugT">
+                                <rect key="frame" x="1" y="64" width="374" height="225"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fp1-TH-WAe">
+                                <rect key="frame" x="255" y="210" width="90" height="37"/>
+                                <connections>
+                                    <segue destination="urJ-Bu-pOY" kind="show" identifier="toDirectionsSegue" id="oQK-Jk-oCL"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TITLE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ua-ZM-C41">
-                                <rect key="frame" x="165" y="118" width="44" height="21"/>
+                                <rect key="frame" x="165" y="125" width="44" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -387,25 +383,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FiG-nW-o2Q">
-                                <rect key="frame" x="249" y="188" width="57" height="30"/>
-                                <state key="normal" title="Start???"/>
-                                <connections>
-                                    <segue destination="J4H-PJ-7wK" kind="show" identifier="toStepsSegue" id="dKY-Bj-ifs"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Directions are here." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t79-7I-Nb7">
-                                <rect key="frame" x="58" y="192" width="150" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LFN-vg-Q7F">
                                 <rect key="frame" x="29" y="240" width="316" height="375"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Oqc-UC-OSb">
-                                        <rect key="frame" x="0.0" y="28" width="316" height="44"/>
+                                        <rect key="frame" x="0.0" y="92" width="316" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Oqc-UC-OSb" id="GMA-tu-a0Y">
                                             <rect key="frame" x="0.0" y="0.0" width="316" height="43"/>
@@ -422,12 +405,28 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TITLE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EQV-Pl-jqi">
-                                <rect key="frame" x="165" y="117" width="44" height="21"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="Artboard 12.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="KjH-di-L3A">
+                                <rect key="frame" x="0.0" y="64" width="375" height="219"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F2s-zq-B70">
+                                <rect key="frame" x="29" y="202" width="87" height="41"/>
+                                <connections>
+                                    <segue destination="ep8-qB-i5s" kind="show" identifier="toIngredientsSegue" id="Te9-lL-fAJ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TITLE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gBb-vo-v1g">
+                                <rect key="frame" x="165" y="129" width="44" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FiG-nW-o2Q">
+                                <rect key="frame" x="150" y="265" width="75" height="27"/>
+                                <state key="normal" backgroundImage="start btn.png"/>
+                                <connections>
+                                    <segue destination="J4H-PJ-7wK" kind="show" identifier="toStepsSegue" id="dKY-Bj-ifs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -463,11 +462,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Artboard 11.jpg" width="750" height="367"/>
+        <image name="Artboard 12.jpg" width="750" height="367"/>
         <image name="bon appetit.png" width="424" height="350"/>
         <image name="search logo.png" width="334" height="133"/>
+        <image name="start btn.png" width="138" height="51"/>
         <image name="time cards.png" width="19" height="19"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="EQf-Pl-dm9"/>
         <segue reference="dKY-Bj-ifs"/>
     </inferredMetricsTieBreakers>
 </document>
