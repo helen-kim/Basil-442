@@ -5,4 +5,4 @@ Using all our accumulated knowledge in iOS app development, we built a mobile ap
 
 Check out our [app prototype](https://invis.io/BX9CR0FMA)!
 
-created Fall 2016 by Helen Kim and Sophie Zhao.
+Created Fall 2016 by Helen Kim and Sophie Zhao.
