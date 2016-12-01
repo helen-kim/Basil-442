@@ -1,0 +1,596 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		49911E761DDA2C16004EE876 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49911E751DDA2C16004EE876 /* AppDelegate.swift */; };
+		49911E781DDA2C16004EE876 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49911E771DDA2C16004EE876 /* ViewController.swift */; };
+		49911E7D1DDA2C16004EE876 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49911E7C1DDA2C16004EE876 /* Assets.xcassets */; };
+		49911E801DDA2C16004EE876 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49911E7E1DDA2C16004EE876 /* LaunchScreen.storyboard */; };
+		49911E8B1DDA2C16004EE876 /* Basil_442Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49911E8A1DDA2C16004EE876 /* Basil_442Tests.swift */; };
+		49911E961DDA2C16004EE876 /* Basil_442UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49911E951DDA2C16004EE876 /* Basil_442UITests.swift */; };
+		49B03CE91DE36814004440A9 /* appicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 49B03CDD1DE36814004440A9 /* appicon.png */; };
+		49B03CEA1DE36814004440A9 /* bon appetit.png in Resources */ = {isa = PBXBuildFile; fileRef = 49B03CDE1DE36814004440A9 /* bon appetit.png */; };
+		49B03CEB1DE36814004440A9 /* directions logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 49B03CDF1DE36814004440A9 /* directions logo.png */; };
+		49B03CEC1DE36814004440A9 /* directions.png in Resources */ = {isa = PBXBuildFile; fileRef = 49B03CE01DE36814004440A9 /* directions.png */; };
+		49B03CED1DE36814004440A9 /* ingredients logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 49B03CE11DE36814004440A9 /* ingredients logo.png */; };
+		49B03CEE1DE36814004440A9 /* ingredients.png in Resources */ = {isa = PBXBuildFile; fileRef = 49B03CE21DE36814004440A9 /* ingredients.png */; };
+		49B03CEF1DE36814004440A9 /* loading logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 49B03CE31DE36814004440A9 /* loading logo.png */; };
+		49B03CF01DE36814004440A9 /* search logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 49B03CE41DE36814004440A9 /* search logo.png */; };
+		49B03CF11DE36814004440A9 /* servings.png in Resources */ = {isa = PBXBuildFile; fileRef = 49B03CE51DE36814004440A9 /* servings.png */; };
+		49B03CF21DE36814004440A9 /* start btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 49B03CE61DE36814004440A9 /* start btn.png */; };
+		49B03CF31DE36814004440A9 /* time.png in Resources */ = {isa = PBXBuildFile; fileRef = 49B03CE71DE36814004440A9 /* time.png */; };
+		49B03CF41DE36814004440A9 /* time cards.png in Resources */ = {isa = PBXBuildFile; fileRef = 49B03CE81DE36814004440A9 /* time cards.png */; };
+		EA494FD31DDD75A000712D6A /* RecipeCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA494FD21DDD75A000712D6A /* RecipeCells.swift */; };
+		EA494FD51DDD7F9C00712D6A /* recipeRead.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA494FD41DDD7F9C00712D6A /* recipeRead.swift */; };
+		EA494FD81DDD82C600712D6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA494FD61DDD82C600712D6A /* Main.storyboard */; };
+		EADE93881DEB756700BFF5D6 /* StepsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADE93871DEB756700BFF5D6 /* StepsViewController.swift */; };
+		EADE938C1DEB7AD900BFF5D6 /* recipeSteps.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADE938B1DEB7AD900BFF5D6 /* recipeSteps.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		49911E871DDA2C16004EE876 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49911E6A1DDA2C16004EE876 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 49911E711DDA2C16004EE876;
+			remoteInfo = "Basil 442";
+		};
+		49911E921DDA2C16004EE876 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49911E6A1DDA2C16004EE876 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 49911E711DDA2C16004EE876;
+			remoteInfo = "Basil 442";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		49911E721DDA2C16004EE876 /* Basil 442.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Basil 442.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		49911E751DDA2C16004EE876 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		49911E771DDA2C16004EE876 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		49911E7C1DDA2C16004EE876 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		49911E7F1DDA2C16004EE876 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		49911E811DDA2C16004EE876 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49911E861DDA2C16004EE876 /* Basil 442Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Basil 442Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		49911E8A1DDA2C16004EE876 /* Basil_442Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basil_442Tests.swift; sourceTree = "<group>"; };
+		49911E8C1DDA2C16004EE876 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49911E911DDA2C16004EE876 /* Basil 442UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Basil 442UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		49911E951DDA2C16004EE876 /* Basil_442UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basil_442UITests.swift; sourceTree = "<group>"; };
+		49911E971DDA2C16004EE876 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49B03CDD1DE36814004440A9 /* appicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appicon.png; sourceTree = "<group>"; };
+		49B03CDE1DE36814004440A9 /* bon appetit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bon appetit.png"; sourceTree = "<group>"; };
+		49B03CDF1DE36814004440A9 /* directions logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "directions logo.png"; sourceTree = "<group>"; };
+		49B03CE01DE36814004440A9 /* directions.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = directions.png; sourceTree = "<group>"; };
+		49B03CE11DE36814004440A9 /* ingredients logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ingredients logo.png"; sourceTree = "<group>"; };
+		49B03CE21DE36814004440A9 /* ingredients.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ingredients.png; sourceTree = "<group>"; };
+		49B03CE31DE36814004440A9 /* loading logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loading logo.png"; sourceTree = "<group>"; };
+		49B03CE41DE36814004440A9 /* search logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search logo.png"; sourceTree = "<group>"; };
+		49B03CE51DE36814004440A9 /* servings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = servings.png; sourceTree = "<group>"; };
+		49B03CE61DE36814004440A9 /* start btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "start btn.png"; sourceTree = "<group>"; };
+		49B03CE71DE36814004440A9 /* time.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = time.png; sourceTree = "<group>"; };
+		49B03CE81DE36814004440A9 /* time cards.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "time cards.png"; sourceTree = "<group>"; };
+		EA494FD21DDD75A000712D6A /* RecipeCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeCells.swift; sourceTree = "<group>"; };
+		EA494FD41DDD7F9C00712D6A /* recipeRead.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = recipeRead.swift; sourceTree = "<group>"; };
+		EA494FD71DDD82C600712D6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EADE93871DEB756700BFF5D6 /* StepsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepsViewController.swift; sourceTree = "<group>"; };
+		EADE938B1DEB7AD900BFF5D6 /* recipeSteps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = recipeSteps.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		49911E6F1DDA2C16004EE876 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49911E831DDA2C16004EE876 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49911E8E1DDA2C16004EE876 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		49911E691DDA2C16004EE876 = {
+			isa = PBXGroup;
+			children = (
+				49911E741DDA2C16004EE876 /* Basil 442 */,
+				49911E891DDA2C16004EE876 /* Basil 442Tests */,
+				49911E941DDA2C16004EE876 /* Basil 442UITests */,
+				49911E731DDA2C16004EE876 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		49911E731DDA2C16004EE876 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				49911E721DDA2C16004EE876 /* Basil 442.app */,
+				49911E861DDA2C16004EE876 /* Basil 442Tests.xctest */,
+				49911E911DDA2C16004EE876 /* Basil 442UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		49911E741DDA2C16004EE876 /* Basil 442 */ = {
+			isa = PBXGroup;
+			children = (
+				49B03CDC1DE36814004440A9 /* images */,
+				49911E751DDA2C16004EE876 /* AppDelegate.swift */,
+				EA341F141DEE07A60053E833 /* Controllers */,
+				EA494FD61DDD82C600712D6A /* Main.storyboard */,
+				EA341F131DEE07880053E833 /* Models */,
+				49911E7C1DDA2C16004EE876 /* Assets.xcassets */,
+				49911E7E1DDA2C16004EE876 /* LaunchScreen.storyboard */,
+				49911E811DDA2C16004EE876 /* Info.plist */,
+			);
+			path = "Basil 442";
+			sourceTree = "<group>";
+		};
+		49911E891DDA2C16004EE876 /* Basil 442Tests */ = {
+			isa = PBXGroup;
+			children = (
+				49911E8A1DDA2C16004EE876 /* Basil_442Tests.swift */,
+				49911E8C1DDA2C16004EE876 /* Info.plist */,
+			);
+			path = "Basil 442Tests";
+			sourceTree = "<group>";
+		};
+		49911E941DDA2C16004EE876 /* Basil 442UITests */ = {
+			isa = PBXGroup;
+			children = (
+				49911E951DDA2C16004EE876 /* Basil_442UITests.swift */,
+				49911E971DDA2C16004EE876 /* Info.plist */,
+			);
+			path = "Basil 442UITests";
+			sourceTree = "<group>";
+		};
+		49B03CDC1DE36814004440A9 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				49B03CDD1DE36814004440A9 /* appicon.png */,
+				49B03CDE1DE36814004440A9 /* bon appetit.png */,
+				49B03CDF1DE36814004440A9 /* directions logo.png */,
+				49B03CE01DE36814004440A9 /* directions.png */,
+				49B03CE11DE36814004440A9 /* ingredients logo.png */,
+				49B03CE21DE36814004440A9 /* ingredients.png */,
+				49B03CE31DE36814004440A9 /* loading logo.png */,
+				49B03CE41DE36814004440A9 /* search logo.png */,
+				49B03CE51DE36814004440A9 /* servings.png */,
+				49B03CE61DE36814004440A9 /* start btn.png */,
+				49B03CE71DE36814004440A9 /* time.png */,
+				49B03CE81DE36814004440A9 /* time cards.png */,
+			);
+			path = images;
+			sourceTree = SOURCE_ROOT;
+		};
+		EA341F131DEE07880053E833 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EA494FD41DDD7F9C00712D6A /* recipeRead.swift */,
+				EADE938B1DEB7AD900BFF5D6 /* recipeSteps.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		EA341F141DEE07A60053E833 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EADE93871DEB756700BFF5D6 /* StepsViewController.swift */,
+				49911E771DDA2C16004EE876 /* ViewController.swift */,
+				EA494FD21DDD75A000712D6A /* RecipeCells.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		49911E711DDA2C16004EE876 /* Basil 442 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49911E9A1DDA2C16004EE876 /* Build configuration list for PBXNativeTarget "Basil 442" */;
+			buildPhases = (
+				49911E6E1DDA2C16004EE876 /* Sources */,
+				49911E6F1DDA2C16004EE876 /* Frameworks */,
+				49911E701DDA2C16004EE876 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Basil 442";
+			productName = "Basil 442";
+			productReference = 49911E721DDA2C16004EE876 /* Basil 442.app */;
+			productType = "com.apple.product-type.application";
+		};
+		49911E851DDA2C16004EE876 /* Basil 442Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49911E9D1DDA2C16004EE876 /* Build configuration list for PBXNativeTarget "Basil 442Tests" */;
+			buildPhases = (
+				49911E821DDA2C16004EE876 /* Sources */,
+				49911E831DDA2C16004EE876 /* Frameworks */,
+				49911E841DDA2C16004EE876 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				49911E881DDA2C16004EE876 /* PBXTargetDependency */,
+			);
+			name = "Basil 442Tests";
+			productName = "Basil 442Tests";
+			productReference = 49911E861DDA2C16004EE876 /* Basil 442Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		49911E901DDA2C16004EE876 /* Basil 442UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49911EA01DDA2C16004EE876 /* Build configuration list for PBXNativeTarget "Basil 442UITests" */;
+			buildPhases = (
+				49911E8D1DDA2C16004EE876 /* Sources */,
+				49911E8E1DDA2C16004EE876 /* Frameworks */,
+				49911E8F1DDA2C16004EE876 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				49911E931DDA2C16004EE876 /* PBXTargetDependency */,
+			);
+			name = "Basil 442UITests";
+			productName = "Basil 442UITests";
+			productReference = 49911E911DDA2C16004EE876 /* Basil 442UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		49911E6A1DDA2C16004EE876 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "team danko_";
+				TargetAttributes = {
+					49911E711DDA2C16004EE876 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					49911E851DDA2C16004EE876 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 49911E711DDA2C16004EE876;
+					};
+					49911E901DDA2C16004EE876 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 49911E711DDA2C16004EE876;
+					};
+				};
+			};
+			buildConfigurationList = 49911E6D1DDA2C16004EE876 /* Build configuration list for PBXProject "Basil 442" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 49911E691DDA2C16004EE876;
+			productRefGroup = 49911E731DDA2C16004EE876 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				49911E711DDA2C16004EE876 /* Basil 442 */,
+				49911E851DDA2C16004EE876 /* Basil 442Tests */,
+				49911E901DDA2C16004EE876 /* Basil 442UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		49911E701DDA2C16004EE876 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49B03CEE1DE36814004440A9 /* ingredients.png in Resources */,
+				49B03CF01DE36814004440A9 /* search logo.png in Resources */,
+				49B03CE91DE36814004440A9 /* appicon.png in Resources */,
+				49B03CEB1DE36814004440A9 /* directions logo.png in Resources */,
+				49B03CEC1DE36814004440A9 /* directions.png in Resources */,
+				EA494FD81DDD82C600712D6A /* Main.storyboard in Resources */,
+				49B03CF21DE36814004440A9 /* start btn.png in Resources */,
+				49B03CED1DE36814004440A9 /* ingredients logo.png in Resources */,
+				49B03CEF1DE36814004440A9 /* loading logo.png in Resources */,
+				49B03CF11DE36814004440A9 /* servings.png in Resources */,
+				49B03CEA1DE36814004440A9 /* bon appetit.png in Resources */,
+				49911E801DDA2C16004EE876 /* LaunchScreen.storyboard in Resources */,
+				49B03CF41DE36814004440A9 /* time cards.png in Resources */,
+				49B03CF31DE36814004440A9 /* time.png in Resources */,
+				49911E7D1DDA2C16004EE876 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49911E841DDA2C16004EE876 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49911E8F1DDA2C16004EE876 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		49911E6E1DDA2C16004EE876 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA494FD31DDD75A000712D6A /* RecipeCells.swift in Sources */,
+				49911E781DDA2C16004EE876 /* ViewController.swift in Sources */,
+				EADE938C1DEB7AD900BFF5D6 /* recipeSteps.swift in Sources */,
+				49911E761DDA2C16004EE876 /* AppDelegate.swift in Sources */,
+				EA494FD51DDD7F9C00712D6A /* recipeRead.swift in Sources */,
+				EADE93881DEB756700BFF5D6 /* StepsViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49911E821DDA2C16004EE876 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49911E8B1DDA2C16004EE876 /* Basil_442Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49911E8D1DDA2C16004EE876 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49911E961DDA2C16004EE876 /* Basil_442UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		49911E881DDA2C16004EE876 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 49911E711DDA2C16004EE876 /* Basil 442 */;
+			targetProxy = 49911E871DDA2C16004EE876 /* PBXContainerItemProxy */;
+		};
+		49911E931DDA2C16004EE876 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 49911E711DDA2C16004EE876 /* Basil 442 */;
+			targetProxy = 49911E921DDA2C16004EE876 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		49911E7E1DDA2C16004EE876 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49911E7F1DDA2C16004EE876 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		EA494FD61DDD82C600712D6A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA494FD71DDD82C600712D6A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		49911E981DDA2C16004EE876 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		49911E991DDA2C16004EE876 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		49911E9B1DDA2C16004EE876 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Basil 442/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "dank-o.Basil-442";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		49911E9C1DDA2C16004EE876 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Basil 442/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "dank-o.Basil-442";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		49911E9E1DDA2C16004EE876 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Basil 442Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "dank-o.Basil-442Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Basil 442.app/Basil 442";
+			};
+			name = Debug;
+		};
+		49911E9F1DDA2C16004EE876 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Basil 442Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "dank-o.Basil-442Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Basil 442.app/Basil 442";
+			};
+			name = Release;
+		};
+		49911EA11DDA2C16004EE876 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Basil 442UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "dank-o.Basil-442UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Basil 442";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		49911EA21DDA2C16004EE876 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Basil 442UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "dank-o.Basil-442UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Basil 442";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		49911E6D1DDA2C16004EE876 /* Build configuration list for PBXProject "Basil 442" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49911E981DDA2C16004EE876 /* Debug */,
+				49911E991DDA2C16004EE876 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49911E9A1DDA2C16004EE876 /* Build configuration list for PBXNativeTarget "Basil 442" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49911E9B1DDA2C16004EE876 /* Debug */,
+				49911E9C1DDA2C16004EE876 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49911E9D1DDA2C16004EE876 /* Build configuration list for PBXNativeTarget "Basil 442Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49911E9E1DDA2C16004EE876 /* Debug */,
+				49911E9F1DDA2C16004EE876 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49911EA01DDA2C16004EE876 /* Build configuration list for PBXNativeTarget "Basil 442UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49911EA11DDA2C16004EE876 /* Debug */,
+				49911EA21DDA2C16004EE876 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 49911E6A1DDA2C16004EE876 /* Project object */;
+}
