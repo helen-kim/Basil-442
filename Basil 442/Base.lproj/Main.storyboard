@@ -470,7 +470,7 @@
         <image name="time cards.png" width="19" height="19"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="WEQ-TF-Y2N"/>
         <segue reference="EQf-Pl-dm9"/>
-        <segue reference="dKY-Bj-ifs"/>
     </inferredMetricsTieBreakers>
 </document>
