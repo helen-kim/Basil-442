@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4zV-rj-vDA">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4zV-rj-vDA">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -22,10 +22,10 @@
             </objects>
             <point key="canvasLocation" x="-526.875" y="429.92957746478868"/>
         </scene>
-        <!--Home-->
+        <!--HomeView-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Home" id="BYZ-38-t0r" customClass="ViewController" customModule="Basil_442" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="HomeView" id="BYZ-38-t0r" customClass="HomeViewController" customModule="Basil_442" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="f7l-Oj-z3d"/>
                         <viewControllerLayoutGuide type="bottom" id="lMB-H3-fqD"/>
@@ -104,10 +104,10 @@
             </objects>
             <point key="canvasLocation" x="168.5" y="428.5"/>
         </scene>
-        <!--Steps View Controller-->
+        <!--StepsView-->
         <scene sceneID="NJr-hE-PrL">
             <objects>
-                <viewController id="J4H-PJ-7wK" customClass="StepsViewController" customModule="Basil_442" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="StepsView" id="J4H-PJ-7wK" customClass="StepsViewController" customModule="Basil_442" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JbG-kg-pEY"/>
                         <viewControllerLayoutGuide type="bottom" id="4XF-ht-7Hd"/>
@@ -144,6 +144,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="currStep" destination="IKD-kt-N1O" id="EIg-nM-j3X"/>
                         <outlet property="nextButton" destination="KFi-kg-nA5" id="d8z-X4-zUm"/>
@@ -156,7 +157,7 @@
         <!--DetailView-->
         <scene sceneID="cka-O3-dSk">
             <objects>
-                <viewController title="DetailView" id="Gb3-sH-0Ya" sceneMemberID="viewController">
+                <viewController title="DetailView" id="Gb3-sH-0Ya" customClass="DetailViewController" customModule="Basil_442" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="plq-ua-pw4"/>
                         <viewControllerLayoutGuide type="bottom" id="I9c-NA-Xuc"/>
@@ -165,8 +166,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="RECIPE TITLE" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B0G-m9-x18">
-                                <rect key="frame" x="0.0" y="65" width="375" height="153"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RECIPE TITLE" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B0G-m9-x18">
+                                <rect key="frame" x="0.0" y="109" width="375" height="109"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="29"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -206,7 +207,7 @@
         <!--IngredientsView-->
         <scene sceneID="X8Z-jP-I3v">
             <objects>
-                <viewController title="IngredientsView" id="ep8-qB-i5s" sceneMemberID="viewController">
+                <viewController title="IngredientsView" id="ep8-qB-i5s" customClass="IngredientsViewController" customModule="Basil_442" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="reZ-Ng-Deb"/>
                         <viewControllerLayoutGuide type="bottom" id="xl1-wb-deG"/>
@@ -261,10 +262,10 @@
             </objects>
             <point key="canvasLocation" x="1204.5" y="1460.5"/>
         </scene>
-        <!--CardView-->
+        <!--CardsView-->
         <scene sceneID="oTT-6O-xww">
             <objects>
-                <viewController title="CardView" id="S5D-GU-WL4" sceneMemberID="viewController">
+                <viewController title="CardsView" id="S5D-GU-WL4" customClass="CardsViewController" customModule="Basil_442" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="U1R-Lb-Ion"/>
                         <viewControllerLayoutGuide type="bottom" id="Dog-Ir-WFJ"/>
@@ -273,25 +274,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yWA-oj-2Fl">
+                                <rect key="frame" x="144" y="98" width="87" height="30"/>
+                                <state key="normal" title="this is a card"/>
+                                <connections>
+                                    <segue destination="Gb3-sH-0Ya" kind="show" identifier="toDetailSegue" id="Z5f-9u-riV"/>
+                                </connections>
+                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gxL-X0-wJE">
                                 <rect key="frame" x="10" y="206" width="354" height="400"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="recipe card" rowHeight="200" id="qTP-97-IeN">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="recipeCell" rowHeight="200" id="qTP-97-IeN">
                                         <rect key="frame" x="0.0" y="92" width="354" height="200"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qTP-97-IeN" id="ntA-Le-he1">
                                             <rect key="frame" x="0.0" y="0.0" width="354" height="199"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9bb-fz-N2t">
-                                                    <rect key="frame" x="8" y="0.0" width="359" height="190"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9bb-fz-N2t">
+                                                    <rect key="frame" x="8" y="0.0" width="338" height="190"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ICC-JA-V4N">
-                                                            <rect key="frame" x="0.0" y="0.0" width="359" height="143"/>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ICC-JA-V4N">
+                                                            <rect key="frame" x="0.0" y="0.0" width="338" height="143"/>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3L-Bz-uRj">
-                                                            <rect key="frame" x="301" y="162" width="21" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3L-Bz-uRj">
+                                                            <rect key="frame" x="280" y="162" width="21" height="21"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="21" id="GTU-Cr-HWp"/>
                                                             </constraints>
@@ -299,8 +307,8 @@
                                                             <color key="textColor" red="0.52941176469999995" green="0.6705882353" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="MINS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a3k-Im-QXy">
-                                                            <rect key="frame" x="325" y="164" width="41" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MINS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a3k-Im-QXy">
+                                                            <rect key="frame" x="304" y="164" width="41" height="21"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="41" id="qTL-Zg-s0r"/>
                                                             </constraints>
@@ -308,8 +316,8 @@
                                                             <color key="textColor" red="0.52941176469999995" green="0.6705882353" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="time cards.png" translatesAutoresizingMaskIntoConstraints="NO" id="3iu-sO-e5Q">
-                                                            <rect key="frame" x="263" y="162" width="38" height="20"/>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="time cards.png" translatesAutoresizingMaskIntoConstraints="NO" id="3iu-sO-e5Q">
+                                                            <rect key="frame" x="242" y="162" width="38" height="20"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="38" id="tkS-l0-Nj1"/>
                                                             </constraints>
@@ -354,27 +362,27 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                 </prototypes>
-                            </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yWA-oj-2Fl">
-                                <rect key="frame" x="144" y="98" width="87" height="30"/>
-                                <state key="normal" title="this is a card"/>
                                 <connections>
-                                    <segue destination="Gb3-sH-0Ya" kind="show" identifier="toDetailSegue" id="Z5f-9u-riV"/>
+                                    <outlet property="dataSource" destination="S5D-GU-WL4" id="sVf-V8-8I9"/>
+                                    <outlet property="delegate" destination="S5D-GU-WL4" id="VsN-iq-ZRG"/>
                                 </connections>
-                            </button>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="cardTableView" destination="gxL-X0-wJE" id="801-vj-Rpo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Tl-yw-AFR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="168.5" y="1460.5"/>
         </scene>
-        <!--DirectionView-->
+        <!--DirectionsView-->
         <scene sceneID="jgI-IG-j7j">
             <objects>
-                <viewController title="DirectionView" id="urJ-Bu-pOY" sceneMemberID="viewController">
+                <viewController title="DirectionsView" id="urJ-Bu-pOY" customClass="DirectionsViewController" customModule="Basil_442" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hpq-RF-4Rr"/>
                         <viewControllerLayoutGuide type="bottom" id="LWZ-S6-on7"/>
@@ -470,7 +478,7 @@
         <image name="time cards.png" width="19" height="19"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="WEQ-TF-Y2N"/>
+        <segue reference="dKY-Bj-ifs"/>
         <segue reference="EQf-Pl-dm9"/>
     </inferredMetricsTieBreakers>
 </document>
