@@ -15,6 +15,10 @@ class IngredientsViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    @IBOutlet weak var ingredientsRecipeName: UILabel!
+    
+    @IBOutlet weak var ingredientsTableView: UITableView!
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

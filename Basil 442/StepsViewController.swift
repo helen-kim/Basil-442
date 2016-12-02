@@ -23,9 +23,14 @@ class StepsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBOutlet weak var prevStep: UILabel!
     @IBOutlet weak var currStep: UILabel!
-    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var nextStep: UILabel!
+
     
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var repeatButton: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
     
 
     /*

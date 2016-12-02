@@ -41,6 +41,7 @@
 		EA61499C1DF11F14004880D9 /* DirectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA61499B1DF11F14004880D9 /* DirectionsViewController.swift */; };
 		EA61499F1DF13C72004880D9 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA61499D1DF13C72004880D9 /* TableViewCell.swift */; };
 		EA6149A01DF13C72004880D9 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA61499E1DF13C72004880D9 /* TableViewCell.xib */; };
+		EA6149A21DF15186004880D9 /* Asset 35.png in Resources */ = {isa = PBXBuildFile; fileRef = EA6149A11DF15186004880D9 /* Asset 35.png */; };
 		EADE93881DEB756700BFF5D6 /* StepsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADE93871DEB756700BFF5D6 /* StepsViewController.swift */; };
 		EADE938C1DEB7AD900BFF5D6 /* recipeSteps.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADE938B1DEB7AD900BFF5D6 /* recipeSteps.swift */; };
 /* End PBXBuildFile section */
@@ -103,6 +104,7 @@
 		EA61499B1DF11F14004880D9 /* DirectionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionsViewController.swift; sourceTree = "<group>"; };
 		EA61499D1DF13C72004880D9 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		EA61499E1DF13C72004880D9 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		EA6149A11DF15186004880D9 /* Asset 35.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Asset 35.png"; sourceTree = "<group>"; };
 		EADE93871DEB756700BFF5D6 /* StepsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepsViewController.swift; sourceTree = "<group>"; };
 		EADE938B1DEB7AD900BFF5D6 /* recipeSteps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = recipeSteps.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -194,6 +196,7 @@
 				630C48091DF097490067A985 /* Asset 32.png */,
 				630C480A1DF097490067A985 /* Asset 33.png */,
 				630C480B1DF097490067A985 /* Asset 34.png */,
+				EA6149A11DF15186004880D9 /* Asset 35.png */,
 				49B03CDD1DE36814004440A9 /* appicon.png */,
 				49B03CDE1DE36814004440A9 /* bon appetit.png */,
 				49B03CDF1DE36814004440A9 /* directions logo.png */,
@@ -304,6 +307,7 @@
 				TargetAttributes = {
 					49911E711DDA2C16004EE876 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = NW6D4URLGN;
 					};
 					49911E851DDA2C16004EE876 = {
 						CreatedOnToolsVersion = 7.2;
@@ -340,6 +344,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA6149A21DF15186004880D9 /* Asset 35.png in Resources */,
 				49B03CEE1DE36814004440A9 /* ingredients.png in Resources */,
 				EA6149A01DF13C72004880D9 /* TableViewCell.xib in Resources */,
 				49B03CF01DE36814004440A9 /* search logo.png in Resources */,
@@ -537,10 +542,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Basil 442/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "dank-o.Basil-442";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -548,10 +556,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Basil 442/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "dank-o.Basil-442";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

@@ -15,7 +15,7 @@ class TableViewCell: UITableViewCell {
         // Initialization code
     }
     @IBOutlet weak var recipeImage: UIImageView!
-    @IBOutlet weak var recipeName: UILabel!
+    @IBOutlet weak var cellRecipeName: UILabel!
     @IBOutlet weak var prepTime: UILabel!
 
     override func setSelected(selected: Bool, animated: Bool) {

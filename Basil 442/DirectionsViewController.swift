@@ -15,6 +15,9 @@ class DirectionsViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    @IBOutlet weak var directionsRecipeName: UILabel!
+    @IBOutlet weak var directionsTableView: UITableView!
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

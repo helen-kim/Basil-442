@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CardsViewController: UIViewController, UITableViewDelegate {
+class CardsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +22,31 @@ class CardsViewController: UIViewController, UITableViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    // MARK: - Table view data source
+    
+//    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+//        // #warning Incomplete implementation, return the number of sections
+//        return 1
+//        
+//    }
+//    
+//    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        // #warning Incomplete implementation, return the number of rows
+//        return steps.count
+//    }
+//    
+//    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCellWithIdentifier("cellIdentifier", forIndexPath: indexPath)
+//        
+//        // Fetch step
+//        let step = steps[indexPath.row]
+//        
+//        // Configure cell
+//        cell.textLabel!.text = step
+//        return cell
+//    }
+
 
     /*
     // MARK: - Navigation
