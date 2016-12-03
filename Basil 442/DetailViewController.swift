@@ -1,16 +1,14 @@
 //
-//  StepsViewController.swift
+//  DetailViewController.swift
 //  Basil 442
 //
-//  Created by Sophie Zhao on 11/27/16.
+//  Created by Sophie Zhao on 12/1/16.
 //  Copyright © 2016 team danko_. All rights reserved.
 //
 
 import UIKit
 
-class StepsViewController: UIViewController {
-    
-    let recipeInstance = recipeSteps()
+class DetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,19 +16,15 @@ class StepsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    @IBOutlet weak var recipeImage: UIImageView!
+    @IBOutlet weak var recipeTitle: UILabel!
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    @IBOutlet weak var prevStep: UILabel!
-    @IBOutlet weak var currStep: UILabel!
-    @IBOutlet weak var nextStep: UILabel!
-
-    
-    @IBOutlet weak var backButton: UIButton!
-    @IBOutlet weak var repeatButton: UIButton!
-    @IBOutlet weak var nextButton: UIButton!
     
 
     /*
