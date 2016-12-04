@@ -8,22 +8,49 @@
 
 import UIKit
 
-class DirectionsViewController: UIViewController {
+class DirectionsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    // Initialize Recipes
+    var dirInfo = Recipes()
+    
+    var id:String = "831906"
+    var allDirections:Array<String> = []
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        allDirections = dirInfo.getDirections(id)
 
         // Do any additional setup after loading the view.
     }
-    @IBOutlet weak var directionsRecipeName: UILabel!
     @IBOutlet weak var directionsTableView: UITableView!
     
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: - Directions Table view data source
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
+        
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return allDirections.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("directionCell", forIndexPath: indexPath) as! DirectionsTableViewCell
+        
+        // Configure cell
+        cell.directionName.text = allDirections[indexPath.row]
+        return cell
+    }
+
 
     /*
     // MARK: - Navigation

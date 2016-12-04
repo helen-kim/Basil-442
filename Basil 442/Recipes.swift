@@ -91,7 +91,7 @@ class Recipes {
         // API request, establish URL and call function
         let recipeData = apiRequest("https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/\(id)/information?includeNutrition=false")
         // Confirm API request successful
-        if recipeData as! String == "404:ERROR: API request failed; make sure the URL is correct" {
+        if let isString = recipeData as? String {
             return [404: "ERROR: API request failed; make sure the URL is correct"]
         } else {
             // parse through JSON and gather necessary title and ingredients
@@ -116,12 +116,12 @@ class Recipes {
     }
     
     // MARK: - Get directions information
-    func getDirections(id: String) -> AnyObject {
+    func getDirections(id: String) -> Array<String> {
         // API request, establish URL and call function
         let recipeData = apiRequest("https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/\(id)/analyzedInstructions?stepBreakdown=true")
         // Confirm API request successful
-        if recipeData as! String == "404:ERROR: API request failed; make sure the URL is correct" {
-            return [404: "ERROR: API request failed; make sure the URL is correct"]
+        if let isString = recipeData as? String {
+            return ["404 ERROR: API request failed; make sure the URL is correct"]
         } else {
             // parse through JSON and gather necessary directions
             do {
@@ -139,7 +139,7 @@ class Recipes {
                 
                 return directions
             } catch {
-                return [404:"ERROR: JSON is not valid"]
+                return ["404 ERROR: JSON is not valid"]
             }
         }
     }

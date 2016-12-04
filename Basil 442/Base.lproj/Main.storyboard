@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="yfp-cw-o6d">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="yfp-cw-o6d">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -212,29 +212,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dpa-T6-Mf7">
-                                <rect key="frame" x="30" y="224" width="317" height="423"/>
+                                <rect key="frame" x="30" y="195" width="317" height="452"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="50" id="eSd-YV-L4h">
-                                        <rect key="frame" x="0.0" y="28" width="317" height="50"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ingredientCell" rowHeight="40" id="eSd-YV-L4h" customClass="IngredientsTableViewCell" customModule="Basil_442" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="317" height="40"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eSd-YV-L4h" id="VF2-B5-gNF">
-                                            <rect key="frame" x="0.0" y="0.0" width="317" height="49"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="317" height="39"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ingredientz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRs-uh-klR">
-                                                    <rect key="frame" x="40" y="11" width="278" height="30"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ingredientz" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRs-uh-klR">
+                                                    <rect key="frame" x="39" y="5" width="278" height="30"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Asset 33.png" translatesAutoresizingMaskIntoConstraints="NO" id="OXq-rC-Ydh">
-                                                    <rect key="frame" x="22" y="21" width="10" height="10"/>
+                                                    <rect key="frame" x="21" y="15" width="10" height="10"/>
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="ingredientName" destination="xRs-uh-klR" id="wkO-mV-YXG"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ep8-qB-i5s" id="UwE-Wq-z0O"/>
+                                    <outlet property="delegate" destination="ep8-qB-i5s" id="c8s-pV-RHO"/>
+                                </connections>
                             </tableView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="Artboard 11.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="4Ai-4Y-ugT">
                                 <rect key="frame" x="-3" y="0.0" width="381" height="225"/>
@@ -257,7 +264,6 @@
                     <navigationItem key="navigationItem" id="13e-c5-gix"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="ingredientsRecipeName" destination="2Ua-ZM-C41" id="Nr3-K7-wLP"/>
                         <outlet property="ingredientsTableView" destination="dpa-T6-Mf7" id="4c0-YQ-Gh0"/>
                     </connections>
                 </viewController>
@@ -317,41 +323,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LFN-vg-Q7F">
-                                <rect key="frame" x="29" y="226" width="316" height="421"/>
+                                <rect key="frame" x="29" y="210" width="316" height="437"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Oqc-UC-OSb">
-                                        <rect key="frame" x="0.0" y="28" width="316" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="directionCell" rowHeight="40" id="Oqc-UC-OSb" customClass="DirectionsTableViewCell" customModule="Basil_442" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="316" height="40"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Oqc-UC-OSb" id="GMA-tu-a0Y">
-                                            <rect key="frame" x="0.0" y="0.0" width="316" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="316" height="39"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="directionz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWW-ow-Gug">
-                                                    <rect key="frame" x="44" y="6" width="272" height="32"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="directionz" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWW-ow-Gug">
+                                                    <rect key="frame" x="44" y="4" width="272" height="32"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Asset 33.png" translatesAutoresizingMaskIntoConstraints="NO" id="h4E-zh-Mqf">
-                                                    <rect key="frame" x="25" y="19" width="10" height="10"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="10" id="coN-tn-014"/>
-                                                    </constraints>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Asset 33.png" translatesAutoresizingMaskIntoConstraints="NO" id="h4E-zh-Mqf">
+                                                    <rect key="frame" x="25" y="17" width="10" height="10"/>
                                                 </imageView>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstItem="h4E-zh-Mqf" firstAttribute="top" secondItem="GMA-tu-a0Y" secondAttribute="topMargin" constant="11" id="6MG-Jm-MLH"/>
-                                                <constraint firstAttribute="trailing" secondItem="bWW-ow-Gug" secondAttribute="trailing" id="FUq-GD-sco"/>
-                                                <constraint firstItem="bWW-ow-Gug" firstAttribute="leading" secondItem="h4E-zh-Mqf" secondAttribute="trailing" constant="9" id="M2l-hy-koZ"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="h4E-zh-Mqf" secondAttribute="bottom" constant="6" id="Pa5-F7-TFA"/>
-                                                <constraint firstItem="bWW-ow-Gug" firstAttribute="top" secondItem="GMA-tu-a0Y" secondAttribute="topMargin" constant="-2" id="T5Y-ze-hIl"/>
-                                                <constraint firstItem="h4E-zh-Mqf" firstAttribute="leading" secondItem="GMA-tu-a0Y" secondAttribute="leadingMargin" constant="17" id="tH5-6y-yxf"/>
-                                                <constraint firstItem="bWW-ow-Gug" firstAttribute="centerY" secondItem="GMA-tu-a0Y" secondAttribute="centerY" id="wrz-hH-Vp7"/>
-                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="directionName" destination="bWW-ow-Gug" id="X0b-5C-xEP"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="urJ-Bu-pOY" id="nYB-Si-9qa"/>
+                                    <outlet property="delegate" destination="urJ-Bu-pOY" id="XwM-nE-YIJ"/>
+                                </connections>
                             </tableView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="Artboard 12.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="KjH-di-L3A">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="225"/>
@@ -380,7 +381,6 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="directionsRecipeName" destination="2hk-br-t5j" id="KCL-QD-kre"/>
                         <outlet property="directionsTableView" destination="LFN-vg-Q7F" id="z1S-X5-kk5"/>
                     </connections>
                 </viewController>
@@ -553,8 +553,8 @@
         <image name="time cards.png" width="19" height="19"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="WEQ-TF-Y2N"/>
         <segue reference="aMX-xR-wS6"/>
-        <segue reference="EQf-Pl-dm9"/>
+        <segue reference="Te9-lL-fAJ"/>
+        <segue reference="dKY-Bj-ifs"/>
     </inferredMetricsTieBreakers>
 </document>
