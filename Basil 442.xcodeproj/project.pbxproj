@@ -32,6 +32,7 @@
 		630C48111DF097490067A985 /* Asset 34.png in Resources */ = {isa = PBXBuildFile; fileRef = 630C480B1DF097490067A985 /* Asset 34.png */; };
 		63259B2A1DF3979B00929D5F /* hometitle.png in Resources */ = {isa = PBXBuildFile; fileRef = 63259B291DF3979B00929D5F /* hometitle.png */; };
 		EA4109571DF0D47E00E2C825 /* Recipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4109561DF0D47E00E2C825 /* Recipes.swift */; };
+		63259B301DF3CF2300929D5F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63259B2F1DF3CF2300929D5F /* Images.xcassets */; };
 		EA494FD31DDD75A000712D6A /* RecipeCellsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA494FD21DDD75A000712D6A /* RecipeCellsTableViewController.swift */; };
 		EA494FD51DDD7F9C00712D6A /* recipeRead.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA494FD41DDD7F9C00712D6A /* recipeRead.swift */; };
 		EA494FD81DDD82C600712D6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA494FD61DDD82C600712D6A /* Main.storyboard */; };
@@ -100,6 +101,7 @@
 		630C480B1DF097490067A985 /* Asset 34.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Asset 34.png"; sourceTree = "<group>"; };
 		63259B291DF3979B00929D5F /* hometitle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hometitle.png; sourceTree = "<group>"; };
 		EA4109561DF0D47E00E2C825 /* Recipes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipes.swift; sourceTree = "<group>"; };
+		63259B2F1DF3CF2300929D5F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EA494FD21DDD75A000712D6A /* RecipeCellsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeCellsTableViewController.swift; sourceTree = "<group>"; };
 		EA494FD41DDD7F9C00712D6A /* recipeRead.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = recipeRead.swift; sourceTree = "<group>"; };
 		EA494FD71DDD82C600712D6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 				EA494FD61DDD82C600712D6A /* Main.storyboard */,
 				EA341F131DEE07880053E833 /* Models */,
 				49911E7C1DDA2C16004EE876 /* Assets.xcassets */,
+				63259B2F1DF3CF2300929D5F /* Images.xcassets */,
 				49911E7E1DDA2C16004EE876 /* LaunchScreen.storyboard */,
 				49911E811DDA2C16004EE876 /* Info.plist */,
 			);
@@ -362,6 +365,8 @@
 				EA6149A21DF15186004880D9 /* Asset 35.png in Resources */,
 				49B03CEE1DE36814004440A9 /* ingredients.png in Resources */,
 				EA6149A01DF13C72004880D9 /* TableViewCell.xib in Resources */,
+				63259B301DF3CF2300929D5F /* Images.xcassets in Resources */,
+				63259B241DF3949600929D5F /* arrow.png in Resources */,
 				49B03CF01DE36814004440A9 /* search logo.png in Resources */,
 				49B03CE91DE36814004440A9 /* appicon.png in Resources */,
 				63259B2A1DF3979B00929D5F /* hometitle.png in Resources */,
