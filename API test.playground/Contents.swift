@@ -67,6 +67,10 @@ do {
     details["servings"] = jsonDet["servings"]
     
     print(details)
+    var time: Int = 0
+    time = details["time"] as! Int
+    var strTime = String(time)
+    print(time)
 }
 
 // test getIngredients method
