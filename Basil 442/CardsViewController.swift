@@ -8,14 +8,20 @@
 
 import UIKit
 
-class CardsViewController: UIViewController {
+class CardsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    let recipeInstance = Recipes()
+    
+    var allRecipes: Dictionary<Int, AnyObject> = [:]
+    var prepTime: Int = 0
+    
+    @IBOutlet weak var cardTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
+        allRecipes = recipeInstance.searchRecipes("burger")
+        cardTableView.registerNib(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "recipeCell")
     }
-    @IBOutlet weak var cardTableView: UITableView!
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -25,29 +31,45 @@ class CardsViewController: UIViewController {
     
     // MARK: - Table view data source
     
-//    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-//        // #warning Incomplete implementation, return the number of sections
-//        return 1
-//        
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
+        
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return allRecipes.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("recipeCell", forIndexPath: indexPath) as! TableViewCell
+        
+        // Configure cell
+        cell.cellRecipeName?.text = allRecipes[indexPath.row]!["title"] as? String
+        prepTime = allRecipes[indexPath.row]!["readyInMinutes"] as! Int
+        cell.prepTime?.text = String(prepTime)
+        return cell
+    }
+    
+    // MARK: - UITableViewDelegate Methods
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        let row = indexPath.row
+        print(allRecipes[row])
+    }
+//    // MARK: - Navigation
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        if let detailVC = segue.destinationViewController as? DetailViewController,
+//            cell = sender as? UITableViewCell,
+//            indexPath = cardTableView.indexPathForCell(cell) {
+//            detailVC.viewModel = viewModel.detailViewModelForRowAtIndexPath(indexPath)
+//        }
+//
 //    }
-//    
-//    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        // #warning Incomplete implementation, return the number of rows
-//        return steps.count
-//    }
-//    
-//    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCellWithIdentifier("cellIdentifier", forIndexPath: indexPath)
-//        
-//        // Fetch step
-//        let step = steps[indexPath.row]
-//        
-//        // Configure cell
-//        cell.textLabel!.text = step
-//        return cell
-//    }
-
-
+    
+    
     /*
     // MARK: - Navigation
 
