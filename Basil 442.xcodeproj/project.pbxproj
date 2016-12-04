@@ -32,6 +32,7 @@
 		630C48111DF097490067A985 /* Asset 34.png in Resources */ = {isa = PBXBuildFile; fileRef = 630C480B1DF097490067A985 /* Asset 34.png */; };
 		63259B2A1DF3979B00929D5F /* hometitle.png in Resources */ = {isa = PBXBuildFile; fileRef = 63259B291DF3979B00929D5F /* hometitle.png */; };
 		63259B301DF3CF2300929D5F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63259B2F1DF3CF2300929D5F /* Images.xcassets */; };
+		63A191671DF4B90C008429EA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A191661DF4B90C008429EA /* HomeViewController.swift */; };
 		EA0C0C631DF4997200B0ABEF /* IngredientsTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C0C621DF4997200B0ABEF /* IngredientsTableCellView.swift */; };
 		EA0C0C651DF49AB700B0ABEF /* DirecitonsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C0C641DF49AB700B0ABEF /* DirecitonsTableViewCell.swift */; };
 		EA4109571DF0D47E00E2C825 /* Recipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4109561DF0D47E00E2C825 /* Recipes.swift */; };
@@ -40,7 +41,7 @@
 		EA494FD81DDD82C600712D6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA494FD61DDD82C600712D6A /* Main.storyboard */; };
 		EA6149941DF11D39004880D9 /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6149931DF11D39004880D9 /* CardsViewController.swift */; };
 		EA6149961DF11ECA004880D9 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6149951DF11ECA004880D9 /* DetailViewController.swift */; };
-		EA6149981DF11EE2004880D9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6149971DF11EE2004880D9 /* HomeViewController.swift */; };
+		EA6149981DF11EE2004880D9 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6149971DF11EE2004880D9 /* SearchViewController.swift */; };
 		EA61499A1DF11F04004880D9 /* IngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6149991DF11F04004880D9 /* IngredientsViewController.swift */; };
 		EA61499C1DF11F14004880D9 /* DirectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA61499B1DF11F14004880D9 /* DirectionsViewController.swift */; };
 		EA61499F1DF13C72004880D9 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA61499D1DF13C72004880D9 /* TableViewCell.swift */; };
@@ -103,6 +104,7 @@
 		630C480B1DF097490067A985 /* Asset 34.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Asset 34.png"; sourceTree = "<group>"; };
 		63259B291DF3979B00929D5F /* hometitle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hometitle.png; sourceTree = "<group>"; };
 		63259B2F1DF3CF2300929D5F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		63A191661DF4B90C008429EA /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = ../HomeViewController.swift; sourceTree = "<group>"; };
 		EA0C0C621DF4997200B0ABEF /* IngredientsTableCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientsTableCellView.swift; sourceTree = "<group>"; };
 		EA0C0C641DF49AB700B0ABEF /* DirecitonsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirecitonsTableViewCell.swift; sourceTree = "<group>"; };
 		EA4109561DF0D47E00E2C825 /* Recipes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipes.swift; sourceTree = "<group>"; };
@@ -111,7 +113,7 @@
 		EA494FD71DDD82C600712D6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EA6149931DF11D39004880D9 /* CardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
 		EA6149951DF11ECA004880D9 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		EA6149971DF11EE2004880D9 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		EA6149971DF11EE2004880D9 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		EA6149991DF11F04004880D9 /* IngredientsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientsViewController.swift; sourceTree = "<group>"; };
 		EA61499B1DF11F14004880D9 /* DirectionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionsViewController.swift; sourceTree = "<group>"; };
 		EA61499D1DF13C72004880D9 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
@@ -246,13 +248,14 @@
 		EA341F141DEE07A60053E833 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				63A191661DF4B90C008429EA /* HomeViewController.swift */,
 				EADE93871DEB756700BFF5D6 /* StepsViewController.swift */,
 				EA494FD21DDD75A000712D6A /* RecipeCellsTableViewController.swift */,
 				EAF682E31DF3C43800BFA3CD /* RecipeViewModel.swift */,
 				EA6149931DF11D39004880D9 /* CardsViewController.swift */,
 				EAF682E61DF3C78900BFA3CD /* DetailViewModel.swift */,
 				EA6149951DF11ECA004880D9 /* DetailViewController.swift */,
-				EA6149971DF11EE2004880D9 /* HomeViewController.swift */,
+				EA6149971DF11EE2004880D9 /* SearchViewController.swift */,
 				EA6149991DF11F04004880D9 /* IngredientsViewController.swift */,
 				EA0C0C621DF4997200B0ABEF /* IngredientsTableCellView.swift */,
 				EA61499B1DF11F14004880D9 /* DirectionsViewController.swift */,
@@ -423,12 +426,13 @@
 				EA494FD31DDD75A000712D6A /* RecipeCellsTableViewController.swift in Sources */,
 				EA0C0C651DF49AB700B0ABEF /* DirecitonsTableViewCell.swift in Sources */,
 				EA61499C1DF11F14004880D9 /* DirectionsViewController.swift in Sources */,
+				63A191671DF4B90C008429EA /* HomeViewController.swift in Sources */,
 				EA4109571DF0D47E00E2C825 /* Recipes.swift in Sources */,
 				EADE938C1DEB7AD900BFF5D6 /* recipeSteps.swift in Sources */,
 				EA61499A1DF11F04004880D9 /* IngredientsViewController.swift in Sources */,
 				EAF682E21DF3C13200BFA3CD /* Recipe.swift in Sources */,
 				EA0C0C631DF4997200B0ABEF /* IngredientsTableCellView.swift in Sources */,
-				EA6149981DF11EE2004880D9 /* HomeViewController.swift in Sources */,
+				EA6149981DF11EE2004880D9 /* SearchViewController.swift in Sources */,
 				49911E761DDA2C16004EE876 /* AppDelegate.swift in Sources */,
 				EAF682E41DF3C43800BFA3CD /* RecipeViewModel.swift in Sources */,
 				EA61499F1DF13C72004880D9 /* TableViewCell.swift in Sources */,
