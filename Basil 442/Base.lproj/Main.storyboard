@@ -6,31 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
-        <scene sceneID="wAo-cq-Reg">
-            <objects>
-                <navigationController navigationBarHidden="YES" id="4zV-rj-vDA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Tjg-Ji-i04"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VQe-EM-Hdd">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="NM8-4e-KLi">
-                        <rect key="frame" x="0.0" y="556" width="600" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </toolbar>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="SA1-5u-mKD"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="w35-qh-8WQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="284" y="298"/>
-        </scene>
-        <!--HomeView-->
+        <!--SearchView-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="HomeView" modalTransitionStyle="flipHorizontal" id="BYZ-38-t0r" customClass="HomeViewController" customModule="Basil_442" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="HomeView" modalTransitionStyle="flipHorizontal" id="BYZ-38-t0r" userLabel="SearchView" customClass="SearchViewController" customModule="Basil_442" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="f7l-Oj-z3d"/>
                         <viewControllerLayoutGuide type="bottom" id="lMB-H3-fqD"/>
@@ -53,7 +32,7 @@
                                 <color key="backgroundColor" red="0.88055600999999994" green="0.88055600999999994" blue="0.88055600999999994" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Demo - to Steps"/>
                                 <connections>
-                                    <segue destination="J4H-PJ-7wK" kind="show" id="WEQ-TF-Y2N"/>
+                                    <segue destination="J4H-PJ-7wK" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="WEQ-TF-Y2N"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A0V-BW-i64">
@@ -71,7 +50,6 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Search" image="search" id="hYr-A7-ESo"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="find a recipe" id="gBk-p2-KnQ"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
@@ -81,7 +59,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="284.5" y="1404.5"/>
+            <point key="canvasLocation" x="960.5" y="1404.5"/>
         </scene>
         <!--StepsView-->
         <scene sceneID="NJr-hE-PrL">
@@ -102,12 +80,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KFi-kg-nA5">
-                                <rect key="frame" x="278" y="486" width="40" height="74"/>
-                                <state key="normal" title="Next"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Qd-LO-mjO">
-                                <rect key="frame" x="52" y="508" width="50" height="30"/>
+                                <rect key="frame" x="163" y="84" width="50" height="30"/>
                                 <state key="normal" title="Back"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Wr-c2-fl7">
@@ -118,7 +92,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Pr-5g-3jG">
-                                <rect key="frame" x="155" y="508" width="65" height="30"/>
+                                <rect key="frame" x="297" y="300" width="65" height="30"/>
                                 <state key="normal" title="Repeat"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Previous Step" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Tz-2U-EUi">
@@ -138,6 +112,10 @@
                                 <color key="textColor" red="0.40563645287958117" green="0.40563645287958117" blue="0.40563645287958117" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KFi-kg-nA5">
+                                <rect key="frame" x="168" y="508" width="40" height="26"/>
+                                <state key="normal" title="Next"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -153,7 +131,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bb7-2e-aWK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1382.5" y="2410.5"/>
+            <point key="canvasLocation" x="1412.5" y="2410.5"/>
         </scene>
         <!--DetailView-->
         <scene sceneID="cka-O3-dSk">
@@ -187,6 +165,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="8aU-Cd-w56"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -197,7 +176,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i3z-rD-FcG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1500.5" y="1404.5"/>
+            <point key="canvasLocation" x="2312.5" y="1404.5"/>
         </scene>
         <!--IngredientsView-->
         <scene sceneID="X8Z-jP-I3v">
@@ -269,7 +248,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GrF-ce-pQm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2128.5" y="1404.5"/>
+            <point key="canvasLocation" x="2940.5" y="1404.5"/>
         </scene>
         <!--CardsView-->
         <scene sceneID="oTT-6O-xww">
@@ -308,7 +287,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Tl-yw-AFR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="932.5" y="1404.5"/>
+            <point key="canvasLocation" x="1744.5" y="1404.5"/>
         </scene>
         <!--DirectionsView-->
         <scene sceneID="jgI-IG-j7j">
@@ -367,7 +346,7 @@
                                 <rect key="frame" x="163" y="196" width="61" height="22"/>
                                 <state key="normal" backgroundImage="start btn.png"/>
                                 <connections>
-                                    <segue destination="J4H-PJ-7wK" kind="show" identifier="toStepsSegue" id="dKY-Bj-ifs"/>
+                                    <segue destination="J4H-PJ-7wK" kind="presentation" identifier="toStepsSegue" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="dKY-Bj-ifs"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F2s-zq-B70">
@@ -386,7 +365,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="saW-tg-rkC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2766.5" y="1404.5"/>
+            <point key="canvasLocation" x="3578.5" y="1404.5"/>
         </scene>
         <!--CompletionView-->
         <scene sceneID="mR1-SN-a9o">
@@ -403,6 +382,12 @@
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="bon appetit.png" translatesAutoresizingMaskIntoConstraints="NO" id="NES-Lj-r87">
                                 <rect key="frame" x="65" y="236" width="244" height="195"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0r5-wo-Y86">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <connections>
+                                    <segue destination="yfp-cw-o6d" kind="showDetail" action="showViewController:sender:" id="EjW-bO-s8Y"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -412,10 +397,10 @@
             </objects>
             <point key="canvasLocation" x="2094.5" y="2410.5"/>
         </scene>
-        <!--HomeView(2)-->
+        <!--HomeView-->
         <scene sceneID="gNW-a0-fvi">
             <objects>
-                <viewController title="HomeView(2)" id="528-Xh-akh" customClass="HomeViewController" customModule="Basil_442" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="HomeView" id="528-Xh-akh" userLabel="HomeView" customClass="HomeViewController" customModule="Basil_442" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kaL-s4-deF"/>
                         <viewControllerLayoutGuide type="bottom" id="631-Qr-7kt"/>
@@ -496,7 +481,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LZX-Oq-dp8">
                                 <rect key="frame" x="20" y="257" width="336" height="190"/>
                                 <connections>
-                                    <segue destination="Gb3-sH-0Ya" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="aMX-xR-wS6"/>
+                                    <segue destination="Gb3-sH-0Ya" kind="show" id="aMX-xR-wS6"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -509,7 +494,6 @@
                             <constraint firstItem="qYo-T2-tdo" firstAttribute="top" secondItem="kKd-Oq-G4O" secondAttribute="bottom" constant="14" id="gGa-bJ-nTn"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="home" id="o59-N6-UXd"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="find a recipe" id="FUU-mY-1b4"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
@@ -519,7 +503,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7je-ia-vDe" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1500.5" y="331.5"/>
+            <point key="canvasLocation" x="2312.5" y="331.5"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="VMQ-O5-eXC">
@@ -531,13 +515,51 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="528-Xh-akh" kind="relationship" relationship="viewControllers" id="NYX-ao-ZKY"/>
-                        <segue destination="4zV-rj-vDA" kind="relationship" relationship="viewControllers" id="ocr-HI-j5I"/>
+                        <segue destination="VI0-Kl-LMq" kind="relationship" relationship="viewControllers" id="NYX-ao-ZKY"/>
+                        <segue destination="Fa5-za-uxO" kind="relationship" relationship="viewControllers" id="nRr-rV-mMy"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bxb-9g-bH5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="901" y="-504"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="c9d-xL-SLV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Fa5-za-uxO" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Search" image="search" id="hYr-A7-ESo"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="m4r-i2-0R7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="IAS-MM-OVM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VAc-lC-UW6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="416" y="340"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="GgS-uH-rQt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="VI0-Kl-LMq" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="home" id="o59-N6-UXd"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pjU-n6-jsn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="528-Xh-akh" kind="relationship" relationship="rootViewController" id="AON-N6-ntt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kse-gi-JPM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1500" y="331"/>
         </scene>
     </scenes>
     <resources>
@@ -553,8 +575,8 @@
         <image name="time cards.png" width="19" height="19"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="aMX-xR-wS6"/>
-        <segue reference="Te9-lL-fAJ"/>
         <segue reference="dKY-Bj-ifs"/>
+        <segue reference="EQf-Pl-dm9"/>
+        <segue reference="Z5f-9u-riV"/>
     </inferredMetricsTieBreakers>
 </document>
