@@ -8,23 +8,49 @@
 
 import UIKit
 
-class IngredientsViewController: UIViewController {
+class IngredientsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    var id:String = "831906"
+    var allIngredients:Array<String> = []
+    let ingRecipe = Recipes()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        // getIngredients returns dictionary with title and ingredients, ingredients is an array
+        let ingredientInfo:Dictionary<String, AnyObject> = ingRecipe.getIngredients(id) as! Dictionary<String, AnyObject>
+        allIngredients = (ingredientInfo["ingredients"] as! Array<String>)
+        
         // Do any additional setup after loading the view.
     }
-    @IBOutlet weak var ingredientsRecipeName: UILabel!
-    
     @IBOutlet weak var ingredientsTableView: UITableView!
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: - Ingredients Table view data source
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
+        
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return allIngredients.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("ingredientCell", forIndexPath: indexPath) as! IngredientsTableViewCell
+        
+        // Configure cell
+        cell.ingredientName.text = allIngredients[indexPath.row]
+        return cell
+    }
+
 
     /*
     // MARK: - Navigation
