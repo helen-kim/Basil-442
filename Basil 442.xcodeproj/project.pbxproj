@@ -33,6 +33,8 @@
 		63259B2A1DF3979B00929D5F /* hometitle.png in Resources */ = {isa = PBXBuildFile; fileRef = 63259B291DF3979B00929D5F /* hometitle.png */; };
 		63259B301DF3CF2300929D5F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63259B2F1DF3CF2300929D5F /* Images.xcassets */; };
 		63A191671DF4B90C008429EA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A191661DF4B90C008429EA /* HomeViewController.swift */; };
+		63A191691DF4C89A008429EA /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 63A191681DF4C89A008429EA /* arrow.png */; };
+		63A1916B1DF4CDFB008429EA /* arrow up.png in Resources */ = {isa = PBXBuildFile; fileRef = 63A1916A1DF4CDFB008429EA /* arrow up.png */; };
 		EA0C0C631DF4997200B0ABEF /* IngredientsTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C0C621DF4997200B0ABEF /* IngredientsTableCellView.swift */; };
 		EA0C0C651DF49AB700B0ABEF /* DirecitonsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C0C641DF49AB700B0ABEF /* DirecitonsTableViewCell.swift */; };
 		EA4109571DF0D47E00E2C825 /* Recipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4109561DF0D47E00E2C825 /* Recipes.swift */; };
@@ -105,6 +107,8 @@
 		63259B291DF3979B00929D5F /* hometitle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hometitle.png; sourceTree = "<group>"; };
 		63259B2F1DF3CF2300929D5F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		63A191661DF4B90C008429EA /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = ../HomeViewController.swift; sourceTree = "<group>"; };
+		63A191681DF4C89A008429EA /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
+		63A1916A1DF4CDFB008429EA /* arrow up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow up.png"; sourceTree = "<group>"; };
 		EA0C0C621DF4997200B0ABEF /* IngredientsTableCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientsTableCellView.swift; sourceTree = "<group>"; };
 		EA0C0C641DF49AB700B0ABEF /* DirecitonsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirecitonsTableViewCell.swift; sourceTree = "<group>"; };
 		EA4109561DF0D47E00E2C825 /* Recipes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipes.swift; sourceTree = "<group>"; };
@@ -209,6 +213,8 @@
 		49B03CDC1DE36814004440A9 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				63A1916A1DF4CDFB008429EA /* arrow up.png */,
+				63A191681DF4C89A008429EA /* arrow.png */,
 				63259B291DF3979B00929D5F /* hometitle.png */,
 				630C48061DF097490067A985 /* Artboard 11.jpg */,
 				630C48071DF097490067A985 /* Artboard 12.jpg */,
@@ -390,9 +396,11 @@
 				EAF682E01DF3AEDA00BFA3CD /* appicon.png in Resources */,
 				49B03CEA1DE36814004440A9 /* bon appetit.png in Resources */,
 				49911E801DDA2C16004EE876 /* LaunchScreen.storyboard in Resources */,
+				63A1916B1DF4CDFB008429EA /* arrow up.png in Resources */,
 				49B03CF41DE36814004440A9 /* time cards.png in Resources */,
 				630C48111DF097490067A985 /* Asset 34.png in Resources */,
 				49B03CF31DE36814004440A9 /* time.png in Resources */,
+				63A191691DF4C89A008429EA /* arrow.png in Resources */,
 				630C480D1DF097490067A985 /* Artboard 12.jpg in Resources */,
 				630C48101DF097490067A985 /* Asset 33.png in Resources */,
 				49911E7D1DDA2C16004EE876 /* Assets.xcassets in Resources */,
@@ -585,6 +593,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "dank-o.Basil-442";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -599,6 +608,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "dank-o.Basil-442";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
