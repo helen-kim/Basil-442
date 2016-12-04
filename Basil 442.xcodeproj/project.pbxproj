@@ -30,6 +30,13 @@
 		630C480F1DF097490067A985 /* Asset 32.png in Resources */ = {isa = PBXBuildFile; fileRef = 630C48091DF097490067A985 /* Asset 32.png */; };
 		630C48101DF097490067A985 /* Asset 33.png in Resources */ = {isa = PBXBuildFile; fileRef = 630C480A1DF097490067A985 /* Asset 33.png */; };
 		630C48111DF097490067A985 /* Asset 34.png in Resources */ = {isa = PBXBuildFile; fileRef = 630C480B1DF097490067A985 /* Asset 34.png */; };
+		63259B231DF3949600929D5F /* appicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 63259B1D1DF3949600929D5F /* appicon.png */; };
+		63259B241DF3949600929D5F /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 63259B1E1DF3949600929D5F /* arrow.png */; };
+		63259B251DF3949600929D5F /* directions.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 63259B1F1DF3949600929D5F /* directions.jpg */; };
+		63259B261DF3949600929D5F /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 63259B201DF3949600929D5F /* home.png */; };
+		63259B271DF3949600929D5F /* navsearch.png in Resources */ = {isa = PBXBuildFile; fileRef = 63259B211DF3949600929D5F /* navsearch.png */; };
+		63259B281DF3949600929D5F /* searchbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 63259B221DF3949600929D5F /* searchbar.png */; };
+		63259B2A1DF3979B00929D5F /* hometitle.png in Resources */ = {isa = PBXBuildFile; fileRef = 63259B291DF3979B00929D5F /* hometitle.png */; };
 		EA4109571DF0D47E00E2C825 /* recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4109561DF0D47E00E2C825 /* recipe.swift */; };
 		EA494FD31DDD75A000712D6A /* RecipeCellsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA494FD21DDD75A000712D6A /* RecipeCellsTableViewController.swift */; };
 		EA494FD51DDD7F9C00712D6A /* recipeRead.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA494FD41DDD7F9C00712D6A /* recipeRead.swift */; };
@@ -93,6 +100,13 @@
 		630C48091DF097490067A985 /* Asset 32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Asset 32.png"; sourceTree = "<group>"; };
 		630C480A1DF097490067A985 /* Asset 33.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Asset 33.png"; sourceTree = "<group>"; };
 		630C480B1DF097490067A985 /* Asset 34.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Asset 34.png"; sourceTree = "<group>"; };
+		63259B1D1DF3949600929D5F /* appicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = appicon.png; path = ../../../../../Volumes/HELENKIM/appicon.png; sourceTree = "<group>"; };
+		63259B1E1DF3949600929D5F /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = arrow.png; path = ../../../../../Volumes/HELENKIM/arrow.png; sourceTree = "<group>"; };
+		63259B1F1DF3949600929D5F /* directions.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = directions.jpg; path = ../../../../../Volumes/HELENKIM/directions.jpg; sourceTree = "<group>"; };
+		63259B201DF3949600929D5F /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home.png; path = ../../../../../Volumes/HELENKIM/home.png; sourceTree = "<group>"; };
+		63259B211DF3949600929D5F /* navsearch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = navsearch.png; path = ../../../../../Volumes/HELENKIM/navsearch.png; sourceTree = "<group>"; };
+		63259B221DF3949600929D5F /* searchbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = searchbar.png; path = ../../../../../Volumes/HELENKIM/searchbar.png; sourceTree = "<group>"; };
+		63259B291DF3979B00929D5F /* hometitle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hometitle.png; sourceTree = "<group>"; };
 		EA4109561DF0D47E00E2C825 /* recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = recipe.swift; sourceTree = "<group>"; };
 		EA494FD21DDD75A000712D6A /* RecipeCellsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeCellsTableViewController.swift; sourceTree = "<group>"; };
 		EA494FD41DDD7F9C00712D6A /* recipeRead.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = recipeRead.swift; sourceTree = "<group>"; };
@@ -190,6 +204,13 @@
 		49B03CDC1DE36814004440A9 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				63259B291DF3979B00929D5F /* hometitle.png */,
+				63259B1D1DF3949600929D5F /* appicon.png */,
+				63259B1E1DF3949600929D5F /* arrow.png */,
+				63259B1F1DF3949600929D5F /* directions.jpg */,
+				63259B201DF3949600929D5F /* home.png */,
+				63259B211DF3949600929D5F /* navsearch.png */,
+				63259B221DF3949600929D5F /* searchbar.png */,
 				630C48061DF097490067A985 /* Artboard 11.jpg */,
 				630C48071DF097490067A985 /* Artboard 12.jpg */,
 				630C48081DF097490067A985 /* Asset 31.png */,
@@ -345,10 +366,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA6149A21DF15186004880D9 /* Asset 35.png in Resources */,
+				63259B281DF3949600929D5F /* searchbar.png in Resources */,
 				49B03CEE1DE36814004440A9 /* ingredients.png in Resources */,
+				63259B261DF3949600929D5F /* home.png in Resources */,
 				EA6149A01DF13C72004880D9 /* TableViewCell.xib in Resources */,
+				63259B241DF3949600929D5F /* arrow.png in Resources */,
 				49B03CF01DE36814004440A9 /* search logo.png in Resources */,
+				63259B251DF3949600929D5F /* directions.jpg in Resources */,
 				49B03CE91DE36814004440A9 /* appicon.png in Resources */,
+				63259B2A1DF3979B00929D5F /* hometitle.png in Resources */,
 				49B03CEB1DE36814004440A9 /* directions logo.png in Resources */,
 				49B03CEC1DE36814004440A9 /* directions.png in Resources */,
 				630C480F1DF097490067A985 /* Asset 32.png in Resources */,
@@ -360,6 +386,8 @@
 				49B03CF11DE36814004440A9 /* servings.png in Resources */,
 				49B03CEA1DE36814004440A9 /* bon appetit.png in Resources */,
 				49911E801DDA2C16004EE876 /* LaunchScreen.storyboard in Resources */,
+				63259B271DF3949600929D5F /* navsearch.png in Resources */,
+				63259B231DF3949600929D5F /* appicon.png in Resources */,
 				49B03CF41DE36814004440A9 /* time cards.png in Resources */,
 				630C48111DF097490067A985 /* Asset 34.png in Resources */,
 				49B03CF31DE36814004440A9 /* time.png in Resources */,
