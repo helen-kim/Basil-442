@@ -8,7 +8,9 @@
 
 import Foundation
 
-class recipe {
+class Recipes {
+    
+    var recipeList:[Int:AnyObject] = [:]
 
     // MARK: - API Requests
     func apiRequest(url: String) -> AnyObject {
@@ -38,21 +40,26 @@ class recipe {
     }
     
     // MARK: - Search recipes using keyword/words
-    func searchRecipes(query: String) -> AnyObject {
+    func searchRecipes(query: String) -> Dictionary<Int, AnyObject> {
         // API request, establish URL and call function
         let searchData = apiRequest("https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/search?number=30&query="+query)
         // Confirm API request successful
-        if searchData as! String == "404:ERROR: API request failed; make sure the URL is correct" {
+        if searchData is String {
             return [404: "ERROR: API request failed; make sure the URL is correct"]
         } else {
             // get results
             do {
                 let json = try NSJSONSerialization.JSONObjectWithData(searchData as! NSData, options: .AllowFragments) as! Dictionary<String, AnyObject>
-                return json["results"]!
+                var count:Int = 0
+                for item in json["results"] as! [Dictionary<String, AnyObject>] {
+                    recipeList[count] = item
+                    count = count + 1
+                }
             } catch {
                 return [404:"ERROR: JSON is not valid"]
             }
         }
+        return recipeList
     }
     
     // MARK: - Get summarized recipe detail dictionary

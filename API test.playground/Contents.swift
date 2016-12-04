@@ -31,11 +31,25 @@ do {
 if dataSearch == nil {
     print("ERROR: API request failed; make sure the URL is correct")
 }
-
+var recipeList:[Int:AnyObject] = [:]
 do {
     let jsonSearch = try NSJSONSerialization.JSONObjectWithData(dataSearch!, options: .AllowFragments) as! Dictionary<String, AnyObject>
     print(jsonSearch["results"]!)
+    let res = jsonSearch["results"] as! [Dictionary<String, AnyObject>]
+    var count:Int = 0
+    for item in res {
+        recipeList[count] = item
+        count = count + 1
+    }
 }
+recipeList[1]!["title"]
+recipeList[2]!["readyInMinutes"]
+if let receiver = recipeList[2] {
+    if let temp = receiver["readyInMinutes"] as? String {
+        print("Success")
+    }
+}
+let im:String = "https://spoonacular.com/recipeImages/"
 
 // test getRecipeDetails method
 let urlDet = NSURL(string: "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/\(id)/information?includeNutrition=false")
