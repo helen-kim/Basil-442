@@ -8,7 +8,7 @@
 
 import Foundation
 
-class recipe {
+class Recipes {
     
     var recipeList:[Int:AnyObject] = [:]
 

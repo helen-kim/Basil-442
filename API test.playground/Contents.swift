@@ -43,7 +43,12 @@ do {
     }
 }
 recipeList[1]!["title"]
-String(recipeList[2]!["readyInMinutes"])
+recipeList[2]!["readyInMinutes"]
+if let receiver = recipeList[2] {
+    if let temp = receiver["readyInMinutes"] as? String {
+        print("Success")
+    }
+}
 let im:String = "https://spoonacular.com/recipeImages/"
 
 // test getRecipeDetails method
