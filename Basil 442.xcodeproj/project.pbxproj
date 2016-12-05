@@ -50,6 +50,7 @@
 		EA61499F1DF13C72004880D9 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA61499D1DF13C72004880D9 /* TableViewCell.swift */; };
 		EA6149A01DF13C72004880D9 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA61499E1DF13C72004880D9 /* TableViewCell.xib */; };
 		EA6149A21DF15186004880D9 /* Asset 35.png in Resources */ = {isa = PBXBuildFile; fileRef = EA6149A11DF15186004880D9 /* Asset 35.png */; };
+		EAC160161DF61B2F006458CD /* DirectionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC160151DF61B2F006458CD /* DirectionsViewModel.swift */; };
 		EADE93881DEB756700BFF5D6 /* StepsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADE93871DEB756700BFF5D6 /* StepsViewController.swift */; };
 		EADE938C1DEB7AD900BFF5D6 /* recipeSteps.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADE938B1DEB7AD900BFF5D6 /* recipeSteps.swift */; };
 		EAF682E01DF3AEDA00BFA3CD /* appicon.png in Resources */ = {isa = PBXBuildFile; fileRef = EAF682DF1DF3AEDA00BFA3CD /* appicon.png */; };
@@ -125,6 +126,7 @@
 		EA61499D1DF13C72004880D9 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		EA61499E1DF13C72004880D9 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		EA6149A11DF15186004880D9 /* Asset 35.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Asset 35.png"; sourceTree = "<group>"; };
+		EAC160151DF61B2F006458CD /* DirectionsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionsViewModel.swift; sourceTree = "<group>"; };
 		EADE93871DEB756700BFF5D6 /* StepsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepsViewController.swift; sourceTree = "<group>"; };
 		EADE938B1DEB7AD900BFF5D6 /* recipeSteps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = recipeSteps.swift; sourceTree = "<group>"; };
 		EAF682DF1DF3AEDA00BFA3CD /* appicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appicon.png; sourceTree = "<group>"; };
@@ -268,6 +270,7 @@
 				EA0C0C681DF523C900B0ABEF /* IngredientsViewModel.swift */,
 				EA0C0C621DF4997200B0ABEF /* IngredientsTableCellView.swift */,
 				EA61499B1DF11F14004880D9 /* DirectionsViewController.swift */,
+				EAC160151DF61B2F006458CD /* DirectionsViewModel.swift */,
 				EA0C0C641DF49AB700B0ABEF /* DirectionsTableViewCell.swift */,
 				EA61499D1DF13C72004880D9 /* TableViewCell.swift */,
 				EA61499E1DF13C72004880D9 /* TableViewCell.xib */,
@@ -444,6 +447,7 @@
 				EAF682E21DF3C13200BFA3CD /* Recipe.swift in Sources */,
 				EA0C0C631DF4997200B0ABEF /* IngredientsTableCellView.swift in Sources */,
 				EA6149981DF11EE2004880D9 /* SearchViewController.swift in Sources */,
+				EAC160161DF61B2F006458CD /* DirectionsViewModel.swift in Sources */,
 				49911E761DDA2C16004EE876 /* AppDelegate.swift in Sources */,
 				EAF682E41DF3C43800BFA3CD /* RecipeViewModel.swift in Sources */,
 				EA61499F1DF13C72004880D9 /* TableViewCell.swift in Sources */,

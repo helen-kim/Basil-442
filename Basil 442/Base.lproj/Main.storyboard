@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="yfp-cw-o6d">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="yfp-cw-o6d">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -209,6 +209,8 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <outlet property="recipeImage" destination="NoC-eC-RVo" id="EBf-Q7-OCp"/>
+                        <outlet property="recipeServings" destination="XqT-VQ-3Ll" id="Z8b-hV-pig"/>
+                        <outlet property="recipeTime" destination="Pgv-Eo-Kgg" id="8AA-sb-mPX"/>
                         <outlet property="recipeTitle" destination="B0G-m9-x18" id="VOs-tH-YPD"/>
                     </connections>
                 </viewController>
@@ -629,6 +631,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="WEQ-TF-Y2N"/>
         <segue reference="aMX-xR-wS6"/>
-        <segue reference="Te9-lL-fAJ"/>
+        <segue reference="EQf-Pl-dm9"/>
     </inferredMetricsTieBreakers>
 </document>
