@@ -22,14 +22,16 @@ class CardsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         allRecipes = recipeInstance.searchRecipes("burger")
         cardTableView.registerNib(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "recipeCell")
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        if let selectedRow = cardTableView.indexPathForSelectedRow {
+            cardTableView.deselectRowAtIndexPath(selectedRow, animated: true)
+        }
     }
     
     
-    // MARK: - Table view data source
+    // MARK: - Table View
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -52,22 +54,50 @@ class CardsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return cell
     }
     
-    // MARK: - UITableViewDelegate Methods
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        
-        let row = indexPath.row
-        print(allRecipes[row])
+        performSegueWithIdentifier("toDetailSegue", sender: indexPath)
     }
-//    // MARK: - Navigation
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        if let detailVC = segue.destinationViewController as? DetailViewController,
-//            cell = sender as? UITableViewCell,
-//            indexPath = cardTableView.indexPathForCell(cell) {
-//            detailVC.viewModel = viewModel.detailViewModelForRowAtIndexPath(indexPath)
-//        }
-//
-//    }
+    
+    func detailViewModelForRowAtIndexPath(indexPath: NSIndexPath) -> DetailViewModel {
+        let selectedRecipe = getRelevantData(indexPath)
+        return DetailViewModel(recipe: selectedRecipe)
+    }
+    
+    func getRelevantData(indexPath: NSIndexPath) -> Recipe {
+        let selected = allRecipes[indexPath.row]
+        let idInt = selected!["id"] as! Int
+        let id = String(idInt)
+        let title = selected!["title"] as! String
+        let timeInt = selected!["readyInMinutes"] as! Int
+        let time = String(timeInt)
+        
+        // Get details 
+        let detailsInfo:Dictionary<String, AnyObject> = recipeInstance.getRecipeDetails(id) as! Dictionary<String, AnyObject>
+        let image = detailsInfo["imageURL"] as! String
+        let servingsInt = detailsInfo["servings"] as! Int
+        let servings = String(servingsInt)
+                
+        // Get ingredients
+        let ingredientInfo:Dictionary<String, AnyObject> = recipeInstance.getIngredients(id) as! Dictionary<String, AnyObject>
+        let ingredientsList:Array<String> = (ingredientInfo["ingredients"] as! Array<String>)
+        
+        // Get directions
+        let directionsList:Array<String> = recipeInstance.getDirections(id)
+        
+        // Create Recipe instance with current recipe
+        let selectedRecipe = Recipe(id:id, name:title, imageURL:image, time:time, servings:servings, ingredients:ingredientsList, directions:directionsList)
+        
+        return selectedRecipe
+    }
+    
+    // MARK: - Segues
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let detailVC = segue.destinationViewController as? DetailViewController,
+            indexPath = sender as? NSIndexPath {
+            detailVC.viewModel = detailViewModelForRowAtIndexPath(indexPath)
+        }
+    }
     
     
     /*

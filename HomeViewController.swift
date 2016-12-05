@@ -2,7 +2,7 @@
 //  HomeViewController.swift
 //  Basil 442
 //
-//  Created by Sophie Zhao on 12/1/16.
+//  Created by Other on 12/4/16.
 //  Copyright © 2016 team danko_. All rights reserved.
 //
 

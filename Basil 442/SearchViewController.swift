@@ -1,20 +1,17 @@
 //
-//  StepsViewController.swift
+//  HomeViewController.swift
 //  Basil 442
 //
-//  Created by Sophie Zhao on 11/27/16.
+//  Created by Sophie Zhao on 12/1/16.
 //  Copyright © 2016 team danko_. All rights reserved.
 //
 
 import UIKit
 
-class StepsViewController: UIViewController {
-    
-    let recipeInstance = Recipes()
+class SearchViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
 
         // Do any additional setup after loading the view.
     }
@@ -23,15 +20,6 @@ class StepsViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    @IBOutlet weak var prevStep: UILabel!
-    @IBOutlet weak var currStep: UILabel!
-    @IBOutlet weak var nextStep: UILabel!
-
-    
-    @IBOutlet weak var backButton: UIButton!
-    @IBOutlet weak var repeatButton: UIButton!
-    @IBOutlet weak var nextButton: UIButton!
     
 
     /*
