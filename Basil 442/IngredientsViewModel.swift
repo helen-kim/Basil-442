@@ -1,14 +1,14 @@
 //
-//  DetailViewModel.swift
+//  IngredientsViewModel.swift
 //  Basil 442
 //
-//  Created by Sophie Zhao on 12/3/16.
+//  Created by Sophie Zhao on 12/4/16.
 //  Copyright © 2016 team danko_. All rights reserved.
 //
 
 import Foundation
 
-class DetailViewModel {
+class IngredientsViewModel {
     let recipe: Recipe
     
     init(recipe: Recipe) {
@@ -42,5 +42,4 @@ class DetailViewModel {
     func directions() -> Array<String> {
         return recipe.directions
     }
-    
 }

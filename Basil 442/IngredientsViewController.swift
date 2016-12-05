@@ -10,12 +10,17 @@ import UIKit
 
 class IngredientsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    var id:String = "831906"
+    var ingViewModel:IngredientsViewModel?
+
+    var id:String = ""
     var allIngredients:Array<String> = []
     let ingRecipe = Recipes()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        id = ingViewModel!.id()
         
         // getIngredients returns dictionary with title and ingredients, ingredients is an array
         let ingredientInfo:Dictionary<String, AnyObject> = ingRecipe.getIngredients(id) as! Dictionary<String, AnyObject>
