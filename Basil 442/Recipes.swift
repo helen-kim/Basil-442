@@ -67,7 +67,7 @@ class Recipes {
         // API request, establish URL and call function
         let recipeData = apiRequest("https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/\(id)/information?includeNutrition=false")
         // Confirm API request successful
-        if recipeData as! String == "404:ERROR: API request failed; make sure the URL is correct" {
+        if recipeData is String {
             return [404: "ERROR: API request failed; make sure the URL is correct"]
         } else {
             // parse through JSON and gather necessary title, imageURL, time, and servings information

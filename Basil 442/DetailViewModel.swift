@@ -15,7 +15,7 @@ class DetailViewModel {
         self.recipe = recipe
     }
     
-    func id() -> Int {
+    func id() -> String {
         return recipe.id
     }
     
