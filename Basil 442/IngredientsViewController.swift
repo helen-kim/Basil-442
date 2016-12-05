@@ -48,6 +48,7 @@ class IngredientsViewController: UIViewController, UITableViewDelegate, UITableV
         
         // Configure cell
         cell.ingredientName.text = allIngredients[indexPath.row]
+        cell.selectionStyle = .None
         return cell
     }
 

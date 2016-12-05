@@ -7,7 +7,7 @@
 //
 
 struct Recipe {
-    let id: Int
+    let id: String
     let name: String
     let imageURL: String
     let time: String?
