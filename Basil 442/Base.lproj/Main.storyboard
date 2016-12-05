@@ -272,7 +272,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fp1-TH-WAe">
                                 <rect key="frame" x="509" y="243" width="148" height="65"/>
                                 <connections>
-                                    <segue destination="urJ-Bu-pOY" kind="show" identifier="toDirectionsSegue" id="bey-nV-YwE"/>
+                                    <segue destination="urJ-Bu-pOY" kind="show" identifier="toDirectionsSegue" animates="NO" id="bey-nV-YwE"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -390,7 +390,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F2s-zq-B70">
                                 <rect key="frame" x="111" y="235" width="145" height="74"/>
                                 <connections>
-                                    <segue destination="ep8-qB-i5s" kind="show" identifier="toIngredientsSegue" id="Te9-lL-fAJ"/>
+                                    <segue destination="ep8-qB-i5s" kind="show" identifier="toIngredientsSegue" animates="NO" id="Te9-lL-fAJ"/>
                                 </connections>
                             </button>
                         </subviews>

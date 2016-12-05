@@ -48,6 +48,7 @@ class DirectionsViewController: UIViewController, UITableViewDelegate, UITableVi
         
         // Configure cell
         cell.directionName.text = allDirections[indexPath.row]
+        cell.selectionStyle = .None
         return cell
     }
 
