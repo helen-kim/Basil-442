@@ -12,19 +12,15 @@ class IngredientsViewController: UIViewController, UITableViewDelegate, UITableV
 
     var ingViewModel:IngredientsViewModel?
 
-    var id:String = ""
     var allIngredients:Array<String> = []
-    let ingRecipe = Recipes()
 
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        id = ingViewModel!.id()
-        
         // getIngredients returns dictionary with title and ingredients, ingredients is an array
-        let ingredientInfo:Dictionary<String, AnyObject> = ingRecipe.getIngredients(id) as! Dictionary<String, AnyObject>
-        allIngredients = (ingredientInfo["ingredients"] as! Array<String>)
+        allIngredients = ingViewModel!.ingredients()
         
         // Do any additional setup after loading the view.
     }

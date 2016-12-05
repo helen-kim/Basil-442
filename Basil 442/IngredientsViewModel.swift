@@ -15,31 +15,12 @@ class IngredientsViewModel {
         self.recipe = recipe
     }
     
-    func id() -> String {
-        return recipe.id
-    }
-    
     func name() -> String {
         return recipe.name
-    }
-    
-    func imageURL() -> String {
-        return recipe.imageURL
-    }
-    
-    func time() -> String? {
-        return recipe.time
-    }
-    
-    func servings() -> String? {
-        return recipe.servings
     }
     
     func ingredients() -> Array<String> {
         return recipe.ingredients
     }
     
-    func directions() -> Array<String> {
-        return recipe.directions
-    }
 }
