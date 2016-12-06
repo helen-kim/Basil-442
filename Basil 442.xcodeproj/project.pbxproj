@@ -51,6 +51,7 @@
 		EA6149A01DF13C72004880D9 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA61499E1DF13C72004880D9 /* TableViewCell.xib */; };
 		EA6149A21DF15186004880D9 /* Asset 35.png in Resources */ = {isa = PBXBuildFile; fileRef = EA6149A11DF15186004880D9 /* Asset 35.png */; };
 		EAC160161DF61B2F006458CD /* DirectionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC160151DF61B2F006458CD /* DirectionsViewModel.swift */; };
+		EAC160181DF63687006458CD /* StepsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC160171DF63687006458CD /* StepsViewModel.swift */; };
 		EADE93881DEB756700BFF5D6 /* StepsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADE93871DEB756700BFF5D6 /* StepsViewController.swift */; };
 		EADE938C1DEB7AD900BFF5D6 /* recipeSteps.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADE938B1DEB7AD900BFF5D6 /* recipeSteps.swift */; };
 		EAF682E01DF3AEDA00BFA3CD /* appicon.png in Resources */ = {isa = PBXBuildFile; fileRef = EAF682DF1DF3AEDA00BFA3CD /* appicon.png */; };
@@ -127,6 +128,7 @@
 		EA61499E1DF13C72004880D9 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		EA6149A11DF15186004880D9 /* Asset 35.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Asset 35.png"; sourceTree = "<group>"; };
 		EAC160151DF61B2F006458CD /* DirectionsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionsViewModel.swift; sourceTree = "<group>"; };
+		EAC160171DF63687006458CD /* StepsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepsViewModel.swift; sourceTree = "<group>"; };
 		EADE93871DEB756700BFF5D6 /* StepsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepsViewController.swift; sourceTree = "<group>"; };
 		EADE938B1DEB7AD900BFF5D6 /* recipeSteps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = recipeSteps.swift; sourceTree = "<group>"; };
 		EAF682DF1DF3AEDA00BFA3CD /* appicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appicon.png; sourceTree = "<group>"; };
@@ -260,6 +262,7 @@
 			children = (
 				63A191661DF4B90C008429EA /* HomeViewController.swift */,
 				EADE93871DEB756700BFF5D6 /* StepsViewController.swift */,
+				EAC160171DF63687006458CD /* StepsViewModel.swift */,
 				EA494FD21DDD75A000712D6A /* RecipeCellsTableViewController.swift */,
 				EAF682E31DF3C43800BFA3CD /* RecipeViewModel.swift */,
 				EA6149931DF11D39004880D9 /* CardsViewController.swift */,
@@ -438,6 +441,7 @@
 				EA6149961DF11ECA004880D9 /* DetailViewController.swift in Sources */,
 				EA6149941DF11D39004880D9 /* CardsViewController.swift in Sources */,
 				EA494FD31DDD75A000712D6A /* RecipeCellsTableViewController.swift in Sources */,
+				EAC160181DF63687006458CD /* StepsViewModel.swift in Sources */,
 				EA0C0C651DF49AB700B0ABEF /* DirectionsTableViewCell.swift in Sources */,
 				EA61499C1DF11F14004880D9 /* DirectionsViewController.swift in Sources */,
 				63A191671DF4B90C008429EA /* HomeViewController.swift in Sources */,

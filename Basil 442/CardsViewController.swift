@@ -30,7 +30,6 @@ class CardsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
     }
     
-    
     // MARK: - Table View
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
