@@ -14,14 +14,15 @@ class DirectionsViewController: UIViewController, UITableViewDelegate, UITableVi
     var dirViewModel:DirectionsViewModel?
     
     var allDirections:Array<String> = []
-
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         allDirections = dirViewModel!.directions()
-
+        
         // Do any additional setup after loading the view.
     }
+    
     @IBOutlet weak var directionsTableView: UITableView!
     
     override func didReceiveMemoryWarning() {
@@ -51,11 +52,11 @@ class DirectionsViewController: UIViewController, UITableViewDelegate, UITableVi
         cell.selectionStyle = .None
         return cell
     }
-
-
+    
+    
     
     // MARK: - Segues
-     
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "toStepsSegue" {
             if let destination = segue.destinationViewController as? StepsViewController {
@@ -68,7 +69,7 @@ class DirectionsViewController: UIViewController, UITableViewDelegate, UITableVi
             }
         }
     }
-
     
-
+    
+    
 }
