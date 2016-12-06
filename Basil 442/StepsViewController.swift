@@ -10,11 +10,13 @@ import UIKit
 
 class StepsViewController: UIViewController {
     
-    let recipeInstance = Recipes()
+    var stepViewModel:StepsViewModel?
 
+    var allDirections:Array<String> = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        allDirections = stepViewModel!.directions()
 
         // Do any additional setup after loading the view.
     }
@@ -33,7 +35,16 @@ class StepsViewController: UIViewController {
     @IBOutlet weak var repeatButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     
-
+    func updateSteps() {
+        
+    }
+    
+    func initializeSteps() {
+    
+    }
+    
+    
+    
     /*
     // MARK: - Navigation
 

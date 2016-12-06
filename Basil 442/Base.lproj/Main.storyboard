@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="yfp-cw-o6d">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="yfp-cw-o6d">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -90,17 +90,13 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Previous Step" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2hp-iv-yZW">
-                                <rect key="frame" x="130" y="606" width="508" height="122"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Next Step" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2hp-iv-yZW">
+                                <rect key="frame" x="130" y="606" width="508" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
                                 <color key="textColor" red="0.3345263416" green="0.3345263416" blue="0.3345263416" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KFi-kg-nA5">
-                                <rect key="frame" x="361" y="736" width="46" height="17"/>
-                                <state key="normal" backgroundImage="arrow.png"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Wr-c2-fl7">
                                 <rect key="frame" x="345" y="895" width="78" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -125,7 +121,8 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <outlet property="backButton" destination="1Qd-LO-mjO" id="c7A-HR-MQc"/>
-                        <outlet property="nextButton" destination="KFi-kg-nA5" id="C7c-6L-lnu"/>
+                        <outlet property="currStep" destination="bDm-S0-HMw" id="3CH-az-5YT"/>
+                        <outlet property="nextStep" destination="2hp-iv-yZW" id="cTz-SS-eOf"/>
                         <outlet property="prevStep" destination="1Tz-2U-EUi" id="kte-EW-QMm"/>
                     </connections>
                 </viewController>
@@ -402,7 +399,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F2s-zq-B70">
                                 <rect key="frame" x="102" y="224" width="145" height="74"/>
                                 <connections>
-                                    <segue destination="ep8-qB-i5s" kind="show" identifier="toIngredientsSegue" animates="NO" id="Te9-lL-fAJ"/>
+                                    <segue destination="ep8-qB-i5s" kind="show" identifier="returnIngredientsSegue" animates="NO" id="Te9-lL-fAJ"/>
                                 </connections>
                             </button>
                         </subviews>
