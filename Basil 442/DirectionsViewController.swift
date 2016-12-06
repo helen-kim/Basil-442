@@ -11,15 +11,14 @@ import UIKit
 class DirectionsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     // Initialize Recipes
-    var dirInfo = Recipes()
+    var dirViewModel:DirectionsViewModel?
     
-    var id:String = "831906"
     var allDirections:Array<String> = []
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        allDirections = dirInfo.getDirections(id)
+        allDirections = dirViewModel!.directions()
 
         // Do any additional setup after loading the view.
     }
@@ -40,6 +39,7 @@ class DirectionsViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
+        print(allDirections.count)
         return allDirections.count
     }
     

@@ -10,16 +10,17 @@ import UIKit
 
 class IngredientsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    var id:String = "831906"
+    var ingViewModel:IngredientsViewModel?
+
     var allIngredients:Array<String> = []
-    let ingRecipe = Recipes()
+
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // getIngredients returns dictionary with title and ingredients, ingredients is an array
-        let ingredientInfo:Dictionary<String, AnyObject> = ingRecipe.getIngredients(id) as! Dictionary<String, AnyObject>
-        allIngredients = (ingredientInfo["ingredients"] as! Array<String>)
+        allIngredients = ingViewModel!.ingredients()
         
         // Do any additional setup after loading the view.
     }
@@ -40,6 +41,7 @@ class IngredientsViewController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
+        
         return allIngredients.count
     }
     
@@ -51,7 +53,20 @@ class IngredientsViewController: UIViewController, UITableViewDelegate, UITableV
         cell.selectionStyle = .None
         return cell
     }
+    
+    // MARK: - Directions Segue
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "toDirectionsSegue" {
+            if let destination = segue.destinationViewController as? DirectionsViewController {
+                destination.dirViewModel = DirectionsViewModel(recipe: ingViewModel!.recipe)
+            }
+        }
+    }
 
+
+    
+    
 
     /*
     // MARK: - Navigation

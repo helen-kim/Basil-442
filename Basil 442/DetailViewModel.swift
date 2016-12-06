@@ -43,5 +43,4 @@ class DetailViewModel {
         return recipe.directions
     }
     
-    
 }

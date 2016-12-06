@@ -10,10 +10,11 @@ import UIKit
 
 class StepsViewController: UIViewController {
     
-    let recipeInstance = recipeSteps()
+    let recipeInstance = Recipes()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
         // Do any additional setup after loading the view.
     }

@@ -21,6 +21,9 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var recipeImage: UIImageView!
     @IBOutlet weak var recipeTitle: UILabel!
     
+    @IBOutlet weak var recipeTime: UILabel!
+    
+    @IBOutlet weak var recipeServings: UILabel!
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
             
@@ -28,4 +31,11 @@ class DetailViewController: UIViewController {
         
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "toIngredientsSegue" {
+            if let destination = segue.destinationViewController as? IngredientsViewController {
+                destination.ingViewModel = IngredientsViewModel(recipe: viewModel!.recipe)
+            }
+        }
+    }
 }
