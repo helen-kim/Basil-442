@@ -53,14 +53,22 @@ class DirectionsViewController: UIViewController, UITableViewDelegate, UITableVi
     }
 
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
+    // MARK: - Segues
+     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "toStepsSegue" {
+            if let destination = segue.destinationViewController as? StepsViewController {
+                destination.stepViewModel = StepsViewModel(recipe: dirViewModel!.recipe)
+            }
+        }
+        if segue.identifier == "returnIngredientsSegue" {
+            if let dest = segue.destinationViewController as? IngredientsViewController {
+                dest.ingViewModel = IngredientsViewModel(recipe:dirViewModel!.recipe)
+            }
+        }
     }
-    */
+
+    
 
 }
