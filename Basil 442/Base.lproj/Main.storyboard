@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="yfp-cw-o6d">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="yfp-cw-o6d">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -122,7 +122,6 @@
                     <connections>
                         <outlet property="backButton" destination="1Qd-LO-mjO" id="c7A-HR-MQc"/>
                         <outlet property="currStep" destination="bDm-S0-HMw" id="3CH-az-5YT"/>
-                        <outlet property="nextButton" destination="KFi-kg-nA5" id="C7c-6L-lnu"/>
                         <outlet property="nextStep" destination="2hp-iv-yZW" id="cTz-SS-eOf"/>
                         <outlet property="prevStep" destination="1Tz-2U-EUi" id="kte-EW-QMm"/>
                     </connections>
