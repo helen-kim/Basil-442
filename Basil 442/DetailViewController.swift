@@ -28,6 +28,8 @@ class DetailViewController: UIViewController {
         super.viewWillAppear(animated)
             
         recipeTitle.text = viewModel?.name()
+        recipeTime.text = viewModel?.time()
+        recipeServings.text = viewModel?.servings()
         
     }
     
