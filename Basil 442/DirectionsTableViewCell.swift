@@ -1,5 +1,5 @@
 //
-//  DirecitonsTableViewCell.swift
+//  DirectionsTableViewCell.swift
 //  Basil 442
 //
 //  Created by Sophie Zhao on 12/4/16.
