@@ -42,7 +42,8 @@ class Recipes {
     // MARK: - Search recipes using keyword/words
     func searchRecipes(query: String) -> Dictionary<Int, AnyObject> {
         // API request, establish URL and call function
-        let searchData = apiRequest("https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/search?number=30&query="+query)
+        let reformat = query.componentsSeparatedByString(" ").joinWithSeparator("+")
+        let searchData = apiRequest("https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/search?number=30&query="+reformat)
         // Confirm API request successful
         if searchData is String {
             return [404: "ERROR: API request failed; make sure the URL is correct"]
@@ -91,7 +92,7 @@ class Recipes {
         // API request, establish URL and call function
         let recipeData = apiRequest("https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/\(id)/information?includeNutrition=false")
         // Confirm API request successful
-        if let isString = recipeData as? String {
+        if recipeData is String {
             return [404: "ERROR: API request failed; make sure the URL is correct"]
         } else {
             // parse through JSON and gather necessary title and ingredients
@@ -104,9 +105,10 @@ class Recipes {
                     let ingredient: String = item["name"] as! String
                     ingredients.append(ingredient)
                 }
+                let uniqueIng = Array(Set(ingredients))
                 var details: Dictionary<String, AnyObject> = [:]
                 details["title"] = json["title"]
-                details["ingredients"] = ingredients
+                details["ingredients"] = uniqueIng
                 
                 return details
             } catch {
@@ -120,7 +122,7 @@ class Recipes {
         // API request, establish URL and call function
         let recipeData = apiRequest("https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/\(id)/analyzedInstructions?stepBreakdown=true")
         // Confirm API request successful
-        if let isString = recipeData as? String {
+        if recipeData is String {
             return ["404 ERROR: API request failed; make sure the URL is correct"]
         } else {
             // parse through JSON and gather necessary directions
