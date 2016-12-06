@@ -35,6 +35,10 @@
 		63A191671DF4B90C008429EA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A191661DF4B90C008429EA /* HomeViewController.swift */; };
 		63A191691DF4C89A008429EA /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 63A191681DF4C89A008429EA /* arrow.png */; };
 		63A1916B1DF4CDFB008429EA /* arrow up.png in Resources */ = {isa = PBXBuildFile; fileRef = 63A1916A1DF4CDFB008429EA /* arrow up.png */; };
+		63A191741DF657D9008429EA /* directionstab.png in Resources */ = {isa = PBXBuildFile; fileRef = 63A191701DF657D9008429EA /* directionstab.png */; };
+		63A191751DF657D9008429EA /* hometitle_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 63A191711DF657D9008429EA /* hometitle_1.png */; };
+		63A191761DF657D9008429EA /* ingredientstab.png in Resources */ = {isa = PBXBuildFile; fileRef = 63A191721DF657D9008429EA /* ingredientstab.png */; };
+		63A191771DF657D9008429EA /* whiteclock.png in Resources */ = {isa = PBXBuildFile; fileRef = 63A191731DF657D9008429EA /* whiteclock.png */; };
 		EA0C0C631DF4997200B0ABEF /* IngredientsTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C0C621DF4997200B0ABEF /* IngredientsTableCellView.swift */; };
 		EA0C0C651DF49AB700B0ABEF /* DirectionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C0C641DF49AB700B0ABEF /* DirectionsTableViewCell.swift */; };
 		EA0C0C691DF523C900B0ABEF /* IngredientsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C0C681DF523C900B0ABEF /* IngredientsViewModel.swift */; };
@@ -112,6 +116,10 @@
 		63A191661DF4B90C008429EA /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = ../HomeViewController.swift; sourceTree = "<group>"; };
 		63A191681DF4C89A008429EA /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
 		63A1916A1DF4CDFB008429EA /* arrow up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow up.png"; sourceTree = "<group>"; };
+		63A191701DF657D9008429EA /* directionstab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = directionstab.png; sourceTree = "<group>"; };
+		63A191711DF657D9008429EA /* hometitle_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hometitle_1.png; sourceTree = "<group>"; };
+		63A191721DF657D9008429EA /* ingredientstab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ingredientstab.png; sourceTree = "<group>"; };
+		63A191731DF657D9008429EA /* whiteclock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteclock.png; sourceTree = "<group>"; };
 		EA0C0C621DF4997200B0ABEF /* IngredientsTableCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientsTableCellView.swift; sourceTree = "<group>"; };
 		EA0C0C641DF49AB700B0ABEF /* DirectionsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionsTableViewCell.swift; sourceTree = "<group>"; };
 		EA0C0C681DF523C900B0ABEF /* IngredientsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientsViewModel.swift; sourceTree = "<group>"; };
@@ -219,6 +227,10 @@
 		49B03CDC1DE36814004440A9 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				63A191701DF657D9008429EA /* directionstab.png */,
+				63A191711DF657D9008429EA /* hometitle_1.png */,
+				63A191721DF657D9008429EA /* ingredientstab.png */,
+				63A191731DF657D9008429EA /* whiteclock.png */,
 				63A1916A1DF4CDFB008429EA /* arrow up.png */,
 				63A191681DF4C89A008429EA /* arrow.png */,
 				63259B291DF3979B00929D5F /* hometitle.png */,
@@ -387,6 +399,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA6149A21DF15186004880D9 /* Asset 35.png in Resources */,
+				63A191741DF657D9008429EA /* directionstab.png in Resources */,
 				49B03CEE1DE36814004440A9 /* ingredients.png in Resources */,
 				EA6149A01DF13C72004880D9 /* TableViewCell.xib in Resources */,
 				63259B301DF3CF2300929D5F /* Images.xcassets in Resources */,
@@ -398,6 +411,8 @@
 				630C480F1DF097490067A985 /* Asset 32.png in Resources */,
 				EA494FD81DDD82C600712D6A /* Main.storyboard in Resources */,
 				49B03CF21DE36814004440A9 /* start btn.png in Resources */,
+				63A191751DF657D9008429EA /* hometitle_1.png in Resources */,
+				63A191771DF657D9008429EA /* whiteclock.png in Resources */,
 				49B03CED1DE36814004440A9 /* ingredients logo.png in Resources */,
 				49B03CEF1DE36814004440A9 /* loading logo.png in Resources */,
 				630C480E1DF097490067A985 /* Asset 31.png in Resources */,
@@ -407,6 +422,7 @@
 				49911E801DDA2C16004EE876 /* LaunchScreen.storyboard in Resources */,
 				63A1916B1DF4CDFB008429EA /* arrow up.png in Resources */,
 				49B03CF41DE36814004440A9 /* time cards.png in Resources */,
+				63A191761DF657D9008429EA /* ingredientstab.png in Resources */,
 				630C48111DF097490067A985 /* Asset 34.png in Resources */,
 				49B03CF31DE36814004440A9 /* time.png in Resources */,
 				63A191691DF4C89A008429EA /* arrow.png in Resources */,
