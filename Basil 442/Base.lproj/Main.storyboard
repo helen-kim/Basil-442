@@ -56,6 +56,9 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="searchBar" destination="19Q-kA-fAd" id="CGK-gc-PBo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -649,8 +652,8 @@
         <image name="whiteclock.png" width="187" height="187"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dKY-Bj-ifs"/>
-        <segue reference="EQf-Pl-dm9"/>
+        <segue reference="Te9-lL-fAJ"/>
+        <segue reference="WEQ-TF-Y2N"/>
         <segue reference="B1E-NN-97A"/>
     </inferredMetricsTieBreakers>
 </document>

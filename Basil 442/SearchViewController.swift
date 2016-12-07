@@ -8,11 +8,15 @@
 
 import UIKit
 
-class SearchViewController: UIViewController {
+class SearchViewController: UIViewController, UISearchBarDelegate {
+    @IBOutlet weak var searchBar: UISearchBar!
+    
+    var searchActive : Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        searchBar.delegate = self
         // Do any additional setup after loading the view.
     }
 
@@ -21,6 +25,23 @@ class SearchViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+        searchActive = true
+    }
+    
+    func searchBarTextDidEndEditing(searchBar: UISearchBar) {
+        searchActive = false
+    }
+    
+    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+        searchActive = false
+    }
+    
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        searchActive = false
+        print(searchBar.text)
+        performSegueWithIdentifier("toCardSegue", sender: searchBar.text)
+    }
 
     /*
     // MARK: - Navigation
