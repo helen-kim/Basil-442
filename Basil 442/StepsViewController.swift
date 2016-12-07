@@ -50,6 +50,10 @@ class StepsViewController: UIViewController {
     
     
     
+    @IBAction func repeatClicked(sender: UIButton) {
+        readDirection()
+    }
+    
     @IBAction func finishClicked(sender: UIButton) {
         speechSynthesizer.stopSpeakingAtBoundary(AVSpeechBoundary.Immediate)
     }
