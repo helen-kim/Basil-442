@@ -25,6 +25,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: - SearchBar
     func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
         searchActive = true
     }
@@ -42,15 +43,12 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
         print(searchBar.text)
         performSegueWithIdentifier("toCardSegue", sender: searchBar.text)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
+    // MARK: - Segues
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if let cardsVC = segue.destinationViewController as? CardsViewController,
+            q = sender as? String {
+            cardsVC.cardsViewModel = CardsViewModel(query: q)
+        }
     }
-    */
-
 }

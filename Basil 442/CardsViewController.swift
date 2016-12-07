@@ -9,7 +9,8 @@
 import UIKit
 
 class CardsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    var cardsViewModel: CardsViewModel?
+    
     let recipeInstance = Recipes()
     
     var allRecipes: Dictionary<Int, AnyObject> = [:]
@@ -19,7 +20,8 @@ class CardsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        allRecipes = recipeInstance.searchRecipes("burger")
+        print(cardsViewModel!.query())
+        allRecipes = recipeInstance.searchRecipes(cardsViewModel!.query())
         cardTableView.registerNib(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "recipeCell")
     }
     
