@@ -7,10 +7,14 @@
 //
 
 import UIKit
+import AVFoundation
 
 class StepsViewController: UIViewController {
     
+    
     var stepViewModel:StepsViewModel?
+    let speechSynthesizer = AVSpeechSynthesizer()
+    var isSpeechStopped:Bool = false
     
     var allDirections:Array<String> = []
     var currentStep: Int = 0
@@ -20,7 +24,8 @@ class StepsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        allDirections = stepViewModel!.directions()
+        recipeTitle.text = stepViewModel!.name()
+        allDirections = ["BEGIN"] + stepViewModel!.directions()
         allDirections.append("DONE")
         prevStep.text = ""
         currStep.text = allDirections[currentStep]
@@ -33,6 +38,7 @@ class StepsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBOutlet weak var recipeTitle: UILabel!
     @IBOutlet weak var prevStep: UILabel!
     @IBOutlet weak var currStep: UILabel!
     @IBOutlet weak var nexStep: UILabel!
@@ -42,12 +48,20 @@ class StepsViewController: UIViewController {
     @IBOutlet weak var repeatButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     
+    
+    
+    @IBAction func finishClicked(sender: UIButton) {
+        speechSynthesizer.stopSpeakingAtBoundary(AVSpeechBoundary.Immediate)
+    }
+    
     @IBAction func nextClicked(sender: UIButton) {
         increaseStepIndices()
+        readDirection()
     }
     
     @IBAction func previousClicked(sender: UIButton) {
         decreaseStepIndices()
+        readDirection()
     }
     
     func decreaseStepIndices() {
@@ -115,12 +129,23 @@ class StepsViewController: UIViewController {
             currStep.text = allDirections[currentStep]
             prevStep.text = allDirections[previousStep]
         }
+        isSpeechStopped = speechSynthesizer.stopSpeakingAtBoundary(AVSpeechBoundary.Immediate)
         
     }
     
     func endInstructions() {
         
     }
+    
+    func readDirection() {
+        if (allDirections[currentStep] != "DONE") && (allDirections[currentStep] != "BEGIN") {
+            let speechUtterance = AVSpeechUtterance(string: allDirections[currentStep])
+            speechUtterance.preUtteranceDelay = 0.3
+            speechSynthesizer.speakUtterance(speechUtterance)
+        }
+        
+    }
+    
     
     
     

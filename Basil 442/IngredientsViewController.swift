@@ -13,19 +13,20 @@ class IngredientsViewController: UIViewController, UITableViewDelegate, UITableV
     var ingViewModel:IngredientsViewModel?
 
     var allIngredients:Array<String> = []
-
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // getIngredients returns dictionary with title and ingredients, ingredients is an array
         allIngredients = ingViewModel!.ingredients()
+        recipeTitle.text = ingViewModel!.name()
         
         // Do any additional setup after loading the view.
     }
+    
     @IBOutlet weak var ingredientsTableView: UITableView!
-
+    @IBOutlet weak var recipeTitle: UILabel!
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
