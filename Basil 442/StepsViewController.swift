@@ -24,6 +24,7 @@ class StepsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        recipeTitle.text = stepViewModel!.name()
         allDirections = ["BEGIN"] + stepViewModel!.directions()
         allDirections.append("DONE")
         prevStep.text = ""
@@ -37,6 +38,7 @@ class StepsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBOutlet weak var recipeTitle: UILabel!
     @IBOutlet weak var prevStep: UILabel!
     @IBOutlet weak var currStep: UILabel!
     @IBOutlet weak var nexStep: UILabel!
@@ -45,6 +47,12 @@ class StepsViewController: UIViewController {
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var repeatButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
+    
+    
+    
+    @IBAction func finishClicked(sender: UIButton) {
+        speechSynthesizer.stopSpeakingAtBoundary(AVSpeechBoundary.Immediate)
+    }
     
     @IBAction func nextClicked(sender: UIButton) {
         increaseStepIndices()

@@ -105,12 +105,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Finished"/>
                                 <connections>
+                                    <action selector="finishClicked:" destination="J4H-PJ-7wK" eventType="touchUpInside" id="dfB-Lg-v2e"/>
                                     <segue destination="POW-pW-jBj" kind="show" identifier="toEndSegue" id="JK6-pl-ZV2"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TITLE OF RECIPE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edg-Fs-Ihc">
-                                <rect key="frame" x="-2" y="112" width="771" height="69"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="58"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TITLE OF RECIPE" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edg-Fs-Ihc">
+                                <rect key="frame" x="-2" y="51" width="771" height="137"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="50"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -135,6 +136,7 @@
                         <outlet property="nexStep" destination="2hp-iv-yZW" id="qYz-VU-bP9"/>
                         <outlet property="nextButton" destination="w2U-0d-Eul" id="yoz-zd-lCn"/>
                         <outlet property="prevStep" destination="1Tz-2U-EUi" id="kte-EW-QMm"/>
+                        <outlet property="recipeTitle" destination="edg-Fs-Ihc" id="2Aj-df-W9T"/>
                         <outlet property="repeatButton" destination="WSk-o4-0xy" id="WIu-QO-di0"/>
                     </connections>
                 </viewController>
@@ -172,7 +174,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00" textAlignment="center" lineBreakMode="characterWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XqT-VQ-3Ll">
                                 <rect key="frame" x="559" y="833" width="43" height="38"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="28"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="Asset 31.png" translatesAutoresizingMaskIntoConstraints="NO" id="aJG-qu-9tG">
@@ -187,7 +189,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00" textAlignment="center" lineBreakMode="characterWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pgv-Eo-Kgg">
                                 <rect key="frame" x="152" y="833" width="43" height="38"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="28"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="whiteclock.png" translatesAutoresizingMaskIntoConstraints="NO" id="IPN-M6-hcV">
@@ -269,18 +271,18 @@
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="ingredientstab.png" translatesAutoresizingMaskIntoConstraints="NO" id="4Ai-4Y-ugT">
                                 <rect key="frame" x="94" y="219" width="578" height="99"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TITLE OF RECIPE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ua-ZM-C41">
-                                <rect key="frame" x="-3" y="92" width="771" height="69"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="58"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fp1-TH-WAe">
                                 <rect key="frame" x="517" y="236" width="148" height="65"/>
                                 <connections>
                                     <segue destination="urJ-Bu-pOY" kind="show" identifier="toDirectionsSegue" animates="NO" id="bey-nV-YwE"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TITLE OF RECIPE" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ua-ZM-C41">
+                                <rect key="frame" x="-2" y="51" width="771" height="141"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="50"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -288,6 +290,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <outlet property="ingredientsTableView" destination="dpa-T6-Mf7" id="4c0-YQ-Gh0"/>
+                        <outlet property="recipeTitle" destination="2Ua-ZM-C41" id="gKg-4j-cDj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GrF-ce-pQm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -395,12 +398,6 @@
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="directionstab.png" translatesAutoresizingMaskIntoConstraints="NO" id="KjH-di-L3A">
                                 <rect key="frame" x="94" y="219" width="578" height="99"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TITLE OF RECIPE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lX6-cK-Vg3">
-                                <rect key="frame" x="-3" y="92" width="771" height="69"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="58"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FiG-nW-o2Q">
                                 <rect key="frame" x="312" y="905" width="145" height="52"/>
                                 <state key="normal" backgroundImage="start btn.png"/>
@@ -414,12 +411,19 @@
                                     <segue destination="ep8-qB-i5s" kind="show" identifier="returnIngredientsSegue" animates="NO" id="Te9-lL-fAJ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TITLE OF RECIPE" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lX6-cK-Vg3">
+                                <rect key="frame" x="-2" y="55" width="771" height="133"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="50"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <outlet property="directionsTableView" destination="LFN-vg-Q7F" id="z1S-X5-kk5"/>
+                        <outlet property="recipeTitle" destination="lX6-cK-Vg3" id="fis-bv-Unj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="saW-tg-rkC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -650,7 +654,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="dKY-Bj-ifs"/>
-        <segue reference="EQf-Pl-dm9"/>
+        <segue reference="Te9-lL-fAJ"/>
         <segue reference="B1E-NN-97A"/>
     </inferredMetricsTieBreakers>
 </document>

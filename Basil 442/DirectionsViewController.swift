@@ -15,15 +15,16 @@ class DirectionsViewController: UIViewController, UITableViewDelegate, UITableVi
     
     var allDirections:Array<String> = []
     
+    @IBOutlet weak var directionsTableView: UITableView!
+    @IBOutlet weak var recipeTitle: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         allDirections = dirViewModel!.directions()
+        recipeTitle.text = dirViewModel!.name()
         
         // Do any additional setup after loading the view.
     }
-    
-    @IBOutlet weak var directionsTableView: UITableView!
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
