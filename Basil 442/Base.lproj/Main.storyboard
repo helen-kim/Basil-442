@@ -125,6 +125,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WSk-o4-0xy">
                                 <rect key="frame" x="66" y="491" width="67" height="42"/>
                                 <state key="normal" backgroundImage="Asset 33.png"/>
+                                <connections>
+                                    <action selector="repeatClicked:" destination="J4H-PJ-7wK" eventType="touchUpInside" id="Mcg-lO-iPP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
