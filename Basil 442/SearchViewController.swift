@@ -40,8 +40,8 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
         searchActive = false
-        print(searchBar.text)
         performSegueWithIdentifier("toCardSegue", sender: searchBar.text)
+        searchBar.text = ""
     }
     
     // MARK: - Segues
