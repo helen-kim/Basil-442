@@ -7,10 +7,14 @@
 //
 
 import UIKit
+import AVFoundation
 
 class StepsViewController: UIViewController {
     
+    
     var stepViewModel:StepsViewModel?
+    let speechSynthesizer = AVSpeechSynthesizer()
+    var isSpeechStopped:Bool = false
     
     var allDirections:Array<String> = []
     var currentStep: Int = 0
@@ -20,7 +24,7 @@ class StepsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        allDirections = stepViewModel!.directions()
+        allDirections = ["BEGIN"] + stepViewModel!.directions()
         allDirections.append("DONE")
         prevStep.text = ""
         currStep.text = allDirections[currentStep]
@@ -44,10 +48,12 @@ class StepsViewController: UIViewController {
     
     @IBAction func nextClicked(sender: UIButton) {
         increaseStepIndices()
+        readDirection()
     }
     
     @IBAction func previousClicked(sender: UIButton) {
         decreaseStepIndices()
+        readDirection()
     }
     
     func decreaseStepIndices() {
@@ -115,12 +121,21 @@ class StepsViewController: UIViewController {
             currStep.text = allDirections[currentStep]
             prevStep.text = allDirections[previousStep]
         }
+        isSpeechStopped = speechSynthesizer.stopSpeakingAtBoundary(AVSpeechBoundary.Immediate)
         
     }
     
     func endInstructions() {
         
     }
+    
+    func readDirection() {
+        let speechUtterance = AVSpeechUtterance(string: allDirections[currentStep])
+        speechUtterance.preUtteranceDelay = 0.3
+        speechSynthesizer.speakUtterance(speechUtterance)
+        
+    }
+    
     
     
     
