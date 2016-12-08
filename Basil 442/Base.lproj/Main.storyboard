@@ -66,15 +66,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0P-Hd-QKc">
-                                <rect key="frame" x="307" y="274" width="153" height="62"/>
-                                <connections>
-                                    <action selector="previousClicked:" destination="J4H-PJ-7wK" eventType="touchUpInside" id="qG4-et-CTT"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Qd-LO-mjO">
-                                <rect key="frame" x="361" y="295" width="46" height="17"/>
-                                <state key="normal" backgroundImage="arrow up.png"/>
+                                <rect key="frame" x="307" y="274" width="153" height="62"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="8"/>
+                                <state key="normal" image="arrow up.png"/>
                                 <connections>
                                     <action selector="previousClicked:" destination="J4H-PJ-7wK" eventType="touchUpInside" id="GZh-ez-sq7"/>
                                 </connections>
@@ -105,15 +100,10 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="orL-Bx-j06">
-                                <rect key="frame" x="238" y="755" width="293" height="67"/>
-                                <connections>
-                                    <action selector="nextClicked:" destination="J4H-PJ-7wK" eventType="touchUpInside" id="rfa-cQ-oPQ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w2U-0d-Eul">
-                                <rect key="frame" x="362" y="792" width="43" height="16"/>
-                                <state key="normal" backgroundImage="arrow.png"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w2U-0d-Eul">
+                                <rect key="frame" x="307" y="755" width="153" height="62"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="24" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" image="arrow.png"/>
                                 <connections>
                                     <action selector="nextClicked:" destination="J4H-PJ-7wK" eventType="touchUpInside" id="aLa-qb-9B1"/>
                                 </connections>
@@ -155,8 +145,6 @@
                         <outlet property="prevStep" destination="1Tz-2U-EUi" id="kte-EW-QMm"/>
                         <outlet property="recipeTitle" destination="edg-Fs-Ihc" id="2Aj-df-W9T"/>
                         <outlet property="repeatButton" destination="WSk-o4-0xy" id="WIu-QO-di0"/>
-                        <outlet property="suppBackButton" destination="I0P-Hd-QKc" id="7f0-v3-2hM"/>
-                        <outlet property="suppNextButton" destination="orL-Bx-j06" id="XFe-UY-AIR"/>
                         <outlet property="suppRepeatButton" destination="B88-KS-Niw" id="EKF-zy-CQr"/>
                     </connections>
                 </viewController>
