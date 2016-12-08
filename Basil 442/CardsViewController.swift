@@ -90,16 +90,16 @@ class CardsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let id = String(idInt)
         let details:Dictionary<String, AnyObject> = recipeInstance.getRecipeDetails(id) as! Dictionary<String, AnyObject>
         if let ins = details["instructions"] as? String {
-            performSegueWithIdentifier("toDetailSegue", sender: indexPath)
+            performSegueWithIdentifier("cardToIngredientsSegue", sender: indexPath)
         } else {
             alertNoInstructions(selected!["title"] as! String)
         }
     }
     
     
-    func detailViewModelForRowAtIndexPath(indexPath: NSIndexPath) -> DetailViewModel {
+    func ingredientsViewModelForRowAtIndexPath(indexPath: NSIndexPath) -> IngredientsViewModel {
         let selectedRecipe = getRelevantData(indexPath)
-        return DetailViewModel(recipe: selectedRecipe)
+        return IngredientsViewModel(recipe: selectedRecipe)
     }
     
     func getRelevantData(indexPath: NSIndexPath) -> Recipe {
@@ -131,9 +131,9 @@ class CardsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     // MARK: - Segues
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let detailVC = segue.destinationViewController as? DetailViewController,
+        if let ingVC = segue.destinationViewController as? IngredientsViewController,
             indexPath = sender as? NSIndexPath {
-            detailVC.viewModel = detailViewModelForRowAtIndexPath(indexPath)
+            ingVC.ingViewModel = ingredientsViewModelForRowAtIndexPath(indexPath)
         }
     }
     
