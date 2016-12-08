@@ -71,14 +71,14 @@ class HomeViewController: UIViewController {
         return selectedRecipe
     }
     
-    func sendToDetailViewModel() -> DetailViewModel{
+    func sendToIngredientsViewModel() -> IngredientsViewModel{
         let selectedRecipe = getRelevantData()
-        return DetailViewModel(recipe: selectedRecipe)
+        return IngredientsViewModel(recipe: selectedRecipe)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let detailsVC = segue.destinationViewController as? DetailViewController {
-            detailsVC.viewModel = sendToDetailViewModel()
+        if let ingVC = segue.destinationViewController as? IngredientsViewController {
+            ingVC.ingViewModel = sendToIngredientsViewModel()
         }
     }
     
