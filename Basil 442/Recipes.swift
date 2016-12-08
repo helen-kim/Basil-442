@@ -79,6 +79,7 @@ class Recipes {
                 details["imageURL"] = json["image"]
                 details["time"] = json["readyInMinutes"]
                 details["servings"] = json["servings"]
+                details["instructions"] = json["instructions"]
                 
                 return details
             } catch {
