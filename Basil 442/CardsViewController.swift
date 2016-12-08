@@ -28,7 +28,6 @@ class CardsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         print(cardsViewModel!.query())
         searchQuery.text = cardsViewModel!.query()
         allRecipes = recipeInstance.searchRecipes(cardsViewModel!.query())
-//        cardTableView.registerNib(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "recipeCell")
     }
     
     override func viewWillAppear(animated: Bool) {
