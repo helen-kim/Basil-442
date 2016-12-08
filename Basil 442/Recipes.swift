@@ -145,4 +145,32 @@ class Recipes {
             }
         }
     }
+    
+    func getRandomRecipe() {
+        // API request, establish URL and call function
+        let recipeData = apiRequest("https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/random?limitLicense=false&number=1")
+        // Confirm API request successful
+        if recipeData is String {
+            return ["404 ERROR: API request failed; make sure the URL is correct"]
+        } else {
+            // parse through JSON and gather necessary directions
+            do {
+                let json = try NSJSONSerialization.JSONObjectWithData(recipeData as! NSData, options: .AllowFragments) as! [Dictionary<String, AnyObject>]
+                var directions: [String] = []
+                var mainSteps = json[0]["steps"] as! [Dictionary<String, AnyObject>]
+                if mainSteps == [] {
+                    mainSteps = json[1]["steps"] as! [Dictionary<String, AnyObject>]
+                }
+                
+                for stepInfo in mainSteps {
+                    let step = stepInfo["step"] as! String
+                    directions.append(step)
+                }
+                
+                return directions
+            } catch {
+                return ["404 ERROR: JSON is not valid"]
+            }
+        }
+    }
 }

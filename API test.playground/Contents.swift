@@ -8,9 +8,42 @@ var str = "Hello, playground"
 
 import Foundation
 
-let id = 831906
+let id = 61478
 let query = "chicken"
 let spaces = "pesto chicken pasta"
+
+// test randomRecipes method
+let urlRand = NSURL(string: "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/random?limitLicense=false&number=1")
+let requestRand = NSMutableURLRequest(URL: urlRand!)
+requestRand.HTTPMethod = "GET"
+requestRand.setValue("iT7alpV4wxmshQQDyVZiaVJE5qAGp1Xhqkkjsn89TCTiZYAcvg", forHTTPHeaderField: "X-Mashape-Key")
+
+var responseRand: NSURLResponse?
+let errorRand: NSErrorPointer = nil
+
+var dataRand: NSData?
+do {
+    dataRand = try NSURLConnection.sendSynchronousRequest(requestRand, returningResponse: &responseRand)
+} catch let error1 as NSError {
+    errorRand.memory = error1
+    dataRand = nil
+}
+// ensure that the API call was successful
+if dataRand == nil {
+    print("ERROR: API request failed; make sure the URL is correct")
+}
+
+do {
+    let jsonRand = try NSJSONSerialization.JSONObjectWithData(dataRand!, options: .AllowFragments) as! Dictionary<String, AnyObject>
+    let rnd = jsonRand["recipes"]![0] as! Dictionary<String, AnyObject>
+    var info: Dictionary<String, AnyObject> = [:]
+    info["id"] = rnd["id"] as! Int
+    info["title"] = rnd["title"] as! String
+    info["imageURL"] = rnd["image"] as! String
+    info["time"] = rnd["readyInMinutes"] as! Int
+    info["servings"] = rnd["servings"] as! Int
+}
+
 
 // test searchRecipes method
 let reformat = spaces.componentsSeparatedByString(" ").joinWithSeparator("+")
@@ -149,16 +182,19 @@ if dataDir == nil {
 
 do {
     let jsonDir = try NSJSONSerialization.JSONObjectWithData(dataDir!, options: .AllowFragments) as! [Dictionary<String, AnyObject>]
-    var directions: [String] = []
-    var mainSteps = jsonDir[0]["steps"] as! [Dictionary<String, AnyObject>]
-    if mainSteps == [] {
-        mainSteps = jsonDir[1]["steps"] as! [Dictionary<String, AnyObject>]
+    if jsonDir != [] {
+        var directions: [String] = []
+        var mainSteps = jsonDir[0]["steps"] as! [Dictionary<String, AnyObject>]
+        if mainSteps == [] {
+            mainSteps = jsonDir[1]["steps"] as! [Dictionary<String, AnyObject>]
+        }
+        for stepInfo in mainSteps {
+            let step = stepInfo["step"] as! String
+            directions.append(step)
+        }
+        
+        print(directions)
+    } else {
+        print(jsonDir)
     }
-
-    for stepInfo in mainSteps {
-        let step = stepInfo["step"] as! String
-        directions.append(step)
-    }
-    
-    print(directions)
 }

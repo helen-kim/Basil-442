@@ -659,8 +659,8 @@
         <image name="whiteclock.png" width="187" height="187"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dKY-Bj-ifs"/>
-        <segue reference="Te9-lL-fAJ"/>
+        <segue reference="WEQ-TF-Y2N"/>
         <segue reference="B1E-NN-97A"/>
+        <segue reference="Te9-lL-fAJ"/>
     </inferredMetricsTieBreakers>
 </document>
