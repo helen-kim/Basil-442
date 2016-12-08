@@ -19,14 +19,15 @@ class CardsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var prepTime: Int = 0
     
     @IBOutlet weak var cardTableView: UITableView!
+    @IBOutlet weak var searchQuery: UILabel!
     
     // MARK: Std View Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         // register the nib
         print(cardsViewModel!.query())
+        searchQuery.text = cardsViewModel!.query()
         allRecipes = recipeInstance.searchRecipes(cardsViewModel!.query())
-        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -107,7 +108,7 @@ class CardsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let image = detailsInfo["imageURL"] as! String
         let servingsInt = detailsInfo["servings"] as! Int
         let servings = String(servingsInt)
-                
+        
         // Get ingredients
         let ingredientInfo:Dictionary<String, AnyObject> = recipeInstance.getIngredients(id) as! Dictionary<String, AnyObject>
         let ingredientsList:Array<String> = (ingredientInfo["ingredients"] as! Array<String>)
