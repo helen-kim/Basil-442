@@ -174,7 +174,7 @@ class StepsViewController: UIViewController {
         print("read")
         if (allDirections[currentStep] != "DONE") && (allDirections[currentStep] != "BEGIN") {
             let speechUtterance = AVSpeechUtterance(string: allDirections[currentStep])
-            speechUtterance.preUtteranceDelay = 0.15
+            speechUtterance.preUtteranceDelay = 0.05
             speechSynthesizer.speakUtterance(speechUtterance)
         }
         
