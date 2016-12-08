@@ -82,8 +82,6 @@ class StepsViewController: UIViewController {
         toggleDone()
     }
     
-    let useVoice = AVSpeechSynthesisVoice(identifier: AVSpeechSynthesisVoiceIdentifierAlex)
-    
     func toggleDone() {
         print("prev step: (\(previousStep)), current step: (\(currentStep)), next step: (\(nextStep)), total steps: (\(totalSteps))")
         if (nextStep == totalSteps) {
@@ -154,7 +152,6 @@ class StepsViewController: UIViewController {
     func readDirection() {
         print("read")
         let speechUtterance = AVSpeechUtterance(string: allDirections[currentStep])
-        speechUtterance.voice = useVoice
         speechUtterance.preUtteranceDelay = 0.05
         speechSynthesizer.speakUtterance(speechUtterance)
     }
