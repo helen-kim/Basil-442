@@ -28,13 +28,14 @@ class StepsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         recipeTitle.text = stepViewModel!.name()
-        allDirections = ["BEGIN"] + stepViewModel!.directions()
-        allDirections.append("DONE")
+        allDirections = stepViewModel!.directions()
+//        allDirections.append("DONE")
         prevStep.text = ""
+        print(currentStep)
         currStep.text = allDirections[currentStep]
         nexStep.text = allDirections[nextStep]
         totalSteps = allDirections.count
-
+        readDirection()
     }
     
     override func didReceiveMemoryWarning() {
@@ -102,7 +103,7 @@ class StepsViewController: UIViewController {
     
     func assignText() {
         // If reach end
-        if nextStep == totalSteps {
+        if nextStep == totalSteps{
             nexStep.text = ""
             currStep.text = allDirections[currentStep]
             prevStep.text = allDirections[previousStep]
@@ -123,11 +124,11 @@ class StepsViewController: UIViewController {
     
     func readDirection() {
         print("read")
-        if (allDirections[currentStep] != "DONE") && (allDirections[currentStep] != "BEGIN") {
-            let speechUtterance = AVSpeechUtterance(string: allDirections[currentStep])
-            speechUtterance.preUtteranceDelay = 0.15
-            speechSynthesizer.speakUtterance(speechUtterance)
-        }
+//        if (allDirections[currentStep] != "DONE") && (allDirections[currentStep] != "BEGIN") {
+        let speechUtterance = AVSpeechUtterance(string: allDirections[currentStep])
+        speechUtterance.preUtteranceDelay = 0.15
+        speechSynthesizer.speakUtterance(speechUtterance)
+//        }
         
     }
     
