@@ -374,6 +374,11 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4B-wP-q8S">
+                                                    <rect key="frame" x="676" y="92" width="15" height="40"/>
+                                                    <color key="tintColor" red="0.71296429630000002" green="0.80820739269999997" blue="0.73153346779999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <state key="normal" image="arrow go.png"/>
+                                                </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
@@ -651,6 +656,7 @@
     <resources>
         <image name="Asset 31.png" width="69" height="69"/>
         <image name="Asset 33.png" width="67" height="42"/>
+        <image name="arrow go.png" width="22" height="59"/>
         <image name="arrow up.png" width="59" height="22"/>
         <image name="arrow.png" width="59" height="22"/>
         <image name="bon appetit.png" width="424" height="350"/>
@@ -665,7 +671,7 @@
         <image name="whiteclock.png" width="187" height="187"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="B1E-NN-97A"/>
         <segue reference="EQf-Pl-dm9"/>
+        <segue reference="B1E-NN-97A"/>
     </inferredMetricsTieBreakers>
 </document>
