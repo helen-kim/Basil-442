@@ -406,6 +406,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <outlet property="cardTableView" destination="gxL-X0-wJE" id="801-vj-Rpo"/>
+                        <outlet property="searchQuery" destination="GUu-de-aX4" id="Mtb-6g-t3K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Tl-yw-AFR" userLabel="First Responder" sceneMemberID="firstResponder"/>
