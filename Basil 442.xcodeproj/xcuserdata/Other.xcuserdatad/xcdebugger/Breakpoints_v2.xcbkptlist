@@ -19,5 +19,68 @@
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Basil 442/CardsViewController.swift"
+            timestampString = "502786258.762015"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "CardsViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Basil_442.CardsViewController.recipeInstance.getter : Basil_442.Recipes"
+                  moduleName = "Basil 442"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Other/Desktop/Basil-442/Basil%20442/CardsViewController.swift"
+                  timestampString = "502786259.342135"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Basil_442.CardsViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; Basil_442.CardsViewController"
+                  moduleName = "Basil 442"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Other/Desktop/Basil-442/Basil%20442/CardsViewController.swift"
+                  timestampString = "502786259.400334"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "67">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Basil_442.CardsViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Basil_442.CardsViewController&gt;"
+                  moduleName = "Basil 442"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Other/Desktop/Basil-442/Basil%20442/CardsViewController.swift"
+                  timestampString = "502786259.400671"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "27">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

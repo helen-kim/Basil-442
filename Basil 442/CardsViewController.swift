@@ -11,6 +11,8 @@ import UIKit
 class CardsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     // MARK: Properties & Outlets
+    var cardsViewModel: CardsViewModel?
+    
     let recipeInstance = Recipes()
     
     var allRecipes: Dictionary<Int, AnyObject> = [:]
@@ -22,12 +24,9 @@ class CardsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
         // register the nib
-        let cellNib = UINib(nibName: "TableViewCell", bundle: nil)
-        cardTableView.registerNib(cellNib, forCellReuseIdentifier: "recipeCell")
-        
-        // get the data for the table
-        allRecipes = recipeInstance.searchRecipes("burger")
-
+        print(cardsViewModel!.query())
+        allRecipes = recipeInstance.searchRecipes(cardsViewModel!.query())
+        cardTableView.registerNib(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "recipeCell")
     }
     
     override func viewWillAppear(animated: Bool) {
