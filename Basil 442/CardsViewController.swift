@@ -19,12 +19,14 @@ class CardsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var prepTime: Int = 0
     
     @IBOutlet weak var cardTableView: UITableView!
+    @IBOutlet weak var searchQuery: UILabel!
     
     // MARK: Std View Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         // register the nib
         print(cardsViewModel!.query())
+        searchQuery.text = cardsViewModel!.query()
         allRecipes = recipeInstance.searchRecipes(cardsViewModel!.query())
         cardTableView.registerNib(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "recipeCell")
     }
