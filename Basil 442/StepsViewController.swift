@@ -22,6 +22,7 @@ class StepsViewController: UIViewController {
     var previousStep: Int = -1
     var isBegin: Bool = false
     var isEnd: Bool = false
+    var isPaused: Bool = false
     let emptyString: Int = -1
     var totalSteps: Int = 0
     
@@ -55,7 +56,14 @@ class StepsViewController: UIViewController {
     @IBOutlet weak var doneButton: UIButton!
     
     @IBAction func repeatClicked(sender: UIButton) {
-        readDirection()
+        if speechSynthesizer.paused {
+            speechSynthesizer.continueSpeaking()
+        }
+        else if speechSynthesizer.speaking {
+            speechSynthesizer.pauseSpeakingAtBoundary(AVSpeechBoundary.Immediate)
+        } else if speechSynthesizer.speaking == false{
+            readDirection()
+        }
     }
     
     @IBAction func finishClicked(sender: UIButton) {
@@ -142,6 +150,7 @@ class StepsViewController: UIViewController {
     }
     
     func readDirection() {
+        print("read")
         let speechUtterance = AVSpeechUtterance(string: allDirections[currentStep])
         speechUtterance.preUtteranceDelay = 0.05
         speechSynthesizer.speakUtterance(speechUtterance)
