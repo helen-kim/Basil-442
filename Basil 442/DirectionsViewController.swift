@@ -15,6 +15,8 @@ class DirectionsViewController: UIViewController, UITableViewDelegate, UITableVi
     
     var allDirections:Array<String> = []
     
+    
+    
     @IBOutlet weak var directionsTableView: UITableView!
     @IBOutlet weak var recipeTitle: UILabel!
     
@@ -23,6 +25,9 @@ class DirectionsViewController: UIViewController, UITableViewDelegate, UITableVi
         allDirections = dirViewModel!.directions()
         recipeTitle.text = dirViewModel!.name()
         
+        // Self-sizing table view cell 
+        directionsTableView.estimatedRowHeight = 85.0
+        directionsTableView.rowHeight = UITableViewAutomaticDimension
         // Do any additional setup after loading the view.
     }
     

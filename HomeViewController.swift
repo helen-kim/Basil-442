@@ -14,6 +14,8 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var recipeTitle: UILabel!
     @IBOutlet weak var recipeTime: UILabel!
+    @IBOutlet weak var recipeImage: UIImageView!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +24,23 @@ class HomeViewController: UIViewController {
         let time = rnd["time"] as! Int
         recipeTime.text = String(time)
         // Do any additional setup after loading the view.
+        
+        // Setup image view
+        if let img = rnd["imageURL"] {
+            let endString:String = img as! String
+            let url:NSURL? = NSURL(string: endString)
+            let data:NSData? = NSData(contentsOfURL : url!)
+            let image = UIImage(data : data!)
+            recipeImage.image = image
+        }
+        else {
+            let imgString:String = "https://spoonacular.com/recipeImages/beef-burgundy-2-101141.jpg"
+            let url:NSURL? = NSURL(string: imgString)
+            let data:NSData? = NSData(contentsOfURL : url!)
+            let image = UIImage(data : data!)
+            recipeImage.image = image
+        }
+
     }
 
     override func didReceiveMemoryWarning() {
