@@ -36,6 +36,7 @@ if dataRand == nil {
 do {
     let jsonRand = try NSJSONSerialization.JSONObjectWithData(dataRand!, options: .AllowFragments) as! Dictionary<String, AnyObject>
     let rnd = jsonRand["recipes"]![0] as! Dictionary<String, AnyObject>
+    print(rnd["instructions"])
     var info: Dictionary<String, AnyObject> = [:]
     info["id"] = rnd["id"] as! Int
     info["title"] = rnd["title"] as! String
@@ -157,6 +158,7 @@ do {
     details["ingredients"] = uniqueIng
     
     print(details)
+    print(jsonIng["instructions"])
 }
 
 // test getDirections method

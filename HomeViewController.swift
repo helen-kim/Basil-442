@@ -9,10 +9,18 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
+    let recipeInstance = Recipes()
+    var rnd: Dictionary<String, AnyObject> = [:]
+    
+    @IBOutlet weak var recipeTitle: UILabel!
+    @IBOutlet weak var recipeTime: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        rnd = recipeInstance.getRandomRecipe() as! Dictionary<String, AnyObject>
+        recipeTitle.text = rnd["title"] as? String
+        let time = rnd["time"] as! Int
+        recipeTime.text = String(time)
         // Do any additional setup after loading the view.
     }
 
@@ -21,7 +29,40 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func getRelevantData() -> Recipe {
+        let idInt = rnd["id"] as! Int
+        let id = String(idInt)
+        let title = rnd["title"] as! String
+        let timeInt = rnd["time"] as! Int
+        let time = String(timeInt)
+        let servingsInt = rnd["servings"] as! Int
+        let servings = String(servingsInt)
+        let image = rnd["imageURL"] as! String
+        
+        // Get ingredients
+        let ingredientInfo:Dictionary<String, AnyObject> = recipeInstance.getIngredients(id) as! Dictionary<String, AnyObject>
+        let ingredientsList:Array<String> = (ingredientInfo["ingredients"] as! Array<String>)
+        
+        // Get directions
+        let directionsList:Array<String> = recipeInstance.getDirections(id)
+        
+        // Create Recipe instance with current recipe
+        let selectedRecipe = Recipe(id:id, name:title, imageURL:image, time:time, servings:servings, ingredients:ingredientsList, directions:directionsList)
+        
+        return selectedRecipe
+    }
+    
+    func sendToDetailViewModel() -> DetailViewModel{
+        let selectedRecipe = getRelevantData()
+        return DetailViewModel(recipe: selectedRecipe)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let detailsVC = segue.destinationViewController as? DetailViewController {
+            detailsVC.viewModel = sendToDetailViewModel()
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
