@@ -29,7 +29,7 @@ class StepsViewController: UIViewController {
         super.viewDidLoad()
         recipeTitle.text = stepViewModel!.name()
         allDirections = ["BEGIN"] + stepViewModel!.directions()
-        allDirections.append("DONE")
+        allDirections.append("")
         prevStep.text = ""
         currStep.text = allDirections[currentStep]
         nexStep.text = allDirections[nextStep]
@@ -51,8 +51,10 @@ class StepsViewController: UIViewController {
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var repeatButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
-    
-    
+    @IBOutlet weak var suppNextButton: UIButton!
+    @IBOutlet weak var suppRepeatButton: UIButton!
+    @IBOutlet weak var suppBackButton: UIButton!
+    @IBOutlet weak var doneButton: UIButton!
     
     @IBAction func repeatClicked(sender: UIButton) {
         readDirection()
@@ -63,6 +65,7 @@ class StepsViewController: UIViewController {
     }
     
     @IBAction func nextClicked(sender: UIButton) {
+        toggleDone()
         increaseStepIndices()
         readDirection()
     }
@@ -70,6 +73,24 @@ class StepsViewController: UIViewController {
     @IBAction func previousClicked(sender: UIButton) {
         decreaseStepIndices()
         readDirection()
+        toggleDone()
+    }
+    
+    func toggleDone() {
+        print("prev step: (\(previousStep)) \(prevStep.text), current step: (\(currentStep)) \(currStep.text), next step: (\(nextStep)) \(nexStep.text)")
+        if allDirections[nextStep+1] == "" {
+            doneButton.userInteractionEnabled = true
+            doneButton.setTitle("Finished!", forState: UIControlState.Normal)
+            nextButton.userInteractionEnabled = false
+            nextButton.hidden = true
+            suppNextButton.userInteractionEnabled = false
+        } else {
+            doneButton.userInteractionEnabled = false
+            doneButton.setTitle("", forState: UIControlState.Normal)
+            nextButton.userInteractionEnabled = true
+            nextButton.hidden = false
+            suppNextButton.userInteractionEnabled = true
+        }
     }
     
     func decreaseStepIndices() {
@@ -172,7 +193,7 @@ class StepsViewController: UIViewController {
     
     func readDirection() {
         print("read")
-        if (allDirections[currentStep] != "DONE") && (allDirections[currentStep] != "BEGIN") {
+        if (allDirections[currentStep] != "") && (allDirections[currentStep] != "BEGIN") {
             let speechUtterance = AVSpeechUtterance(string: allDirections[currentStep])
             speechUtterance.preUtteranceDelay = 0.05
             speechSynthesizer.speakUtterance(speechUtterance)
