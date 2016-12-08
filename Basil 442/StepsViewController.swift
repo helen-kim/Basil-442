@@ -30,10 +30,10 @@ class StepsViewController: UIViewController {
         recipeTitle.text = stepViewModel!.name()
         allDirections = stepViewModel!.directions()
         prevStep.text = ""
+        print(currentStep)
         currStep.text = allDirections[currentStep]
         nexStep.text = allDirections[nextStep]
         totalSteps = allDirections.count
-
         readDirection()
     }
     
@@ -123,7 +123,7 @@ class StepsViewController: UIViewController {
     
     func assignText() {
         // If reach end
-        if nextStep == totalSteps {
+        if nextStep == totalSteps{
             nexStep.text = ""
             currStep.text = allDirections[currentStep]
             prevStep.text = allDirections[previousStep]
