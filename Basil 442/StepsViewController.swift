@@ -19,7 +19,9 @@ class StepsViewController: UIViewController {
     var allDirections:Array<String> = []
     var currentStep: Int = 0
     var nextStep: Int = 1
-    var previousStep: Int = 0
+    var previousStep: Int = -1
+    var isBegin: Bool = false
+    var isEnd: Bool = false
     let emptyString: Int = -1
     
     override func viewDidLoad() {
@@ -69,11 +71,14 @@ class StepsViewController: UIViewController {
     }
     
     func decreaseStepIndices() {
-        if currentStep <  0 {
-            return endInstructions()
+        if currentStep == 0 && previousStep == -1{
+            isBegin = true
         }
         
         if currentStep > 0 {
+            if isBegin {
+                isBegin = false
+            }
             currentStep = currentStep - 1
         }
         
@@ -86,7 +91,9 @@ class StepsViewController: UIViewController {
             // Increment previous as 1 less than current
             previousStep = currentStep - 1
         }
-        assignText()
+        if isBegin == false {
+            assignText()
+        }
 
     }
     
@@ -139,12 +146,13 @@ class StepsViewController: UIViewController {
     
     func endInstructions() {
         
+        
     }
     
     func readDirection() {
         if (allDirections[currentStep] != "DONE") && (allDirections[currentStep] != "BEGIN") {
             let speechUtterance = AVSpeechUtterance(string: allDirections[currentStep])
-            speechUtterance.preUtteranceDelay = 0.3
+            speechUtterance.preUtteranceDelay = 0.15
             speechSynthesizer.speakUtterance(speechUtterance)
         }
         

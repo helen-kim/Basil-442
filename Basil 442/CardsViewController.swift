@@ -10,6 +10,7 @@ import UIKit
 
 class CardsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    // MARK: Properties & Outlets
     let recipeInstance = Recipes()
     
     var allRecipes: Dictionary<Int, AnyObject> = [:]
@@ -17,10 +18,16 @@ class CardsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     @IBOutlet weak var cardTableView: UITableView!
     
+    // MARK: Std View Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        // register the nib
+        let cellNib = UINib(nibName: "TableViewCell", bundle: nil)
+        cardTableView.registerNib(cellNib, forCellReuseIdentifier: "recipeCell")
+        
+        // get the data for the table
         allRecipes = recipeInstance.searchRecipes("burger")
-        cardTableView.registerNib(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "recipeCell")
+
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -32,11 +39,11 @@ class CardsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     // MARK: - Table View
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-        
-    }
+//    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+//        // #warning Incomplete implementation, return the number of sections
+//        return 1
+//        
+//    }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
@@ -55,6 +62,9 @@ class CardsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        // if recipe indexed has empty instructions array, ALERT, do not segue
+        
+        //else
         performSegueWithIdentifier("toDetailSegue", sender: indexPath)
     }
     
