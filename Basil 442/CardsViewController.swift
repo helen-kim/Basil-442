@@ -48,15 +48,23 @@ class CardsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let cell = tableView.dequeueReusableCellWithIdentifier("recipeCell", forIndexPath: indexPath) as! TableViewCell
         
         // Configure cell
-        let endString:String = allRecipes[indexPath.row]!["image"] as! String
-        let imgString:String = "https://spoonacular.com/recipeImages/" + endString
-        
         // Get image URL
-        let url:NSURL? = NSURL(string: imgString)
-        let data:NSData? = NSData(contentsOfURL : url!)
-        let image = UIImage(data : data!)
-        
-        cell.recipeImage.image = image
+        if let img = allRecipes[indexPath.row]!["image"] as? String{
+            let endString:String = img
+            let imgString:String = "https://spoonacular.com/recipeImages/" + endString
+            print(imgString)
+            let url:NSURL? = NSURL(string: imgString)
+            let data:NSData? = NSData(contentsOfURL : url!)
+            let image = UIImage(data : data!)
+            cell.recipeImage.image = image
+        }
+        else {
+            let imgString:String = "https://spoonacular.com/recipeImages/beef-burgundy-2-101141.jpg"
+            let url:NSURL? = NSURL(string: imgString)
+            let data:NSData? = NSData(contentsOfURL : url!)
+            let image = UIImage(data : data!)
+            cell.recipeImage.image = image
+        }
         
         cell.cellRecipeName?.text = allRecipes[indexPath.row]!["title"] as? String
         prepTime = allRecipes[indexPath.row]!["readyInMinutes"] as! Int
