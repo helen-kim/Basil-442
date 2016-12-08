@@ -51,9 +51,7 @@ class StepsViewController: UIViewController {
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var repeatButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
-    @IBOutlet weak var suppNextButton: UIButton!
     @IBOutlet weak var suppRepeatButton: UIButton!
-    @IBOutlet weak var suppBackButton: UIButton!
     @IBOutlet weak var doneButton: UIButton!
     
     @IBAction func repeatClicked(sender: UIButton) {
@@ -83,13 +81,11 @@ class StepsViewController: UIViewController {
             doneButton.setTitle("Finished!", forState: UIControlState.Normal)
             nextButton.userInteractionEnabled = false
             nextButton.hidden = true
-            suppNextButton.userInteractionEnabled = false
         } else {
             doneButton.userInteractionEnabled = false
             doneButton.setTitle("", forState: UIControlState.Normal)
             nextButton.userInteractionEnabled = true
             nextButton.hidden = false
-            suppNextButton.userInteractionEnabled = true
         }
     }
     
