@@ -27,7 +27,6 @@ class CardsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         print(cardsViewModel!.query())
         allRecipes = recipeInstance.searchRecipes(cardsViewModel!.query())
         
-//        cardTableView.registerNib(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "recipeCell")
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -50,16 +49,13 @@ class CardsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         // Configure cell
         let endString:String = allRecipes[indexPath.row]!["image"] as! String
         let imgString:String = "https://spoonacular.com/recipeImages/" + endString
-        print(imgString)
         
-        print(allRecipes[indexPath.row]!["image"] as! String)
         // Get image URL
-//        let imageString:String = "https://spoonacular.com/recipeImages/" + allRecipes[indexPath.row]!["image"] as! String
-//        let url:NSURL? = NSURL(string: imageString)
-//        let data:NSData? = NSData(contentsOfURL : url!)
-//        let image = UIImage(data : data!)
-//        
-//        cell.recipeImage.image = image
+        let url:NSURL? = NSURL(string: imgString)
+        let data:NSData? = NSData(contentsOfURL : url!)
+        let image = UIImage(data : data!)
+        
+        cell.recipeImage.image = image
         
         cell.cellRecipeName?.text = allRecipes[indexPath.row]!["title"] as? String
         prepTime = allRecipes[indexPath.row]!["readyInMinutes"] as! Int
