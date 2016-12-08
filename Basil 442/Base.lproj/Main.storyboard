@@ -262,7 +262,7 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Asset 33.png" translatesAutoresizingMaskIntoConstraints="NO" id="OXq-rC-Ydh">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bullet.png" translatesAutoresizingMaskIntoConstraints="NO" id="OXq-rC-Ydh">
                                                     <rect key="frame" x="21" y="18" width="10" height="10"/>
                                                 </imageView>
                                             </subviews>
@@ -319,19 +319,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Looking for" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yZw-dd-cXa">
-                                <rect key="frame" x="250" y="78" width="269" height="69"/>
+                                <rect key="frame" x="250" y="53" width="269" height="69"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="58"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SEARCH" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GUu-de-aX4">
-                                <rect key="frame" x="29" y="155" width="710" height="69"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="58"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SEARCH" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GUu-de-aX4">
+                                <rect key="frame" x="9" y="113" width="747" height="99"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="44"/>
                                 <color key="textColor" red="0.71296429630000002" green="0.80820739269999997" blue="0.73153346779999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g9e-9y-bRR">
-                                <rect key="frame" x="519" y="174" width="32" height="32"/>
+                                <rect key="frame" x="519" y="158" width="32" height="32"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="47"/>
                                 <state key="normal">
                                     <color key="titleColor" red="0.71296429630000002" green="0.80820739269999997" blue="0.73153346779999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -341,7 +341,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="225" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gxL-X0-wJE">
-                                <rect key="frame" x="29" y="249" width="710" height="699"/>
+                                <rect key="frame" x="29" y="271" width="710" height="677"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="recipeCell" rowHeight="225" id="zh9-nP-1eI" customClass="TableViewCell" customModule="Basil_442" customModuleProvider="target">
@@ -388,6 +388,9 @@
                                     <outlet property="delegate" destination="S5D-GU-WL4" id="wCy-L7-2iJ"/>
                                 </connections>
                             </tableView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="searchdeco.png" translatesAutoresizingMaskIntoConstraints="NO" id="Mbp-C4-Q1t">
+                                <rect key="frame" x="73" y="207" width="623" height="32"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -433,7 +436,7 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Asset 33.png" translatesAutoresizingMaskIntoConstraints="NO" id="e8s-YM-21L">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bullet.png" translatesAutoresizingMaskIntoConstraints="NO" id="e8s-YM-21L">
                                                     <rect key="frame" x="21" y="18" width="10" height="10"/>
                                                 </imageView>
                                             </subviews>
@@ -505,9 +508,11 @@
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="bon appetit.png" translatesAutoresizingMaskIntoConstraints="NO" id="NES-Lj-r87">
                                 <rect key="frame" x="218" y="342" width="333" height="266"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0r5-wo-Y86">
+                            <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0r5-wo-Y86">
                                 <rect key="frame" x="218" y="312" width="333" height="399"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.94999999999999996" height="1"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="tintColor" red="0.71296429630000002" green="0.80820739269999997" blue="0.73153346779999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="contentEdgeInsets" minX="0.0" minY="275" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Return to Home">
                                     <color key="titleColor" red="0.71296429630000002" green="0.80820739269999997" blue="0.73153346779999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -669,18 +674,20 @@
         <image name="arrow up.png" width="59" height="22"/>
         <image name="arrow.png" width="59" height="22"/>
         <image name="bon appetit.png" width="424" height="350"/>
+        <image name="bullet.png" width="16" height="16"/>
         <image name="directionstab.png" width="616" height="89"/>
         <image name="home" width="25" height="25"/>
         <image name="hometitle_1.png" width="334" height="133"/>
         <image name="ingredientstab.png" width="616" height="87"/>
         <image name="search" width="25" height="25"/>
         <image name="search logo.png" width="334" height="133"/>
+        <image name="searchdeco.png" width="623" height="32"/>
         <image name="start btn.png" width="138" height="51"/>
         <image name="time cards.png" width="19" height="19"/>
         <image name="whiteclock.png" width="187" height="187"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="EQf-Pl-dm9"/>
-        <segue reference="aMX-xR-wS6"/>
+        <segue reference="Te9-lL-fAJ"/>
+        <segue reference="B1E-NN-97A"/>
     </inferredMetricsTieBreakers>
 </document>
