@@ -63,9 +63,9 @@ class StepsViewController: UIViewController {
     }
     
     @IBAction func nextClicked(sender: UIButton) {
-        toggleDone()
         increaseStepIndices()
         readDirection()
+        toggleDone()
     }
     
     @IBAction func previousClicked(sender: UIButton) {
@@ -75,21 +75,24 @@ class StepsViewController: UIViewController {
     }
     
     func toggleDone() {
-        print("prev step: (\(previousStep)) \(prevStep.text), current step: (\(currentStep)) \(currStep.text), next step: (\(nextStep)) \(nexStep.text)")
-        if (nextStep+1 == totalSteps) {
+        print("prev step: (\(previousStep)), current step: (\(currentStep)), next step: (\(nextStep)), total steps: (\(totalSteps))")
+        if (nextStep == totalSteps) {
             doneButton.userInteractionEnabled = true
+            doneButton.hidden = false
             doneButton.setTitle("Finished!", forState: UIControlState.Normal)
             nextButton.userInteractionEnabled = false
             nextButton.hidden = true
         } else {
             doneButton.userInteractionEnabled = false
-            doneButton.setTitle("", forState: UIControlState.Normal)
+//            doneButton.setTitle("", forState: UIControlState.Normal)
+            doneButton.hidden = true
             nextButton.userInteractionEnabled = true
             nextButton.hidden = false
         }
     }
     
     func decreaseStepIndices() {
+        print("decrease")
         isEnd = false
         if currentStep > 0 {
             isBegin = false
@@ -139,7 +142,6 @@ class StepsViewController: UIViewController {
     }
     
     func readDirection() {
-        print("read")
         let speechUtterance = AVSpeechUtterance(string: allDirections[currentStep])
         speechUtterance.preUtteranceDelay = 0.05
         speechSynthesizer.speakUtterance(speechUtterance)
