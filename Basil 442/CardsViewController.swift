@@ -26,7 +26,7 @@ class CardsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         // register the nib
         print(cardsViewModel!.query())
         allRecipes = recipeInstance.searchRecipes(cardsViewModel!.query())
-        cardTableView.registerNib(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "recipeCell")
+//        cardTableView.registerNib(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "recipeCell")
     }
     
     override func viewWillAppear(animated: Bool) {
