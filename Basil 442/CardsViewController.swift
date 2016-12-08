@@ -52,11 +52,12 @@ class CardsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         if let img = allRecipes[indexPath.row]!["image"] as? String{
             let endString:String = img
             let imgString:String = "https://spoonacular.com/recipeImages/" + endString
-            print(imgString)
-            let url:NSURL? = NSURL(string: imgString)
-            let data:NSData? = NSData(contentsOfURL : url!)
-            let image = UIImage(data : data!)
-            cell.recipeImage.image = image
+            if !imgString.containsString("{") || !imgString.containsString("}") {
+                let url:NSURL? = NSURL(string: imgString)
+                let data:NSData? = NSData(contentsOfURL : url!)
+                let image = UIImage(data : data!)
+                cell.recipeImage.image = image
+            }
         }
         else {
             let imgString:String = "https://spoonacular.com/recipeImages/beef-burgundy-2-101141.jpg"

@@ -5,13 +5,12 @@
 //  Created by Sophie Zhao on 12/1/16.
 //  Copyright © 2016 team danko_. All rights reserved.
 //
-
 import Foundation
 
 class Recipes {
     
     var recipeList:[Int:AnyObject] = [:]
-
+    
     // MARK: - API Requests
     func apiRequest(url: String) -> AnyObject {
         // return full JSON from API request
