@@ -66,60 +66,80 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0P-Hd-QKc">
+                                <rect key="frame" x="307" y="274" width="153" height="62"/>
+                                <connections>
+                                    <action selector="previousClicked:" destination="J4H-PJ-7wK" eventType="touchUpInside" id="qG4-et-CTT"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Qd-LO-mjO">
-                                <rect key="frame" x="361" y="270" width="46" height="17"/>
+                                <rect key="frame" x="361" y="295" width="46" height="17"/>
                                 <state key="normal" backgroundImage="arrow up.png"/>
                                 <connections>
                                     <action selector="previousClicked:" destination="J4H-PJ-7wK" eventType="touchUpInside" id="GZh-ez-sq7"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Previous Step" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Tz-2U-EUi">
-                                <rect key="frame" x="130" y="295" width="508" height="122"/>
+                                <rect key="frame" x="130" y="320" width="508" height="122"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
                                 <color key="textColor" red="0.33452634162303663" green="0.33452634162303663" blue="0.33452634162303663" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current Step" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDm-S0-HMw">
-                                <rect key="frame" x="130" y="425" width="508" height="173"/>
+                                <rect key="frame" x="130" y="457" width="508" height="173"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Next Step" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2hp-iv-yZW">
-                                <rect key="frame" x="130" y="606" width="508" height="128"/>
+                                <rect key="frame" x="130" y="649" width="508" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
                                 <color key="textColor" red="0.3345263416" green="0.3345263416" blue="0.3345263416" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Wr-c2-fl7">
-                                <rect key="frame" x="345" y="895" width="78" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Finished"/>
-                                <connections>
-                                    <action selector="finishClicked:" destination="J4H-PJ-7wK" eventType="touchUpInside" id="dfB-Lg-v2e"/>
-                                    <segue destination="POW-pW-jBj" kind="show" identifier="toEndSegue" id="JK6-pl-ZV2"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TITLE OF RECIPE" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edg-Fs-Ihc">
                                 <rect key="frame" x="-2" y="51" width="771" height="137"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="50"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w2U-0d-Eul">
-                                <rect key="frame" x="362" y="751" width="43" height="16"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="orL-Bx-j06">
+                                <rect key="frame" x="238" y="755" width="293" height="67"/>
+                                <connections>
+                                    <action selector="nextClicked:" destination="J4H-PJ-7wK" eventType="touchUpInside" id="rfa-cQ-oPQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w2U-0d-Eul">
+                                <rect key="frame" x="362" y="792" width="43" height="16"/>
                                 <state key="normal" backgroundImage="arrow.png"/>
                                 <connections>
                                     <action selector="nextClicked:" destination="J4H-PJ-7wK" eventType="touchUpInside" id="aLa-qb-9B1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WSk-o4-0xy">
-                                <rect key="frame" x="66" y="491" width="67" height="42"/>
+                                <rect key="frame" x="66" y="523" width="34" height="42"/>
                                 <state key="normal" backgroundImage="Asset 33.png"/>
                                 <connections>
                                     <action selector="repeatClicked:" destination="J4H-PJ-7wK" eventType="touchUpInside" id="Mcg-lO-iPP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B88-KS-Niw">
+                                <rect key="frame" x="169" y="487" width="429" height="110"/>
+                                <connections>
+                                    <action selector="repeatClicked:" destination="J4H-PJ-7wK" eventType="touchUpInside" id="fh9-2F-0Qn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Wr-c2-fl7">
+                                <rect key="frame" x="274" y="670" width="221" height="85"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.71296429630000002" green="0.80820739269999997" blue="0.73153346779999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="finishClicked:" destination="J4H-PJ-7wK" eventType="touchUpInside" id="dfB-Lg-v2e"/>
+                                    <segue destination="POW-pW-jBj" kind="show" identifier="toEndSegue" id="JK6-pl-ZV2"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -129,11 +149,15 @@
                     <connections>
                         <outlet property="backButton" destination="1Qd-LO-mjO" id="c7A-HR-MQc"/>
                         <outlet property="currStep" destination="bDm-S0-HMw" id="3CH-az-5YT"/>
+                        <outlet property="doneButton" destination="5Wr-c2-fl7" id="LUH-p5-D2K"/>
                         <outlet property="nexStep" destination="2hp-iv-yZW" id="qYz-VU-bP9"/>
                         <outlet property="nextButton" destination="w2U-0d-Eul" id="yoz-zd-lCn"/>
                         <outlet property="prevStep" destination="1Tz-2U-EUi" id="kte-EW-QMm"/>
                         <outlet property="recipeTitle" destination="edg-Fs-Ihc" id="2Aj-df-W9T"/>
                         <outlet property="repeatButton" destination="WSk-o4-0xy" id="WIu-QO-di0"/>
+                        <outlet property="suppBackButton" destination="I0P-Hd-QKc" id="7f0-v3-2hM"/>
+                        <outlet property="suppNextButton" destination="orL-Bx-j06" id="XFe-UY-AIR"/>
+                        <outlet property="suppRepeatButton" destination="B88-KS-Niw" id="EKF-zy-CQr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bb7-2e-aWK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -606,7 +630,7 @@
         <image name="whiteclock.png" width="187" height="187"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="EQf-Pl-dm9"/>
         <segue reference="B1E-NN-97A"/>
-        <segue reference="Te9-lL-fAJ"/>
     </inferredMetricsTieBreakers>
 </document>
