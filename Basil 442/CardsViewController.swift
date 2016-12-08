@@ -25,9 +25,12 @@ class CardsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
         // register the nib
-        print(cardsViewModel!.query())
         searchQuery.text = cardsViewModel!.query()
         allRecipes = recipeInstance.searchRecipes(cardsViewModel!.query())
+        if allRecipes.count == 0 {
+            alertNoResults(cardsViewModel!.query())
+        }
+
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -36,6 +39,60 @@ class CardsViewController: UIViewController, UITableViewDelegate, UITableViewDat
             cardTableView.deselectRowAtIndexPath(selectedRow, animated: true)
         }
     }
+    
+    // MARK: - General Methods 
+    func alertNoResults(query: String) {
+        let title = "No results found!"
+        let message = "Spoonacular Food API does not have any results for \(query). Please go back & search for another recipe!"
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+        let action = UIAlertAction(title: "OK", style: .Default,handler:nil)
+        alert.addAction(action)
+        presentViewController(alert, animated: true, completion: nil)
+    }
+
+    func alertNoInstructions(name: String) {
+        let title = "API did not store instructions!"
+        let message = "Spoonacular Food API does not have complete instructions. Please try again & select a different recipe!"
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+        let action = UIAlertAction(title: "OK", style: .Default,handler:nil)
+        alert.addAction(action)
+        presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    func ingredientsViewModelForRowAtIndexPath(indexPath: NSIndexPath) -> IngredientsViewModel {
+        let selectedRecipe = getRelevantData(indexPath)
+        return IngredientsViewModel(recipe: selectedRecipe)
+    }
+    
+    func getRelevantData(indexPath: NSIndexPath) -> Recipe {
+        let selected = allRecipes[indexPath.row]
+        let idInt = selected!["id"] as! Int
+        let id = String(idInt)
+        let title = selected!["title"] as! String
+        let timeInt = selected!["readyInMinutes"] as! Int
+        let time = String(timeInt)
+        
+        // Get details
+        let detailsInfo:Dictionary<String, AnyObject> = recipeInstance.getRecipeDetails(id) as! Dictionary<String, AnyObject>
+        let image = detailsInfo["imageURL"] as! String
+        let servingsInt = detailsInfo["servings"] as! Int
+        let servings = String(servingsInt)
+        
+        // Get ingredients
+        let ingredientInfo:Dictionary<String, AnyObject> = recipeInstance.getIngredients(id) as! Dictionary<String, AnyObject>
+        let ingredientsList:Array<String> = (ingredientInfo["ingredients"] as! Array<String>)
+        
+        // Get directions
+        let directionsList:Array<String> = recipeInstance.getDirections(id)
+        
+        // Create Recipe instance with current recipe
+        let selectedRecipe = Recipe(id:id, name:title, imageURL:image, time:time, servings:servings, ingredients:ingredientsList, directions:directionsList)
+        
+        return selectedRecipe
+    }
+
     
     // MARK: - Table View
     
@@ -72,20 +129,10 @@ class CardsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         cell.prepTime?.text = String(prepTime)
         return cell
     }
-//    
-    func alertNoInstructions(name: String) {
-        let title = "API did not store instructions!"
-        let message = "Spoonacular Food API does not have complete instructions. Please try again & select a different recipe!"
-        
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
-        let action = UIAlertAction(title: "OK", style: .Default,handler:nil)
-        alert.addAction(action)
-        presentViewController(alert, animated: true, completion: nil)
-    }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-//        // if recipe indexed has empty instructions array, ALERT, do not segue
+        // if recipe indexed has empty instructions array, ALERT, do not segue
         let selected = allRecipes[indexPath.row]
         let idInt = selected!["id"] as! Int
         let id = String(idInt)
@@ -95,39 +142,6 @@ class CardsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         } else {
             alertNoInstructions(selected!["title"] as! String)
         }
-    }
-    
-    
-    func ingredientsViewModelForRowAtIndexPath(indexPath: NSIndexPath) -> IngredientsViewModel {
-        let selectedRecipe = getRelevantData(indexPath)
-        return IngredientsViewModel(recipe: selectedRecipe)
-    }
-    
-    func getRelevantData(indexPath: NSIndexPath) -> Recipe {
-        let selected = allRecipes[indexPath.row]
-        let idInt = selected!["id"] as! Int
-        let id = String(idInt)
-        let title = selected!["title"] as! String
-        let timeInt = selected!["readyInMinutes"] as! Int
-        let time = String(timeInt)
-        
-        // Get details 
-        let detailsInfo:Dictionary<String, AnyObject> = recipeInstance.getRecipeDetails(id) as! Dictionary<String, AnyObject>
-        let image = detailsInfo["imageURL"] as! String
-        let servingsInt = detailsInfo["servings"] as! Int
-        let servings = String(servingsInt)
-        
-        // Get ingredients
-        let ingredientInfo:Dictionary<String, AnyObject> = recipeInstance.getIngredients(id) as! Dictionary<String, AnyObject>
-        let ingredientsList:Array<String> = (ingredientInfo["ingredients"] as! Array<String>)
-        
-        // Get directions
-        let directionsList:Array<String> = recipeInstance.getDirections(id)
-        
-        // Create Recipe instance with current recipe
-        let selectedRecipe = Recipe(id:id, name:title, imageURL:image, time:time, servings:servings, ingredients:ingredientsList, directions:directionsList)
-        
-        return selectedRecipe
     }
     
     // MARK: - Segues

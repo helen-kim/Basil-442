@@ -423,7 +423,7 @@
         <!--CompletionView-->
         <scene sceneID="mR1-SN-a9o">
             <objects>
-                <viewController title="CompletionView" id="POW-pW-jBj" sceneMemberID="viewController">
+                <viewController title="CompletionView" id="POW-pW-jBj" customClass="CompletionViewController" customModule="Basil_442" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ErL-Co-fmb"/>
                         <viewControllerLayoutGuide type="bottom" id="KnZ-YG-vr8"/>
@@ -615,6 +615,6 @@
         <image name="time cards.png" width="19" height="19"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Te9-lL-fAJ"/>
+        <segue reference="Evo-C4-qbD"/>
     </inferredMetricsTieBreakers>
 </document>
