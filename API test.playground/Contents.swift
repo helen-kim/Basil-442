@@ -10,9 +10,11 @@ import Foundation
 
 let id = 831906
 let query = "chicken"
+let spaces = "pesto chicken pasta"
 
 // test searchRecipes method
-let urlSearch = NSURL(string: "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/search?number=30&query="+query)
+let reformat = spaces.componentsSeparatedByString(" ").joinWithSeparator("+")
+let urlSearch = NSURL(string: "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/search?number=30&query="+reformat)
 let requestSearch = NSMutableURLRequest(URL: urlSearch!)
 requestSearch.HTTPMethod = "GET"
 requestSearch.setValue("iT7alpV4wxmshQQDyVZiaVJE5qAGp1Xhqkkjsn89TCTiZYAcvg", forHTTPHeaderField: "X-Mashape-Key")
@@ -116,9 +118,10 @@ do {
         let ingredient: String = item["name"] as! String
         ingredients.append(ingredient)
     }
+    let uniqueIng = Array(Set(ingredients))
     var details: Dictionary<String, AnyObject> = [:]
     details["title"] = jsonIng["title"]
-    details["ingredients"] = ingredients
+    details["ingredients"] = uniqueIng
     
     print(details)
 }

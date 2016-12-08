@@ -8,11 +8,15 @@
 
 import UIKit
 
-class SearchViewController: UIViewController {
+class SearchViewController: UIViewController, UISearchBarDelegate {
+    @IBOutlet weak var searchBar: UISearchBar!
+    
+    var searchActive : Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        searchBar.delegate = self
         // Do any additional setup after loading the view.
     }
 
@@ -21,15 +25,30 @@ class SearchViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // MARK: - SearchBar
+    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+        searchActive = true
     }
-    */
-
+    
+    func searchBarTextDidEndEditing(searchBar: UISearchBar) {
+        searchActive = false
+    }
+    
+    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+        searchActive = false
+    }
+    
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        searchActive = false
+        performSegueWithIdentifier("toCardSegue", sender: searchBar.text)
+        searchBar.text = ""
+    }
+    
+    // MARK: - Segues
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let cardsVC = segue.destinationViewController as? CardsViewController,
+            q = sender as? String {
+            cardsVC.cardsViewModel = CardsViewModel(query: q)
+        }
+    }
 }

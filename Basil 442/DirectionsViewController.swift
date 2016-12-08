@@ -11,19 +11,20 @@ import UIKit
 class DirectionsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     // Initialize Recipes
-    var dirInfo = Recipes()
+    var dirViewModel:DirectionsViewModel?
     
-    var id:String = "831906"
     var allDirections:Array<String> = []
-
-
+    
+    @IBOutlet weak var directionsTableView: UITableView!
+    @IBOutlet weak var recipeTitle: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        allDirections = dirInfo.getDirections(id)
-
+        allDirections = dirViewModel!.directions()
+        recipeTitle.text = dirViewModel!.name()
+        
         // Do any additional setup after loading the view.
     }
-    @IBOutlet weak var directionsTableView: UITableView!
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -40,6 +41,7 @@ class DirectionsViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
+        print(allDirections.count)
         return allDirections.count
     }
     
@@ -51,16 +53,24 @@ class DirectionsViewController: UIViewController, UITableViewDelegate, UITableVi
         cell.selectionStyle = .None
         return cell
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
+    
+    
+    // MARK: - Segues
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "toStepsSegue" {
+            if let destination = segue.destinationViewController as? StepsViewController {
+                destination.stepViewModel = StepsViewModel(recipe: dirViewModel!.recipe)
+            }
+        }
+        if segue.identifier == "returnIngredientsSegue" {
+            if let dest = segue.destinationViewController as? IngredientsViewController {
+                dest.ingViewModel = IngredientsViewModel(recipe:dirViewModel!.recipe)
+            }
+        }
     }
-    */
-
+    
+    
+    
 }

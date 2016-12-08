@@ -10,6 +10,9 @@ import UIKit
 
 class CardsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    // MARK: Properties & Outlets
+    var cardsViewModel: CardsViewModel?
+    
     let recipeInstance = Recipes()
     
     var allRecipes: Dictionary<Int, AnyObject> = [:]
@@ -17,9 +20,12 @@ class CardsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     @IBOutlet weak var cardTableView: UITableView!
     
+    // MARK: Std View Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        allRecipes = recipeInstance.searchRecipes("burger")
+        // register the nib
+        print(cardsViewModel!.query())
+        allRecipes = recipeInstance.searchRecipes(cardsViewModel!.query())
         cardTableView.registerNib(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "recipeCell")
     }
     
@@ -30,14 +36,7 @@ class CardsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
     }
     
-    
     // MARK: - Table View
-    
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-        
-    }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
@@ -53,11 +52,32 @@ class CardsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         cell.prepTime?.text = String(prepTime)
         return cell
     }
+//    
+//    func alertNoInstructions(name: String) {
+//        let title = "API did not store instructions!"
+//        let message = "Spoonacular Food API does not have complete instructions. Please try again & select a different recipe!"
+//        
+//        let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+//        let action = UIAlertAction(title: "OK", style: .Default,handler:nil)
+//        alert.addAction(action)
+//        presentViewController(alert, animated: true, completion: nil)
+//    }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+//        // if recipe indexed has empty instructions array, ALERT, do not segue
+//        let selected = allRecipes[indexPath.row]
+//        let idInt = selected!["id"] as! Int
+//        let id = String(idInt)
+//        let directionsList:Array<String> = recipeInstance.getDirections(id)
+//        if directionsList == [] {
+//            alertNoInstructions(selected!["name"])
+//        } else {
+//            performSegueWithIdentifier("toDetailSegue", sender: indexPath)
+//        }
         performSegueWithIdentifier("toDetailSegue", sender: indexPath)
     }
+    
     
     func detailViewModelForRowAtIndexPath(indexPath: NSIndexPath) -> DetailViewModel {
         let selectedRecipe = getRelevantData(indexPath)

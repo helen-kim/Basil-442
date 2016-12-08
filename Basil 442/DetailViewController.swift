@@ -21,10 +21,15 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var recipeImage: UIImageView!
     @IBOutlet weak var recipeTitle: UILabel!
     
+    @IBOutlet weak var recipeTime: UILabel!
+    
+    @IBOutlet weak var recipeServings: UILabel!
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
             
         recipeTitle.text = viewModel?.name()
+        recipeTime.text = viewModel?.time()
+        recipeServings.text = viewModel?.servings()
         
     }
     

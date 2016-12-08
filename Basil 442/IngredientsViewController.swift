@@ -12,24 +12,21 @@ class IngredientsViewController: UIViewController, UITableViewDelegate, UITableV
 
     var ingViewModel:IngredientsViewModel?
 
-    var id:String = ""
     var allIngredients:Array<String> = []
-    let ingRecipe = Recipes()
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        id = ingViewModel!.id()
-        
+
         // getIngredients returns dictionary with title and ingredients, ingredients is an array
-        let ingredientInfo:Dictionary<String, AnyObject> = ingRecipe.getIngredients(id) as! Dictionary<String, AnyObject>
-        allIngredients = (ingredientInfo["ingredients"] as! Array<String>)
+        allIngredients = ingViewModel!.ingredients()
+        recipeTitle.text = ingViewModel!.name()
         
         // Do any additional setup after loading the view.
     }
+    
     @IBOutlet weak var ingredientsTableView: UITableView!
-
+    @IBOutlet weak var recipeTitle: UILabel!
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -45,6 +42,7 @@ class IngredientsViewController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
+        
         return allIngredients.count
     }
     
@@ -56,7 +54,20 @@ class IngredientsViewController: UIViewController, UITableViewDelegate, UITableV
         cell.selectionStyle = .None
         return cell
     }
+    
+    // MARK: - Directions Segue
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "toDirectionsSegue" {
+            if let destination = segue.destinationViewController as? DirectionsViewController {
+                destination.dirViewModel = DirectionsViewModel(recipe: ingViewModel!.recipe)
+            }
+        }
+    }
 
+
+    
+    
 
     /*
     // MARK: - Navigation
