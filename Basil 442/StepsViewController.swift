@@ -28,13 +28,13 @@ class StepsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         recipeTitle.text = stepViewModel!.name()
-        allDirections = ["BEGIN"] + stepViewModel!.directions()
-        allDirections.append("")
+        allDirections = stepViewModel!.directions()
         prevStep.text = ""
         currStep.text = allDirections[currentStep]
         nexStep.text = allDirections[nextStep]
         totalSteps = allDirections.count
 
+        readDirection()
     }
     
     override func didReceiveMemoryWarning() {
@@ -78,7 +78,7 @@ class StepsViewController: UIViewController {
     
     func toggleDone() {
         print("prev step: (\(previousStep)) \(prevStep.text), current step: (\(currentStep)) \(currStep.text), next step: (\(nextStep)) \(nexStep.text)")
-        if allDirections[nextStep+1] == "" {
+        if (nextStep+1 == totalSteps) {
             doneButton.userInteractionEnabled = true
             doneButton.setTitle("Finished!", forState: UIControlState.Normal)
             nextButton.userInteractionEnabled = false
@@ -144,12 +144,9 @@ class StepsViewController: UIViewController {
     
     func readDirection() {
         print("read")
-        if (allDirections[currentStep] != "") && (allDirections[currentStep] != "BEGIN") {
-            let speechUtterance = AVSpeechUtterance(string: allDirections[currentStep])
-            speechUtterance.preUtteranceDelay = 0.05
-            speechSynthesizer.speakUtterance(speechUtterance)
-        }
-        
+        let speechUtterance = AVSpeechUtterance(string: allDirections[currentStep])
+        speechUtterance.preUtteranceDelay = 0.05
+        speechSynthesizer.speakUtterance(speechUtterance)
     }
     
     
