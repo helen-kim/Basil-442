@@ -97,7 +97,7 @@ class CardsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let image = detailsInfo["imageURL"] as! String
         let servingsInt = detailsInfo["servings"] as! Int
         let servings = String(servingsInt)
-                
+        
         // Get ingredients
         let ingredientInfo:Dictionary<String, AnyObject> = recipeInstance.getIngredients(id) as! Dictionary<String, AnyObject>
         let ingredientsList:Array<String> = (ingredientInfo["ingredients"] as! Array<String>)
