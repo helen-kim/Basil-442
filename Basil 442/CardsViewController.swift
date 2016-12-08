@@ -72,29 +72,28 @@ class CardsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return cell
     }
 //    
-//    func alertNoInstructions(name: String) {
-//        let title = "API did not store instructions!"
-//        let message = "Spoonacular Food API does not have complete instructions. Please try again & select a different recipe!"
-//        
-//        let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
-//        let action = UIAlertAction(title: "OK", style: .Default,handler:nil)
-//        alert.addAction(action)
-//        presentViewController(alert, animated: true, completion: nil)
-//    }
+    func alertNoInstructions(name: String) {
+        let title = "API did not store instructions!"
+        let message = "Spoonacular Food API does not have complete instructions. Please try again & select a different recipe!"
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+        let action = UIAlertAction(title: "OK", style: .Default,handler:nil)
+        alert.addAction(action)
+        presentViewController(alert, animated: true, completion: nil)
+    }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
 //        // if recipe indexed has empty instructions array, ALERT, do not segue
-//        let selected = allRecipes[indexPath.row]
-//        let idInt = selected!["id"] as! Int
-//        let id = String(idInt)
-//        let directionsList:Array<String> = recipeInstance.getDirections(id)
-//        if directionsList == [] {
-//            alertNoInstructions(selected!["name"])
-//        } else {
-//            performSegueWithIdentifier("toDetailSegue", sender: indexPath)
-//        }
-        performSegueWithIdentifier("toDetailSegue", sender: indexPath)
+        let selected = allRecipes[indexPath.row]
+        let idInt = selected!["id"] as! Int
+        let id = String(idInt)
+        let details:Dictionary<String, AnyObject> = recipeInstance.getRecipeDetails(id) as! Dictionary<String, AnyObject>
+        if let ins = details["instructions"] as? String {
+            performSegueWithIdentifier("toDetailSegue", sender: indexPath)
+        } else {
+            alertNoInstructions(selected!["title"] as! String)
+        }
     }
     
     
