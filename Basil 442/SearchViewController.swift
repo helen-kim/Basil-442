@@ -35,6 +35,8 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
     }
     
     func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+        searchBar.text = ""
+        // Hide the cancel button
         searchActive = false
     }
     
