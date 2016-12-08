@@ -34,12 +34,12 @@ class StepsViewController: UIViewController {
         currStep.text = allDirections[currentStep]
         nexStep.text = allDirections[nextStep]
         totalSteps = allDirections.count
-        // Do any additional setup after loading the view.
+
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
     }
     
     @IBOutlet weak var recipeTitle: UILabel!
@@ -73,30 +73,6 @@ class StepsViewController: UIViewController {
     }
     
     func decreaseStepIndices() {
-//        print("previous")
-//        if currentStep == 0 && previousStep == -1{
-//            isBegin = true
-//        }
-//        
-//        if currentStep > 0 {
-//            if isBegin {
-//                isBegin = false
-//            }
-//            currentStep = currentStep - 1
-//        }
-//        
-//        // Increment next only if current step is not at the top
-//        if currentStep == 0 {
-//            nextStep = nextStep - 1
-//            previousStep = emptyString
-//        } else {
-//            nextStep = currentStep + 1
-//            // Increment previous as 1 less than current
-//            previousStep = currentStep - 1
-//        }
-//        if isBegin == false {
-//            assignText()
-//        }
         isEnd = false
         if currentStep > 0 {
             isBegin = false
@@ -111,31 +87,6 @@ class StepsViewController: UIViewController {
     }
     
     func increaseStepIndices() {
-//        print("next")
-//        // directions done if currentStep is past last step
-//        if currentStep == allDirections.count + 1{
-//            isEnd = true
-//        }
-//        if currentStep < allDirections.count + 1{
-//            if isEnd {
-//                isEnd = false
-//            }
-//            currentStep = currentStep + 1
-//        }
-//        
-//        // Increment next only if current step is not at the bottom
-//        if currentStep == allDirections.count {
-//            nextStep = 0
-//            previousStep = currentStep - 1
-//        } else {
-//            print("nextstep")
-//            nextStep = nextStep + 1
-//            // Increment previous as 1 less than current
-//            previousStep = currentStep - 1
-//        }
-//        if isEnd == false {
-//            assignText()
-//        }
         isBegin = false
         if currentStep < totalSteps - 1 {
             isEnd = false
@@ -181,16 +132,5 @@ class StepsViewController: UIViewController {
     }
     
     
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
 }
