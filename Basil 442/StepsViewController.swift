@@ -23,6 +23,7 @@ class StepsViewController: UIViewController {
     var isBegin: Bool = false
     var isEnd: Bool = false
     let emptyString: Int = -1
+    var totalSteps: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +33,7 @@ class StepsViewController: UIViewController {
         prevStep.text = ""
         currStep.text = allDirections[currentStep]
         nexStep.text = allDirections[nextStep]
+        totalSteps = allDirections.count
         // Do any additional setup after loading the view.
     }
     
@@ -71,65 +73,89 @@ class StepsViewController: UIViewController {
     }
     
     func decreaseStepIndices() {
-        if currentStep == 0 && previousStep == -1{
+//        print("previous")
+//        if currentStep == 0 && previousStep == -1{
+//            isBegin = true
+//        }
+//        
+//        if currentStep > 0 {
+//            if isBegin {
+//                isBegin = false
+//            }
+//            currentStep = currentStep - 1
+//        }
+//        
+//        // Increment next only if current step is not at the top
+//        if currentStep == 0 {
+//            nextStep = nextStep - 1
+//            previousStep = emptyString
+//        } else {
+//            nextStep = currentStep + 1
+//            // Increment previous as 1 less than current
+//            previousStep = currentStep - 1
+//        }
+//        if isBegin == false {
+//            assignText()
+//        }
+        isEnd = false
+        if currentStep > 0 {
+            isBegin = false
+            previousStep -= 1
+            currentStep -= 1
+            nextStep -= 1
+            assignText()
+        } else if currentStep == 0 {
             isBegin = true
         }
         
-        if currentStep > 0 {
-            if isBegin {
-                isBegin = false
-            }
-            currentStep = currentStep - 1
-        }
-        
-        // Increment next only if current step is not at the top
-        if currentStep == 0 {
-            nextStep = nextStep - 1
-            previousStep = emptyString
-        } else {
-            nextStep = currentStep + 1
-            // Increment previous as 1 less than current
-            previousStep = currentStep - 1
-        }
-        if isBegin == false {
-            assignText()
-        }
-
     }
     
     func increaseStepIndices() {
-        // directions done if currentStep is past last step
-        if currentStep >= allDirections.count + 1{
-            
-            return endInstructions()
+//        print("next")
+//        // directions done if currentStep is past last step
+//        if currentStep == allDirections.count + 1{
+//            isEnd = true
+//        }
+//        if currentStep < allDirections.count + 1{
+//            if isEnd {
+//                isEnd = false
+//            }
+//            currentStep = currentStep + 1
+//        }
+//        
+//        // Increment next only if current step is not at the bottom
+//        if currentStep == allDirections.count {
+//            nextStep = 0
+//            previousStep = currentStep - 1
+//        } else {
+//            print("nextstep")
+//            nextStep = nextStep + 1
+//            // Increment previous as 1 less than current
+//            previousStep = currentStep - 1
+//        }
+//        if isEnd == false {
+//            assignText()
+//        }
+        isBegin = false
+        if currentStep < totalSteps - 1 {
+            isEnd = false
+            nextStep += 1
+            currentStep += 1
+            previousStep += 1
+            assignText()
+        } else if currentStep == totalSteps - 1 {
+            isEnd = true
         }
-        if currentStep <= allDirections.count + 1{
-            currentStep = currentStep + 1
-        }
-        // Increment next only if current step is not at the top
-        if currentStep == allDirections.count {
-            nextStep = 0
-            previousStep = currentStep - 1
-        } else {
-            nextStep = nextStep + 1
-            // Increment previous as 1 less than current
-            previousStep = currentStep - 1
-        }
-        assignText()
+        
     }
     
     func assignText() {
         // If reach end
-        print(nextStep)
-        if nextStep == allDirections.count {
+        if nextStep == totalSteps {
             nexStep.text = ""
             currStep.text = allDirections[currentStep]
             prevStep.text = allDirections[previousStep]
         }
-        else if nextStep == allDirections.count + 1 {
-            endInstructions()
-        }
-        // If just starting
         else if previousStep == emptyString {
             prevStep.text = ""
             currStep.text = allDirections[currentStep]
@@ -144,12 +170,8 @@ class StepsViewController: UIViewController {
         
     }
     
-    func endInstructions() {
-        
-        
-    }
-    
     func readDirection() {
+        print("read")
         if (allDirections[currentStep] != "DONE") && (allDirections[currentStep] != "BEGIN") {
             let speechUtterance = AVSpeechUtterance(string: allDirections[currentStep])
             speechUtterance.preUtteranceDelay = 0.15
@@ -157,7 +179,6 @@ class StepsViewController: UIViewController {
         }
         
     }
-    
     
     
     
