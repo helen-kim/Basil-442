@@ -470,7 +470,7 @@
                         <outlet property="recipeTitle" destination="lX6-cK-Vg3" id="fis-bv-Unj"/>
                         <segue destination="b8z-Jd-FMd" kind="unwind" identifier="unwindToHome" unwindAction="unwindToHome:" id="pQ4-vt-9f5"/>
                         <segue destination="b8z-Jd-FMd" kind="unwind" identifier="unwindToIng" unwindAction="unwindToIng:" id="5Zw-wT-G1r"/>
-                        <segue destination="b8z-Jd-FMd" kind="unwind" unwindAction="unwindToCard:" id="k69-iv-6Vq"/>
+                        <segue destination="b8z-Jd-FMd" kind="unwind" identifier="unwindToCard" unwindAction="unwindToCard:" id="k69-iv-6Vq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="saW-tg-rkC" userLabel="First Responder" sceneMemberID="firstResponder"/>
