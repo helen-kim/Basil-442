@@ -78,9 +78,14 @@ class IngredientsViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     
-    @IBAction func swipeToDir(sender: UISwipeGestureRecognizer) {
-        performSegueWithIdentifier("toDirectionsSegue", sender: DirectionsViewModel(recipe: ingViewModel!.recipe, source: ingViewModel!.source))
+    @IBAction func downButtonPressed(sender: UIButton) {
+        if ingViewModel!.source == "home" {
+            self.performSegueWithIdentifier("unwindToHome", sender: self)
+        } else if ingViewModel!.source == "cards" {
+            self.performSegueWithIdentifier("unwindToCards", sender: self)
+        }
     }
+   
 
     /*
     // MARK: - Navigation

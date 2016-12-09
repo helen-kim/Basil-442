@@ -127,7 +127,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WSk-o4-0xy">
-                                <rect key="frame" x="85" y="547" width="36" height="25"/>
+                                <rect key="frame" x="73" y="547" width="36" height="25"/>
                                 <state key="normal" image="playtoggle.png"/>
                                 <connections>
                                     <action selector="repeatClicked:" destination="J4H-PJ-7wK" eventType="touchUpInside" id="Mcg-lO-iPP"/>
@@ -240,9 +240,13 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="MbB-9R-Oh0">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lg4-yN-fBJ">
                                 <rect key="frame" x="362" y="28" width="45" height="9"/>
-                            </imageView>
+                                <state key="normal" image="arrow.png"/>
+                                <connections>
+                                    <action selector="downButtonPressed:" destination="ep8-qB-i5s" eventType="touchUpInside" id="Bd2-WZ-WC2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -361,9 +365,11 @@
                     <connections>
                         <outlet property="cardTableView" destination="gxL-X0-wJE" id="801-vj-Rpo"/>
                         <outlet property="searchQuery" destination="GUu-de-aX4" id="Mtb-6g-t3K"/>
+                        <segue destination="59t-EC-tS3" kind="unwind" identifier="unwindToSearch" unwindAction="unwindToSearch:" id="2IP-jm-SGQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Tl-yw-AFR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="59t-EC-tS3" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1536" y="1530"/>
         </scene>
@@ -443,9 +449,13 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="vdg-OG-3cy">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JrT-Wk-hYs">
                                 <rect key="frame" x="362" y="28" width="45" height="9"/>
-                            </imageView>
+                                <state key="normal" image="arrow.png"/>
+                                <connections>
+                                    <action selector="downButtonPressed:" destination="urJ-Bu-pOY" eventType="touchUpInside" id="eXJ-2b-y3r"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -498,6 +508,7 @@
                                     <color key="titleColor" red="0.71296429630000002" green="0.80820739269999997" blue="0.73153346779999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="goToHome:" destination="POW-pW-jBj" eventType="touchUpInside" id="rEI-a8-FRg"/>
                                     <segue destination="yfp-cw-o6d" kind="showDetail" action="showViewController:sender:" id="EjW-bO-s8Y"/>
                                 </connections>
                             </button>
@@ -673,7 +684,7 @@
         <image name="time cards.png" width="19" height="19"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="aWr-mg-LZT"/>
+        <segue reference="Evo-C4-qbD"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.71296429630000002" green="0.80820739269999997" blue="0.73153346779999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

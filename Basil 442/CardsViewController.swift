@@ -43,10 +43,12 @@ class CardsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     // MARK: - General Methods 
     func alertNoResults(query: String) {
         let title = "No results found!"
-        let message = "Spoonacular Food API does not have any results for \(query). Please go back & search for another recipe!"
+        let message = "Spoonacular Food API does not have any results for \(query). Please search for another recipe!"
         
         let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
-        let action = UIAlertAction(title: "OK", style: .Default,handler:nil)
+        let action = UIAlertAction(title: "OK", style: .Default, handler: {
+            action in self.performSegueWithIdentifier("unwindToSearch", sender: self)
+        })
         alert.addAction(action)
         presentViewController(alert, animated: true, completion: nil)
     }

@@ -57,4 +57,6 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
             cardsVC.cardsViewModel = CardsViewModel(query: q)
         }
     }
+    
+    @IBAction func unwindToSearch(segue: UIStoryboardSegue) {}
 }

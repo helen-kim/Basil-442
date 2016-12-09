@@ -28,6 +28,11 @@ class CompletionViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func goToHome(sender: UIButton) {
+        self.performSegueWithIdentifier("unwindToHome", sender: self)
+    }
+
+    
 
     /*
     // MARK: - Navigation
