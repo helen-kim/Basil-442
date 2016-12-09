@@ -31,6 +31,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
     // MARK: - SearchBar
     func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
         searchActive = true
+        
     }
     
     func searchBarTextDidEndEditing(searchBar: UISearchBar) {

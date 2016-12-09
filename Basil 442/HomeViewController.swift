@@ -5,7 +5,6 @@
 //  Created by Other on 12/4/16.
 //  Copyright © 2016 team danko_. All rights reserved.
 //
-
 import UIKit
 
 class HomeViewController: UIViewController {
@@ -15,7 +14,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var recipeTitle: UILabel!
     @IBOutlet weak var recipeTime: UILabel!
     @IBOutlet weak var recipeImage: UIImageView!
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +27,7 @@ class HomeViewController: UIViewController {
         let time = rnd["time"] as! Int
         recipeTime.text = String(time)
         // Do any additional setup after loading the view.
+        
         
         // Setup image view
         if let img = rnd["imageURL"] {
@@ -44,9 +44,9 @@ class HomeViewController: UIViewController {
             let image = UIImage(data : data!)
             recipeImage.image = image
         }
-
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -89,13 +89,12 @@ class HomeViewController: UIViewController {
     @IBAction func unwindToHome(segue: UIStoryboardSegue) {}
     
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
