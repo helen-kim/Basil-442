@@ -99,7 +99,7 @@ class CardsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func ingredientsViewModelForRowAtIndexPath(indexPath: NSIndexPath) -> IngredientsViewModel {
         let selectedRecipe = getRelevantData(indexPath)
-        return IngredientsViewModel(recipe: selectedRecipe)
+        return IngredientsViewModel(recipe: selectedRecipe, source: "cards")
     }
     
     func getRelevantData(indexPath: NSIndexPath) -> Recipe {
@@ -136,6 +136,8 @@ class CardsViewController: UIViewController, UITableViewDelegate, UITableViewDat
             ingVC.ingViewModel = ingredientsViewModelForRowAtIndexPath(indexPath)
         }
     }
+    
+    @IBAction func unwindToCard(segue: UIStoryboardSegue) {}
     
     
     /*

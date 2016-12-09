@@ -89,12 +89,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HomeViewController.swift"
-            timestampString = "502876298.187505"
+            timestampString = "502929250.791214"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "getRelevantData()"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "viewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

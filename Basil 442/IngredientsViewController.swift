@@ -26,6 +26,8 @@ class IngredientsViewController: UIViewController, UITableViewDelegate, UITableV
     
     @IBOutlet weak var ingredientsTableView: UITableView!
     @IBOutlet weak var recipeTitle: UILabel!
+
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -60,14 +62,25 @@ class IngredientsViewController: UIViewController, UITableViewDelegate, UITableV
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "toDirectionsSegue" {
             if let destination = segue.destinationViewController as? DirectionsViewController {
-                destination.dirViewModel = DirectionsViewModel(recipe: ingViewModel!.recipe)
+                destination.dirViewModel = DirectionsViewModel(recipe: ingViewModel!.recipe, source: ingViewModel!.source)
             }
         }
     }
-
-
+    
+    @IBAction func unwindToIng(segue: UIStoryboardSegue) {}
+    
+    @IBAction func swipeOut(sender: UISwipeGestureRecognizer) {
+        if ingViewModel!.source == "home" {
+            self.performSegueWithIdentifier("unwindToHome", sender: self)
+        } else if ingViewModel!.source == "cards" {
+            self.performSegueWithIdentifier("unwindToCards", sender: self)
+        }
+    }
     
     
+    @IBAction func swipeToDir(sender: UISwipeGestureRecognizer) {
+        performSegueWithIdentifier("toDirectionsSegue", sender: DirectionsViewModel(recipe: ingViewModel!.recipe, source: ingViewModel!.source))
+    }
 
     /*
     // MARK: - Navigation

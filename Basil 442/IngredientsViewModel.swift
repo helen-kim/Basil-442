@@ -10,9 +10,11 @@ import Foundation
 
 class IngredientsViewModel {
     let recipe: Recipe
+    let source: String
     
-    init(recipe: Recipe) {
+    init(recipe: Recipe, source: String) {
         self.recipe = recipe
+        self.source = source
     }
     
     func id() -> String {

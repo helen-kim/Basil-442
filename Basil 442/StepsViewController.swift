@@ -74,6 +74,15 @@ class StepsViewController: UIViewController {
         toggleDone()
     }
     
+    @IBAction func swipeOut(sender: UISwipeGestureRecognizer) {
+        self.performSegueWithIdentifier("unwindToDir", sender: self)
+    }
+    
+    @IBAction func backToDir(sender: UIButton) {
+        self.performSegueWithIdentifier("unwindToDir", sender: self)
+    }
+    
+    
     func toggleDone() {
         print("prev step: (\(previousStep)) \(prevStep.text), current step: (\(currentStep)) \(currStep.text), next step: (\(nextStep)) \(nexStep.text)")
         if (nextStep+1 == totalSteps) {

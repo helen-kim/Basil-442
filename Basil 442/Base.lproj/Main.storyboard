@@ -42,7 +42,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="find a recipe" id="gBk-p2-KnQ"/>
+                    <navigationItem key="navigationItem" id="gBk-p2-KnQ"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
@@ -96,7 +96,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TITLE OF RECIPE" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edg-Fs-Ihc">
-                                <rect key="frame" x="-2" y="51" width="771" height="137"/>
+                                <rect key="frame" x="54" y="51" width="678" height="137"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="50"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -140,9 +140,23 @@
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="stepsdeco2.png" translatesAutoresizingMaskIntoConstraints="NO" id="hSR-dq-WKS">
                                 <rect key="frame" x="150" y="909" width="466" height="35"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LaZ-Yz-LIc">
+                                <rect key="frame" x="0.0" y="105" width="46" height="30"/>
+                                <state key="normal" image="arrow back.png"/>
+                                <connections>
+                                    <action selector="backToDir:" destination="J4H-PJ-7wK" eventType="touchUpInside" id="Hoh-Iq-pZ0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Nn2-ln-u20" appends="YES" id="fFh-kA-mlG"/>
+                        </connections>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="BSD-A0-OcF"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <outlet property="backButton" destination="1Qd-LO-mjO" id="c7A-HR-MQc"/>
@@ -154,11 +168,18 @@
                         <outlet property="recipeTitle" destination="edg-Fs-Ihc" id="2Aj-df-W9T"/>
                         <outlet property="repeatButton" destination="WSk-o4-0xy" id="WIu-QO-di0"/>
                         <outlet property="suppRepeatButton" destination="B88-KS-Niw" id="EKF-zy-CQr"/>
+                        <segue destination="arT-8I-VJ2" kind="unwind" identifier="unwindToDir" unwindAction="unwindToDir:" id="fqM-Oo-nUV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bb7-2e-aWK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="arT-8I-VJ2" userLabel="Exit" sceneMemberID="exit"/>
+                <swipeGestureRecognizer direction="right" id="Nn2-ln-u20">
+                    <connections>
+                        <action selector="swipeOut:" destination="J4H-PJ-7wK" id="Yzy-Fk-xcB"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2604" y="2738"/>
+            <point key="canvasLocation" x="2657" y="2734"/>
         </scene>
         <!--IngredientsView-->
         <scene sceneID="X8Z-jP-I3v">
@@ -173,7 +194,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="53" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dpa-T6-Mf7">
-                                <rect key="frame" x="128" y="331" width="511" height="582"/>
+                                <rect key="frame" x="128" y="330" width="511" height="582"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ingredientCell" rowHeight="50" id="eSd-YV-L4h" customClass="IngredientsTableViewCell" customModule="Basil_442" customModuleProvider="target">
@@ -205,33 +226,48 @@
                                 </connections>
                             </tableView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="ingredientstab.png" translatesAutoresizingMaskIntoConstraints="NO" id="4Ai-4Y-ugT">
-                                <rect key="frame" x="94" y="219" width="578" height="99"/>
+                                <rect key="frame" x="94" y="218" width="578" height="99"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fp1-TH-WAe">
-                                <rect key="frame" x="517" y="236" width="148" height="65"/>
+                                <rect key="frame" x="517" y="235" width="148" height="65"/>
                                 <connections>
                                     <segue destination="urJ-Bu-pOY" kind="show" identifier="toDirectionsSegue" animates="NO" id="bey-nV-YwE"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TITLE OF RECIPE" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ua-ZM-C41">
-                                <rect key="frame" x="-2" y="51" width="771" height="154"/>
+                                <rect key="frame" x="20" y="50" width="728" height="154"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="48"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="MbB-9R-Oh0">
+                                <rect key="frame" x="362" y="28" width="45" height="9"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="teZ-rY-D9C" appends="YES" id="KIG-ud-dkX"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="13e-c5-gix"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <outlet property="ingredientsTableView" destination="dpa-T6-Mf7" id="4c0-YQ-Gh0"/>
                         <outlet property="recipeTitle" destination="2Ua-ZM-C41" id="gKg-4j-cDj"/>
+                        <segue destination="3la-o7-Iva" kind="unwind" identifier="unwindToHome" unwindAction="unwindToHome:" id="zen-Gi-z7Z"/>
+                        <segue destination="3la-o7-Iva" kind="unwind" identifier="unwindToCards" unwindAction="unwindToCard:" id="WU9-VC-bvg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GrF-ce-pQm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="3la-o7-Iva" userLabel="Exit" sceneMemberID="exit"/>
+                <swipeGestureRecognizer direction="down" id="teZ-rY-D9C">
+                    <connections>
+                        <action selector="swipeOut:" destination="ep8-qB-i5s" id="tTk-pD-CiI"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2624" y="1536"/>
+            <point key="canvasLocation" x="2630" y="1530"/>
         </scene>
         <!--CardsView-->
         <scene sceneID="oTT-6O-xww">
@@ -264,7 +300,7 @@
                                     <color key="titleColor" red="0.71296429630000002" green="0.80820739269999997" blue="0.73153346779999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ep8-qB-i5s" kind="show" identifier="cardToIngredientsSegue" animates="NO" id="Evo-C4-qbD"/>
+                                    <segue destination="ep8-qB-i5s" kind="modal" identifier="cardToIngredientsSegue" modalTransitionStyle="coverVertical" id="Evo-C4-qbD"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="225" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gxL-X0-wJE">
@@ -391,34 +427,51 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F2s-zq-B70">
                                 <rect key="frame" x="102" y="224" width="145" height="74"/>
                                 <connections>
-                                    <segue destination="ep8-qB-i5s" kind="show" identifier="returnIngredientsSegue" animates="NO" id="Te9-lL-fAJ"/>
+                                    <action selector="ingButtonTapped:" destination="urJ-Bu-pOY" eventType="touchUpInside" id="gu4-Eh-Wk0"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TITLE OF RECIPE" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lX6-cK-Vg3">
-                                <rect key="frame" x="-2" y="34" width="771" height="154"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="48"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FiG-nW-o2Q">
                                 <rect key="frame" x="312" y="882" width="145" height="52"/>
                                 <state key="normal" backgroundImage="start btn.png"/>
                                 <connections>
-                                    <segue destination="J4H-PJ-7wK" kind="presentation" identifier="toStepsSegue" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="dKY-Bj-ifs"/>
+                                    <segue destination="J4H-PJ-7wK" kind="presentation" identifier="toStepsSegue" modalTransitionStyle="flipHorizontal" id="dKY-Bj-ifs"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TITLE OF RECIPE" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lX6-cK-Vg3">
+                                <rect key="frame" x="20" y="50" width="728" height="154"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="48"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="vdg-OG-3cy">
+                                <rect key="frame" x="362" y="28" width="45" height="9"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="agp-2t-X1x" appends="YES" id="cN5-Py-D1q"/>
+                        </connections>
                     </view>
+                    <navigationItem key="navigationItem" id="AYo-Kk-J41"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <outlet property="directionsTableView" destination="LFN-vg-Q7F" id="z1S-X5-kk5"/>
                         <outlet property="recipeTitle" destination="lX6-cK-Vg3" id="fis-bv-Unj"/>
+                        <segue destination="b8z-Jd-FMd" kind="unwind" identifier="unwindToHome" unwindAction="unwindToHome:" id="pQ4-vt-9f5"/>
+                        <segue destination="b8z-Jd-FMd" kind="unwind" identifier="unwindToIng" unwindAction="unwindToIng:" id="5Zw-wT-G1r"/>
+                        <segue destination="b8z-Jd-FMd" kind="unwind" unwindAction="unwindToCard:" id="k69-iv-6Vq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="saW-tg-rkC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="b8z-Jd-FMd" userLabel="Exit" sceneMemberID="exit"/>
+                <swipeGestureRecognizer direction="down" id="agp-2t-X1x">
+                    <connections>
+                        <action selector="swipeOut:" destination="urJ-Bu-pOY" id="E74-dh-riC"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3738" y="1536"/>
+            <point key="canvasLocation" x="3738" y="1530"/>
         </scene>
         <!--CompletionView-->
         <scene sceneID="mR1-SN-a9o">
@@ -452,8 +505,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <segue destination="WwU-oV-ZXX" kind="unwind" identifier="unwindToHome" unwindAction="unwindToHome:" id="OaR-sp-bzh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rVZ-N8-aWd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="WwU-oV-ZXX" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="956" y="2722"/>
         </scene>
@@ -502,7 +559,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LZX-Oq-dp8">
                                         <rect key="frame" x="29" y="26" width="466" height="349"/>
                                         <connections>
-                                            <segue destination="ep8-qB-i5s" kind="show" identifier="homeToIngredientsSegue" id="aWr-mg-LZT"/>
+                                            <segue destination="ep8-qB-i5s" kind="presentation" identifier="homeToIngredientsSegue" modalTransitionStyle="coverVertical" id="aWr-mg-LZT"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -521,7 +578,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="find a recipe" id="FUU-mY-1b4"/>
+                    <navigationItem key="navigationItem" id="FUU-mY-1b4"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
@@ -596,6 +653,7 @@
     </scenes>
     <resources>
         <image name="15423728_10154369400058952_232567886_n.png" width="478" height="348"/>
+        <image name="arrow back.png" width="22" height="59"/>
         <image name="arrow up.png" width="59" height="22"/>
         <image name="arrow.png" width="59" height="22"/>
         <image name="bon appetit.png" width="424" height="350"/>
@@ -615,6 +673,7 @@
         <image name="time cards.png" width="19" height="19"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Evo-C4-qbD"/>
+        <segue reference="aWr-mg-LZT"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" red="0.71296429630000002" green="0.80820739269999997" blue="0.73153346779999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

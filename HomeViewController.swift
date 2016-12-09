@@ -19,6 +19,10 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let img = UIImage()
+        self.navigationController?.navigationBar.shadowImage = img
+        self.navigationController?.navigationBar.setBackgroundImage(img, forBarMetrics: UIBarMetrics.Default)
+        
         rnd = recipeInstance.getRandomRecipe() as! Dictionary<String, AnyObject>
         recipeTitle.text = rnd["title"] as? String
         let time = rnd["time"] as! Int
@@ -73,7 +77,7 @@ class HomeViewController: UIViewController {
     
     func sendToIngredientsViewModel() -> IngredientsViewModel{
         let selectedRecipe = getRelevantData()
-        return IngredientsViewModel(recipe: selectedRecipe)
+        return IngredientsViewModel(recipe: selectedRecipe, source: "home")
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -81,6 +85,8 @@ class HomeViewController: UIViewController {
             ingVC.ingViewModel = sendToIngredientsViewModel()
         }
     }
+    
+    @IBAction func unwindToHome(segue: UIStoryboardSegue) {}
     
     /*
     // MARK: - Navigation

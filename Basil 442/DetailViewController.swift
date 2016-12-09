@@ -36,7 +36,7 @@ class DetailViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "toIngredientsSegue" {
             if let destination = segue.destinationViewController as? IngredientsViewController {
-                destination.ingViewModel = IngredientsViewModel(recipe: viewModel!.recipe)
+                destination.ingViewModel = IngredientsViewModel(recipe: viewModel!.recipe, source: viewModel!.source)
             }
         }
     }

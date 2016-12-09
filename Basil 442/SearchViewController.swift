@@ -15,6 +15,9 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let img = UIImage()
+        self.navigationController?.navigationBar.shadowImage = img
+        self.navigationController?.navigationBar.setBackgroundImage(img, forBarMetrics: UIBarMetrics.Default)
         
         searchBar.delegate = self
         // Do any additional setup after loading the view.

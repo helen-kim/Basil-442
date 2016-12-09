@@ -59,8 +59,6 @@ class DirectionsViewController: UIViewController, UITableViewDelegate, UITableVi
         return cell
     }
     
-    
-    
     // MARK: - Segues
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -71,11 +69,23 @@ class DirectionsViewController: UIViewController, UITableViewDelegate, UITableVi
         }
         if segue.identifier == "returnIngredientsSegue" {
             if let dest = segue.destinationViewController as? IngredientsViewController {
-                dest.ingViewModel = IngredientsViewModel(recipe:dirViewModel!.recipe)
+                dest.ingViewModel = IngredientsViewModel(recipe:dirViewModel!.recipe, source: dirViewModel!.source)
             }
         }
     }
     
+    @IBAction func unwindToDir(segue: UIStoryboardSegue) {}
     
+    @IBAction func swipeOut(sender: UISwipeGestureRecognizer) {
+        if dirViewModel!.source == "home" {
+            self.performSegueWithIdentifier("unwindToHome", sender: self)
+        } else if dirViewModel!.source == "cards" {
+            self.performSegueWithIdentifier("unwindToCards", sender: self)
+        }
+    }
+    
+    @IBAction func ingButtonTapped(sender: UIButton) {
+        self.performSegueWithIdentifier("unwindToIng", sender: self)
+    }
     
 }
