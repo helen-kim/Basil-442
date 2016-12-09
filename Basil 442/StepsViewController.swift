@@ -83,10 +83,12 @@ class StepsViewController: UIViewController {
     }
     
     @IBAction func swipeOut(sender: UISwipeGestureRecognizer) {
+        speechSynthesizer.stopSpeakingAtBoundary(AVSpeechBoundary.Immediate)
         self.performSegueWithIdentifier("unwindToDir", sender: self)
     }
     
     @IBAction func backToDir(sender: UIButton) {
+        speechSynthesizer.stopSpeakingAtBoundary(AVSpeechBoundary.Immediate)
         self.performSegueWithIdentifier("unwindToDir", sender: self)
     }
     

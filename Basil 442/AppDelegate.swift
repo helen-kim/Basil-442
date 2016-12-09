@@ -20,6 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         navigationBarAppearance.barTintColor = UIColor.whiteColor()
         
+        var tab = UITabBar.appearance()
+        tab.selectedImageTintColor = UIColor.whiteColor()
+        
         return true
     }
 
