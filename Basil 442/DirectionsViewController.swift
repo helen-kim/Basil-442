@@ -46,7 +46,6 @@ class DirectionsViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        print(allDirections.count)
         return allDirections.count
     }
     
