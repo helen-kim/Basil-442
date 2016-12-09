@@ -22,6 +22,7 @@ class StepsViewController: UIViewController {
     var previousStep: Int = -1
     var isBegin: Bool = false
     var isEnd: Bool = false
+    var isPaused: Bool = false
     let emptyString: Int = -1
     var totalSteps: Int = 0
     
@@ -55,7 +56,14 @@ class StepsViewController: UIViewController {
     @IBOutlet weak var doneButton: UIButton!
     
     @IBAction func repeatClicked(sender: UIButton) {
-        readDirection()
+        if speechSynthesizer.paused {
+            speechSynthesizer.continueSpeaking()
+        }
+        else if speechSynthesizer.speaking {
+            speechSynthesizer.pauseSpeakingAtBoundary(AVSpeechBoundary.Immediate)
+        } else if speechSynthesizer.speaking == false{
+            readDirection()
+        }
     }
     
     @IBAction func finishClicked(sender: UIButton) {
@@ -63,9 +71,9 @@ class StepsViewController: UIViewController {
     }
     
     @IBAction func nextClicked(sender: UIButton) {
-        toggleDone()
         increaseStepIndices()
         readDirection()
+        toggleDone()
     }
     
     @IBAction func previousClicked(sender: UIButton) {
@@ -75,21 +83,24 @@ class StepsViewController: UIViewController {
     }
     
     func toggleDone() {
-        print("prev step: (\(previousStep)) \(prevStep.text), current step: (\(currentStep)) \(currStep.text), next step: (\(nextStep)) \(nexStep.text)")
-        if (nextStep+1 == totalSteps) {
+        print("prev step: (\(previousStep)), current step: (\(currentStep)), next step: (\(nextStep)), total steps: (\(totalSteps))")
+        if (nextStep == totalSteps) {
             doneButton.userInteractionEnabled = true
+            doneButton.hidden = false
             doneButton.setTitle("Finished!", forState: UIControlState.Normal)
             nextButton.userInteractionEnabled = false
             nextButton.hidden = true
         } else {
             doneButton.userInteractionEnabled = false
-            doneButton.setTitle("", forState: UIControlState.Normal)
+//            doneButton.setTitle("", forState: UIControlState.Normal)
+            doneButton.hidden = true
             nextButton.userInteractionEnabled = true
             nextButton.hidden = false
         }
     }
     
     func decreaseStepIndices() {
+        print("decrease")
         isEnd = false
         if currentStep > 0 {
             isBegin = false

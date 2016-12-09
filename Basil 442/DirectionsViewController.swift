@@ -26,7 +26,7 @@ class DirectionsViewController: UIViewController, UITableViewDelegate, UITableVi
         recipeTitle.text = dirViewModel!.name()
         
         // Self-sizing table view cell 
-        directionsTableView.estimatedRowHeight = 85.0
+        directionsTableView.estimatedRowHeight = 100.0
         directionsTableView.rowHeight = UITableViewAutomaticDimension
         // Do any additional setup after loading the view.
     }
