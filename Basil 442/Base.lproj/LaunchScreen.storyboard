@@ -14,26 +14,18 @@
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loading logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="ShS-eY-c0M">
-                                <rect key="frame" x="233" y="432" width="302" height="160"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="302" id="59a-s7-Q1x"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="loading logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="ShS-eY-c0M">
+                                <rect key="frame" x="65" y="224" width="190" height="120"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="ShS-eY-c0M" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="EDP-iH-Y52"/>
-                            <constraint firstItem="ShS-eY-c0M" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="412" id="WZO-14-BfM"/>
-                            <constraint firstItem="ShS-eY-c0M" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="i2G-G8-Wsm"/>
-                        </constraints>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
