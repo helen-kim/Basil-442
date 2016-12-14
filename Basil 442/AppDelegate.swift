@@ -16,12 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        var navigationBarAppearance = UINavigationBar.appearance()
+        let navigationBarAppearance = UINavigationBar.appearance()
 
         navigationBarAppearance.barTintColor = UIColor.whiteColor()
         
-        var tab = UITabBar.appearance()
-        tab.selectedImageTintColor = UIColor.whiteColor()
+        let tab = UITabBar.appearance()
+        tab.tintColor = UIColor.whiteColor()
         
         return true
     }

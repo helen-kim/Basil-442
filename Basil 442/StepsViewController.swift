@@ -31,7 +31,6 @@ class StepsViewController: UIViewController {
         recipeTitle.text = stepViewModel!.name()
         allDirections = stepViewModel!.directions()
         prevStep.text = ""
-        print(currentStep)
         currStep.text = allDirections[currentStep]
         nexStep.text = allDirections[nextStep]
         totalSteps = allDirections.count
@@ -94,7 +93,6 @@ class StepsViewController: UIViewController {
     
     
     func toggleDone() {
-        print("prev step: (\(previousStep)), current step: (\(currentStep)), next step: (\(nextStep)), total steps: (\(totalSteps))")
         if (nextStep == totalSteps) {
             doneButton.userInteractionEnabled = true
             doneButton.hidden = false
@@ -111,7 +109,6 @@ class StepsViewController: UIViewController {
     }
     
     func decreaseStepIndices() {
-        print("decrease")
         isEnd = false
         if currentStep > 0 {
             isBegin = false
@@ -140,6 +137,9 @@ class StepsViewController: UIViewController {
     }
     
     func assignText() {
+        print(currentStep)
+        print(nextStep)
+        print(previousStep)
         // If reach end
         if nextStep == totalSteps{
             nexStep.text = ""
@@ -152,16 +152,17 @@ class StepsViewController: UIViewController {
             nexStep.text = allDirections[nextStep]
         }
         else {
-            nexStep.text = allDirections[nextStep]
-            currStep.text = allDirections[currentStep]
+            print(allDirections)
+            print(allDirections[currentStep])
+            currStep.text = "second"
             prevStep.text = allDirections[previousStep]
+            nexStep.text = allDirections[nextStep]
         }
         isSpeechStopped = speechSynthesizer.stopSpeakingAtBoundary(AVSpeechBoundary.Immediate)
         
     }
     
     func readDirection() {
-        print("read")
         let speechUtterance = AVSpeechUtterance(string: allDirections[currentStep])
         speechUtterance.preUtteranceDelay = 0.05
         speechSynthesizer.speakUtterance(speechUtterance)

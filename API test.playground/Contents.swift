@@ -8,9 +8,9 @@ var str = "Hello, playground"
 
 import Foundation
 
-let id = 61478
+let id = 775954
 let query = "chicken"
-let spaces = "pesto chicken pasta"
+let spaces = "salmon"
 
 // test randomRecipes method
 let urlRand = NSURL(string: "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/random?limitLicense=false&number=1")
@@ -70,7 +70,7 @@ if dataSearch == nil {
 var recipeList:[Int:AnyObject] = [:]
 do {
     let jsonSearch = try NSJSONSerialization.JSONObjectWithData(dataSearch!, options: .AllowFragments) as! Dictionary<String, AnyObject>
-    print(jsonSearch["results"]!)
+    print(jsonSearch)
     let res = jsonSearch["results"] as! [Dictionary<String, AnyObject>]
     var count:Int = 0
     for item in res {
