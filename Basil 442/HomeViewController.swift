@@ -8,6 +8,7 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    
     let recipeInstance = Recipes()
     var rnd: Dictionary<String, AnyObject> = [:]
     

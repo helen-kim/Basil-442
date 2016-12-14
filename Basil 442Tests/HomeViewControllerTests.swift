@@ -1,5 +1,5 @@
 //
-//  CardsViewControllerTests.swift
+//  HomeViewControllerTests.swift
 //  Basil 442
 //
 //  Created by Sophie Zhao on 12/14/16.
@@ -9,13 +9,14 @@
 import XCTest
 @testable import Basil_442
 
-class CardsViewControllerTests: XCTestCase {
-    var testVC: CardsViewController! = CardsViewController()
 
+class HomeViewControllerTests: XCTestCase {
+    
+    var testVC: HomeViewController! = HomeViewController()
+    
     override func setUp() {
         super.setUp()
-        self.testVC = CardsViewController()
-        
+        self.testVC = HomeViewController()
     }
     
     override func tearDown() {
@@ -25,15 +26,9 @@ class CardsViewControllerTests: XCTestCase {
     
     func testInitialization(){
         //Test values start off as nil
-        XCTAssertEqual(self.testVC.prepTime, 0)
-        
-    }
-
-    func testGetRelevantData(){
-        
+        XCTAssertEqual(self.testVC.rnd.isEmpty, true)
     }
     
     
-
     
 }

@@ -137,6 +137,9 @@ class StepsViewController: UIViewController {
     }
     
     func assignText() {
+        print(currentStep)
+        print(nextStep)
+        print(previousStep)
         // If reach end
         if nextStep == totalSteps{
             nexStep.text = ""
@@ -149,9 +152,11 @@ class StepsViewController: UIViewController {
             nexStep.text = allDirections[nextStep]
         }
         else {
-            nexStep.text = allDirections[nextStep]
-            currStep.text = allDirections[currentStep]
+            print(allDirections)
+            print(allDirections[currentStep])
+            currStep.text = "second"
             prevStep.text = allDirections[previousStep]
+            nexStep.text = allDirections[nextStep]
         }
         isSpeechStopped = speechSynthesizer.stopSpeakingAtBoundary(AVSpeechBoundary.Immediate)
         
