@@ -80,7 +80,7 @@ class DirectionsViewController: UIViewController, UITableViewDelegate, UITableVi
         if dirViewModel!.source == "home" {
             self.performSegueWithIdentifier("unwindToHome", sender: self)
         } else if dirViewModel!.source == "cards" {
-            self.performSegueWithIdentifier("unwindToCards", sender: self)
+            self.performSegueWithIdentifier("unwindToCard", sender: self)
         }
     }
     @IBAction func downButtonPressed(sender: UIButton) {
