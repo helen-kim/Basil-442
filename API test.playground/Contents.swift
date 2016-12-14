@@ -10,7 +10,7 @@ import Foundation
 
 let id = 61478
 let query = "chicken"
-let spaces = "pesto chicken pasta"
+let spaces = "salmon"
 
 // test randomRecipes method
 let urlRand = NSURL(string: "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/random?limitLicense=false&number=1")
